@@ -1,0 +1,1270 @@
+add_namespace = old_ief
+
+country_event = {
+	id = old_ief.1
+	title = old_ief.1.t
+	desc = old_ief.1.d
+	picture = GFX_report_event_generic_read_write
+	
+	#is_triggered_only = yes
+	
+	mean_time_to_happen = {days = 1}
+	fire_only_once = yes 
+	is_triggered_only = yes
+	
+	option = {
+		name = old_ief.1.a
+		ai_chance = { factor = 100 }
+		declare_war_on = {
+			target = STL
+			type =  take_state_focus
+		}
+		hidden_effect = {
+			country_event = { days = 60 id = old_ief.2 }
+			STL = { country_event = { days = 1 id = stl.3 } }
+			STL = {
+				add_ideas = too_angry_to_die
+			}
+		}
+	}	
+}
+country_event = {
+	id = old_ief.2
+	title = old_ief.2.t
+	desc = old_ief.2.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = old_ief.2.a
+		ai_chance = { factor = 100 }
+		#white_peace = STL
+		custom_effect_tooltip = IEF_squash
+		hidden_effect = {
+			#country_event = { days = 20 id = old_ief.3 }
+			IEF = {
+				remove_state_core = 189
+				remove_state_core = 55
+				remove_state_core = 188
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.3
+			}
+			every_country = {
+				news_event = { hours = 24 id = news.53 }
+			}
+			ARA = { 
+				transfer_state = 55
+				transfer_state = 188
+				add_state_core = 188
+				add_state_core = 189
+				add_state_core = 55
+				load_oob = ARA_1936
+				declare_war_on = { type = annex_everything    target = IEF }
+			}
+			IF = {
+				limit = {
+					has_country_flag = IEF_no_lon
+				}
+				ARA = {
+					add_stability = 0.1
+					add_war_support = 0.1
+				}
+			}
+			IF = {
+				limit = {
+					has_country_flag = IEF_no_speech
+				}
+				ARA = {
+					add_stability = 0.1
+					add_war_support = 0.1
+				}
+			}
+			IF = {
+				limit = {
+					has_country_flag = losstostl
+				}
+				ARA = {
+					transfer_state = 189
+					load_oob = ARA_1938
+				}
+			}
+		}
+	}	
+	option = {
+		name = old_ief.2.b
+		ai_chance = { factor = 100 }
+		#white_peace = STL
+		custom_effect_tooltip = IEF_squash
+		hidden_effect = {
+			#country_event = { days = 20 id = old_ief.3 }
+			IEF = {
+				remove_state_core = 189
+				remove_state_core = 55
+				remove_state_core = 188
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.3
+			}
+			every_country = {
+				news_event = { hours = 24 id = news.53 }
+			}
+			ARA = { 
+				transfer_state = 55
+				transfer_state = 188
+				transfer_state = 189
+				add_state_core = 189
+				add_state_core = 188
+				add_state_core = 55
+				load_oob = ARA_1936
+				declare_war_on = { type = annex_everything    target = IEF }
+				change_tag_from = IEF 
+			}	
+		}
+	}	
+}
+country_event = {
+	id = old_ief.3
+	title = old_ief.3.t
+	desc = old_ief.3.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	timeout_days = 3
+	
+	option = {
+		name = old_ief.3.a
+		ai_chance = { factor = 100 }
+		set_country_flag = losstostl
+		set_country_flag = STL_war_over
+		white_peace = STL
+		STL = {
+			remove_ideas = too_angry_to_die
+		}
+		55 = {
+			set_demilitarized_zone = yes
+		}
+		188 = {
+			set_demilitarized_zone = yes
+		}
+		189 = {
+			set_demilitarized_zone = yes
+		}
+	}	
+
+}
+country_event = {
+	id = old_ief.4
+	title = old_ief.4.t
+	desc = old_ief.4.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	timeout_days = 3
+	
+	option = {
+		name = old_ief.4.a
+		ai_chance = { factor = 100 }
+		transfer_state = 168
+		set_country_flag = ownageofstl
+		set_country_flag = STL_war_over
+		white_peace = STL
+		STL = {
+			remove_ideas = too_angry_to_die
+		}
+		55 = {
+			set_demilitarized_zone = yes
+		}
+		188 = {
+			set_demilitarized_zone = yes
+		}
+	}	
+
+}
+
+country_event = {
+	id = old_ief.5
+	title = old_ief.5.t
+	desc = old_ief.5.d
+	picture = GFX_report_event_usa_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = old_ief.5.a
+		ai_chance = { factor = 10 }
+		add_political_power = 15
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = old_ief.6
+	title = old_ief.6.t
+	desc = old_ief.6.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = old_ief.6.a
+		ai_chance = { factor = 50 }
+		add_war_support = -0.05
+		add_stability = 0.1
+		add_manpower = 5000
+		add_political_power = -50
+		set_country_flag = IEF_lon
+		hidden_effect = {
+			55 = {
+				add_compliance = 5
+			}
+			188 = {
+				add_compliance = 5
+			}
+			189 = {
+				add_compliance = 5
+			}
+		}
+	}
+	option = {
+		name = old_ief.6.b
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = IEF_ARA_stronger
+		add_to_variable = {
+			var = ARA_insurgency_strength 
+			value = 1
+		}
+		add_manpower = -2817
+		set_country_flag = IEF_no_lon
+		hidden_effect = {
+			55 = {
+				add_resistance = 5
+			}
+			188 = {
+				add_resistance = 5
+			}
+			189 = {
+				add_resistance = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = old_ief.7
+	title = old_ief.7.t
+	desc = old_ief.7.d
+	picture = GFX_report_event_crowd_in_prague
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = old_ief.7.a
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = IEF_ARA_stronger
+		add_stability = -0.05
+		add_war_support = -0.05
+		add_political_power = 30
+		set_country_flag = IEF_no_speech
+		add_to_variable = {
+			var = ARA_insurgency_strength 
+			value = 1
+		}
+		hidden_effect = {
+			55 = {
+				add_resistance = 5
+			}
+			188 = {
+				add_resistance = 5
+			}
+			189 = {
+				add_resistance = 5
+			}
+		}
+	}
+
+	option = {
+		name = old_ief.7.b
+		ai_chance = { factor = 50 }
+		add_war_support = 0.05
+		add_stability = 0.05
+		add_political_power = 5
+		add_manpower = 500
+		set_country_flag = IEF_speech
+		hidden_effect = {
+			55 = {
+				add_compliance = 5
+			}
+			188 = {
+				add_compliance = 5
+			}
+			189 = {
+				add_compliance = 5
+			}
+			}
+	}
+}
+
+country_event = {
+	id = old_ief.8
+	title = old_ief.8.t
+	desc = old_ief.8.d
+	picture = GFX_report_event_crowd_in_prague
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = old_ief.8.a
+		ai_chance = { factor = 50 }
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 500
+			}
+			add_manpower = 100
+			hidden_effect = {
+			55 = {
+				add_compliance = 5
+			}
+			188 = {
+				add_compliance = 5
+			}
+			189 = {
+				add_compliance = 5
+			}
+			}
+		}
+
+	option = {
+		name = old_ief.8.b
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = IEF_ARA_stronger
+		send_equipment = { target = ARA type = infantry_equipment amount = 500 }  
+		set_country_flag = IEF_piracy
+		add_to_variable = {
+			var = ARA_insurgency_strength 
+			value = 1
+		}
+		hidden_effect = {
+			55 = {
+				add_resistance = 5
+			}
+			188 = {
+				add_resistance = 5
+			}
+			189 = {
+				add_resistance = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = old_ief.9 
+	title = old_ief.9.t
+	desc = old_ief.9.d
+	picture = GFX_report_smith
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = IEF
+		owns_state = 55
+	}
+
+	option = {
+		name = old_ief.9.a
+		ai_chance = { factor = 50 }
+		add_political_power = 100
+		ARA = {
+			retire_character = ARA_charles_lindbergh
+		}
+		hidden_effect = {
+			ARA = {
+				set_politics = {
+					ruling_party = despotism
+					election_frequency = 48
+					elections_allowed = no
+				}
+			}
+			load_focus_tree = ief-warlord
+			complete_national_focus = IEF_the_sky_burns
+		}
+	}
+}
+
+country_event = {
+	id = old_ief.10
+	title = old_ief.10.t
+	desc = old_ief.10.d
+	picture = GFX_report_event_british_inspect_troops
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = old_ief.10.a
+		ai_chance = { factor = 50 }
+		add_stability = 0.1
+		add_war_support = -0.1
+		add_popularity = {
+			ideology = stratocracy
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.05
+		}
+		ARA = {
+			retire_character = ARA_joseph_mcnarney
+			retire_character = ARA_amos_fries
+		}
+	}
+	option = {
+		name = old_ief.10.b
+		ai_chance = { factor = 50 }
+		add_stability = -0.1
+		add_war_support = 0.15
+		ARA = {
+			ARA_joseph_mcnarney = {
+				set_nationality = IEF
+			}
+			ARA_amos_fries = {
+				set_nationality = IEF
+			}
+		}
+		add_popularity = {
+			ideology = guided_democracy
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {
+	id = old_ief.11
+	title = old_ief.11.t
+	desc = old_ief.11.d
+	picture = GFX_report_event_iww_demonstration
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = old_ief.11.a
+		ai_chance = { factor = 50 }
+		add_stability = 0.15
+		add_political_power = -100
+		add_popularity = {
+			ideology = stratocracy
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.05
+		}
+	}
+	option = {
+		name = old_ief.11.b
+		ai_chance = { factor = 50 }
+		add_stability = -0.1
+		add_war_support = -0.1
+		add_political_power = 120
+		add_popularity = {
+			ideology = guided_democracy
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}		
+	}
+}
+
+country_event = {
+	id = old_ief.12
+	title = old_ief.12.t
+	desc = old_ief.12.d
+	picture = GFX_report_event_eng_blackshirt_march
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = old_ief.12.a
+		ai_chance = { factor = 50 }
+		delete_unit_template_and_units = { 
+		division_template = "International Forces"
+		disband = no
+		}
+		hidden_effect = {
+			country_event = {
+				id = old_ief.13
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = old_ief.13
+	title = old_ief.13.t
+	desc = old_ief.13.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = old_ief.13.a
+		ai_chance = { factor = 40 }
+		add_stability = 0.02
+		set_variable = { british_coup_chance = 1 }
+		hidden_effect = {
+			country_event = {
+				id = old_ief.14
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = old_ief.13.b
+		ai_chance = { factor = 60 }
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -300
+		}
+		add_manpower = -300
+		add_political_power = 20
+		set_variable = { british_coup_chance = 0 }
+		country_event = {
+			id = old_ief.14
+			days = 5
+		}
+	}
+}
+
+country_event = {
+	id = old_ief.14
+	title = old_ief.14.t
+	desc = old_ief.14.d
+	picture = GFX_report_event_generic_army
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = old_ief.14.a
+		ai_chance = { factor = 40 }
+		add_political_power = 50
+		add_stability = 0.05
+		add_to_variable = { 
+			var =  british_coup_chance 
+			value = 1 
+		}
+		hidden_effect = {
+			country_event = {
+				id = old_ief.15
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = old_ief.14.b
+		ai_chance = { factor = 60 }
+		add_political_power = -25
+		add_stability = -0.1
+		add_war_support = 0.05
+		add_to_variable = { 
+			var =  british_coup_chance 
+			value = -1 
+		}
+		country_event = {
+			id = old_ief.15
+			days = 5
+		}
+	}
+}
+
+country_event = {
+	id = old_ief.15
+	title = old_ief.15.t
+	desc = old_ief.15.d
+	picture = GFX_report_event_generic_battle
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = old_ief.15.a
+		ai_chance = { factor = 40 }
+		add_to_variable = { 
+			var =  british_coup_chance 
+			value = 1 
+		}
+		add_manpower = -5000
+		hidden_effect = {
+			IF = {
+				limit = {
+					check_variable = {
+						var = british_coup_chance
+						value = 0
+						compare = less_than
+					}
+				}
+				country_event = {
+					id = old_ief.16
+					days = 5
+				}
+			}
+			IF = {
+				limit = {
+					check_variable = {
+						var = british_coup_chance
+						value = 0
+						compare = equals
+					}
+				}
+				country_event = {
+					id = old_ief.16
+					days = 5
+				}
+			}
+			IF = {
+				limit = {
+					check_variable = {
+						var = british_coup_chance
+						value = 1
+						compare = equals
+					}
+				}
+				random_list = {
+					50 = {
+						country_event = {
+							id = old_ief.16
+							days = 5
+						}
+					}
+					50 = {
+						country_event = {
+							id = old_ief.17
+							days = 5
+						}
+					}
+				}
+			}
+			IF = {
+				limit = {
+					check_variable = {
+						var = british_coup_chance
+						value = 2
+						compare = equals
+					}
+				}
+				random_list = {
+					25 = {
+						country_event = {
+							id = old_ief.16
+							days = 5
+						}
+					}
+					75 = {
+						country_event = {
+							id = old_ief.17
+							days = 5
+						}
+					}
+				}
+			}
+			IF = {
+				limit = {
+					check_variable = {
+						var = british_coup_chance
+						value = 3
+						compare = equals
+					}
+				}
+				country_event = {
+					id = old_ief.17
+					days = 5
+				}
+			}
+			IF = {
+				limit = {
+					check_variable = {
+						var = british_coup_chance
+						value = 3
+						compare = greater_than
+					}
+				}
+				country_event = {
+					id = old_ief.17
+					days = 5
+				}
+			}												
+		}
+	}
+
+	option = {
+		name = old_ief.15.b
+		ai_chance = { factor = 60 }
+		add_political_power = 5
+		add_to_variable = { 
+			var =  british_coup_chance 
+			value = -1 
+		}
+		hidden_effect = {
+			IF = {
+				limit = {
+					check_variable = {
+						var = british_coup_chance
+						value = 0
+						compare = less_than
+					}
+				}
+				country_event = {
+					id = old_ief.16
+					days = 5
+				}
+			}
+			IF = {
+				limit = {
+					check_variable = {
+						var = british_coup_chance
+						value = 0
+						compare = equals
+					}
+				}
+				country_event = {
+					id = old_ief.16
+					days = 5
+				}
+			}
+			IF = {
+				limit = {
+					check_variable = {
+						var = british_coup_chance
+						value = 1
+						compare = equals
+					}
+				}
+				random_list = {
+					50 = {
+						country_event = {
+							id = old_ief.16
+							days = 5
+						}
+					}
+					50 = {
+						country_event = {
+							id = old_ief.17
+							days = 5
+						}
+					}
+				}
+			}
+			IF = {
+				limit = {
+					check_variable = {
+						var = british_coup_chance
+						value = 2
+						compare = equals
+					}
+				}
+				random_list = {
+					25 = {
+						country_event = {
+							id = old_ief.16
+							days = 5
+						}
+					}
+					75 = {
+						country_event = {
+							id = old_ief.17
+							days = 5
+						}
+					}
+				}
+			}
+			IF = {
+				limit = {
+					check_variable = {
+						var = british_coup_chance
+						value = 3
+						compare = equals
+					}
+				}
+				country_event = {
+					id = old_ief.17
+					days = 5
+				}
+			}
+			IF = {
+				limit = {
+					check_variable = {
+						var = british_coup_chance
+						value = 4
+						compare = equals
+					}
+				}
+				country_event = {
+					id = old_ief.17
+					days = 5
+				}
+			}					
+		}		
+	}
+}
+
+country_event = {
+	id = old_ief.16
+	title = old_ief.16.t
+	desc = old_ief.16.d
+	picture = GFX_report_event_generic_riot
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = old_ief.16.a
+		ai_chance = { factor = 50 }
+		add_popularity = {
+			ideology = despotism
+			popularity = -1
+		}
+		complete_national_focus = IEF_treading_our_own_path
+		IEF_roy_urquhart = {
+			set_nationality = MIA
+		}
+	}
+}
+
+country_event = {
+	id = old_ief.17
+	title = old_ief.17.t
+	desc = old_ief.17.d
+	picture = GFX_report_event_eng_mosley_speech
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = old_ief.17.a
+		ai_chance = { factor = 50 }
+		add_stability = -0.15
+		retire_character = IEF_walter_smith
+		set_politics = {
+			ruling_party = despotism
+			elections_allowed = no
+		}
+		complete_national_focus = IEF_affirm_loyalty_to_the_league
+	}
+}
+
+country_event = { #Eisenhower Meeting
+	id = old_ief.18
+	title = old_ief.18.t
+	desc = old_ief.18.d
+
+	picture = GFX_report_event_usa_macarthur_speech
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = old_ief.18.a
+		ai_chance = { factor = 50 }
+		add_popularity = {
+			ideology = guided_democracy
+			popularity = 0.08
+		}
+		give_guarantee = IEF
+		give_military_access = ERR
+		diplomatic_relation = {
+			country = IEF
+			relation = non_aggression_pact
+			active = yes
+		}
+		IEF = {
+			give_guarantee = ERR
+			give_military_access = ERR
+			diplomatic_relation = {
+				country = ERR
+				relation = non_aggression_pact
+				active = yes
+			}
+			complete_national_focus = IEF_eisenhower
+		}
+	}
+	option = {
+		name = old_ief.18.b
+		ai_chance = {
+			factor = 40
+		}
+		add_popularity = {
+			ideology = stratocracy 
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = despotism 
+			popularity = 0.08
+		}
+		IEF = {
+			country_event = {
+				id = old_ief.19
+				days = 1
+			}
+			set_country_flag = ERR_said_no
+		}
+	}
+}
+
+country_event = { #cucked
+id = old_ief.19
+title = old_ief.19.t
+desc = old_ief.19.d
+
+picture = GFX_report_event_usa_macarthur_speech
+
+fire_only_once = yes
+is_triggered_only = yes
+
+	option = {
+		name = old_ief.19.a
+		ai_chance = {
+			factor = 5
+		}
+		add_political_power = -20
+		complete_national_focus = IEF_detente
+	}
+}
+
+country_event = { #Early calls
+	id = old_ief.20
+	title = old_ief.20.t
+	desc = old_ief.20.d
+
+	picture = GFX_report_event_usa_macarthur_speech
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = old_ief.20.a
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = ERR_eisenhower_time
+		set_politics = {
+			ruling_party = guided_democracy
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = guided_democracy
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = -0.1
+		}
+		IEF = {
+			country_event = {
+				id = old_ief.21
+				days = 3
+			}
+		}
+	}
+	option = {
+		name = old_ief.20.b
+		ai_chance = {
+			factor = 40
+		}
+		custom_effect_tooltip = ERR_dead_democracy
+		add_popularity = {
+			ideology = guided_democracy
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.15
+		}
+		add_stability = -0.1
+		add_political_power = -50
+		IEF = {
+			country_event = {
+				id = old_ief.22
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #time to die
+id = old_ief.21
+title = old_ief.21.t
+desc = old_ief.21.d
+
+picture = GFX_report_event_usa_macarthur_speech
+
+fire_only_once = yes
+is_triggered_only = yes
+
+	option = {
+		name = old_ief.21.a
+		ai_chance = {
+			factor = 5
+		}
+		custom_effect_tooltip = DEATH_WEAKNESS_DESTRUCTION
+		ERR = {
+			annex_country = {
+				target = IEF
+				transfer_troops = yes
+			}
+			set_country_flag = IEF_peaceful
+		}
+		IEF = {
+			remove_country_leader_role = {
+				character = IEF_walter_smith
+				ideology = gen_stratocracy
+			}
+			every_unit_leader = {
+				set_nationality = ERR
+			}
+		}
+		ERR = {
+			change_tag_from = IEF
+		}
+	}
+}
+
+country_event = { #You were the chosen one!
+id = old_ief.22
+title = old_ief.22.t
+desc = old_ief.22.d
+
+picture = GFX_report_event_usa_macarthur_speech
+
+fire_only_once = yes
+is_triggered_only = yes
+
+	option = {
+		name = old_ief.22.a
+		ai_chance = {
+			factor = 5
+		}
+		add_stability = -0.15
+		add_war_support = 0.1
+		declare_war_on = {
+			target = ERR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = MIC
+			type = annex_everything
+		}
+	}
+}
+
+country_event = { #finishing what the LON started
+	id = old_ief.23
+	title = old_ief.23.t
+	desc = old_ief.23.d
+
+	picture = GFX_report_event_communist_leader
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+		option = {
+			name = old_ief.23.a
+			ai_chance = {
+				factor = 5
+			}
+			add_political_power = 50
+			MIA = {
+				country_event = {
+					id = old_ief.24
+					days = 3
+				}
+			}
+		}
+}
+
+country_event = { #fate of thomas
+	id = old_ief.24
+	title = old_ief.24.t
+	desc = old_ief.24.d
+
+	picture = GFX_report_event_communist_leader
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+		option = {
+			name = old_ief.24.a
+			ai_chance = {
+				factor = 5
+			}
+			add_popularity = {
+				ideology = revolutionary_socialist
+				popularity = -0.1
+			}
+			add_stability = -0.1
+			add_political_power = 100
+			COM = {
+				retire_character = COM_norman_thomas
+			}
+		}
+		option = {
+			name = old_ief.24.a
+			ai_chance = {
+				factor = 5
+			}
+			add_popularity = {
+				ideology = revolutionary_socialist
+				popularity = 0.05
+			}
+			add_war_support = 0.1
+			add_political_power = -100
+		}
+}
+
+country_event = { #The Fate of the King
+	id = old_ief.25
+	title = old_ief.25.t
+	desc = old_ief.25.d
+
+	picture = GFX_report_event_royal_visit
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+		option = {
+			name = old_ief.25.a
+			ai_chance = {
+				factor = 5
+			}
+			MIL = {
+				retire_character = MIL_mark_clark
+			}
+			add_popularity = {
+				ideology = stratocracy
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.1
+			}
+		}
+}
+
+country_event = { #handing over mac
+	id = old_ief.26
+	title = old_ief.26.t
+	desc = old_ief.26.d
+
+	picture = GFX_report_event_usa_election_roosevelt_macarthur
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+		option = {
+			name = old_ief.26.a
+			ai_chance = {
+				factor = 5
+			}
+			add_stability = 0.05
+			MIA = {
+				country_event = {
+					id = old_ief.27
+					days = 3
+				}
+			}
+		}
+}
+
+country_event = { #no more caesar
+	id = old_ief.27
+	title = old_ief.27.t
+	desc = old_ief.27.d
+
+	picture = GFX_report_event_usa_election_roosevelt_macarthur
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+		option = {
+			name = old_ief.27.a
+			ai_chance = {
+				factor = 5
+			}
+			add_stability = 0.05
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.15
+			}
+		}
+}
+
+country_event = { #DO IT AGAIN
+	id = old_ief.28
+	title = old_ief.28.t
+	desc = old_ief.28.d
+
+	picture = GFX_report_event_usa_macarthur_speech
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = old_ief.28.a
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = DEATH_WEAKNESS_DESTRUCTION
+		IEF = {
+			annex_country = {
+				target = IWA
+				transfer_troops = yes
+			}
+		}
+		IWA = {
+		ERR_dwight_eisenhower = {
+			set_nationality = IEF
+		}
+		ERR_edwin_harding = {
+			set_nationality = IEF
+		}
+		IWA_hanford_macnider = {
+			set_nationality = IEF
+		}
+		IWA_clovis_byers = {
+			set_nationality = IEF
+		}
+		}
+	}
+	option = {
+		name = old_ief.28.b
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = -0.1
+		add_war_support = 0.1
+		declare_war_on = {
+			target = IEF
+			type = annex_everything
+		}
+	}
+}

@@ -1,0 +1,153 @@
+add_namespace = ief
+
+country_event = {
+	id = ief.1
+	title = ief.1.t
+	desc = ief.1.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ief.1.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			country_event = {
+				id = ief.2
+				days = 17
+				random_days = 6
+				random_hours = 12
+			}
+		}
+	}	
+}
+country_event = {
+	id = ief.2
+	title = ief.2.t
+	desc = ief.2.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ief.2.a
+		ai_chance = { factor = 100 }
+		create_wargoal = {
+			type = annex_everything
+			target = STL
+		}
+		hidden_effect = {
+			country_event = {
+				id = ief.5
+				days = 25
+				random_days = 3
+				random_hours = 12
+			}
+		}
+	}	
+}
+country_event = {
+	id = ief.3
+	title = ief.3.t
+	desc = ief.3.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ief.3.a
+		ai_chance = { factor = 100 }
+	}	
+}
+country_event = {
+	id = ief.4
+	title = ief.4.t
+	desc = ief.4.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ief.4.a
+		ai_chance = { factor = 100 }
+	}	
+}
+country_event = {
+	id = ief.5
+	title = ief.5.t
+	desc = ief.5.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ief.5.a
+		ai_chance = { factor = 100 }
+		white_peace = STL
+		custom_effect_tooltip = IEF_squash
+		hidden_effect = {
+			IEF = {
+				remove_state_core = 396
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.3
+			}
+			every_country = {
+				news_event = { hours = 24 id = news.53 }
+			}
+			ARA = { 
+				transfer_state = 396
+				add_state_core = 396
+				load_oob = ARA_1936
+				declare_war_on = { type = annex_everything    target = IEF }
+			}
+		}
+	}	
+	option = {
+		name = ief.5.b
+		ai_chance = { factor = 100 }
+		white_peace = STL
+		custom_effect_tooltip = IEF_squash
+		hidden_effect = {
+			IEF = {
+				remove_state_core = 396
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.3
+			}
+			every_country = {
+				news_event = { hours = 24 id = news.53 }
+			}
+			ARA = { 
+				transfer_state = 396
+				add_state_core = 396
+				load_oob = ARA_1936
+				declare_war_on = { type = annex_everything    target = IEF }
+				change_tag_from = IEF 
+			}	
+		}
+	}
+}
+country_event = {
+	id = ief.6
+	title = ief.6.t
+	desc = ief.6.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ief.6.a
+		ai_chance = { factor = 100 }
+		add_ideas = IEF_riverine_warefare_01
+		
+	}
+	option = {
+		name = ief.6.b
+		ai_chance = { factor = 100 }
+		add_ideas = IEF_riverine_warefare_02
+	}
+}
