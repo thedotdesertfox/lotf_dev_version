@@ -1,0 +1,19 @@
+spriteTypes = {
+	
+	###GENERIC###
+	SpriteType = {
+		name = "GFX_idea_refugee_evacuation"
+		texturefile = "gfx/interface/ideas/generic/GEN_refugees.png"	
+	}
+	
+	###IEF###
+	SpriteType = {
+		name = "GFX_idea_ohio_ief_cooperation"
+		texturefile = "gfx/interface/ideas/ief/ohio_ief_cooperation.png"	
+	}
+	SpriteType = {
+		name = "GFX_idea_hoover_relief_agency"
+		texturefile = "gfx/interface/ideas/ief/hoover_relief_agency.png"	
+	}
+	
+}

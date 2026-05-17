@@ -1,0 +1,62 @@
+﻿l_english:
+ NMD:0 "New England"
+ NMD_DEF:0 "the Commonwealth of New England"
+ NMD_ADJ:0 "New Englander"
+ 
+ SMD:0 "Confederate States"
+ SMD_DEF:0 "the Confederate States of Dixieland"
+ SMD_ADJ:0 "Dixie"
+ 
+ N01:0 "Dominion of Canada"
+ N01_DEF:0 "the Dominion of Canada"
+ N01_ADJ:0 "Canadian"
+
+ N02:0 "Mexico"
+ N02_DEF:0 "the United Mexican States"
+ N02_ADJ:0 "Mexican"
+
+ N03:0 "American Anarchy"
+ N03_DEF:0 "the American Anarchy"
+ N03_ADJ:0 "American"
+ 
+ NFL:0 "Dominion of Newfoundland"
+ NFL_DEF:0 "the Dominion of Newfoundland"
+ NFL_ADJ:0 "Newfoundlander"
+ 
+ ###
+ ERR:0 "Erie"
+ ERR_DEF:0 "the Midwest Military District"
+ ERR_ADJ:0 "Federalist"
+ 
+ OHI:0 "Ohio"
+ OHI_DEF:0 "the Provisional State of Ohio"
+ OHI_ADJ:0 "Ohian"
+ 
+ MCH:0 "Detroit"
+ MCH_DEF:0 "the State of Michigan"
+ MCH_ADJ:0 "Michiganer"
+ 
+ CMP:0 "Chicago"
+ CMP_DEF:0 "the American Socialist Republic"
+ CMP_ADJ:0 "Chicagoan"
+ 
+ IEF:0 "International Forces"
+ IEF_DEF:0 "the International Expeditionary Forces"
+ IEF_ADJ:0 "International"
+ 
+ ARA:0 "Indianapolis"
+ ARA_DEF:0 "The Great Lakes Redemption Authority"
+ ARA_ADJ:0 "Hoosier"
+ 
+ WSC:0 "Wisconsin"
+ WSC_DEF:0 "the Regency of Wisconsin"
+ WSC_ADJ:0 "Wisconsinite"
+ 
+ ###
+ 
+ 
+ 
+ ###
+ STL:0 "St. Louis"
+ STL_DEF:0 "the St. Louis Outfit"
+ STL_ADJ:0 "Mob"

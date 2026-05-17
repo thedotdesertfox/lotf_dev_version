@@ -1,0 +1,147 @@
+###IDEAS###
+spriteTypes = {
+	###Societal Laws
+	#Religion
+	spriteType = {
+		name = "GFX_idea_lotf_society_strong_church"
+		texturefile = "gfx/interface/ideas/laws/religon/strong_religion.png"
+	}
+	spriteType = {
+		name = "GFX_idea_lotf_society_anti_clerical"
+		texturefile = "gfx/interface/ideas/laws/religon/anti_clericalism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_lotf_society_state_religion"
+		texturefile = "gfx/interface/ideas/laws/religon/state_religon.png"
+	}
+	spriteType = {
+		name = "GFX_idea_lotf_society_state_atheism"
+		texturefile = "gfx/interface/ideas/laws/religon/state_atheism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_lotf_society_secular"
+		texturefile = "gfx/interface/ideas/laws/religon/secularism.png"
+	}
+	
+	#Womens Rights
+	spriteType = {
+		name = "GFX_idea_lotf_society_domesticity"
+		texturefile = "gfx/interface/ideas/laws/women/cult_of_domesticity.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lotf_society_total_equality"
+		texturefile = "gfx/interface/ideas/laws/women/total_equality.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lotf_society_patriachal"
+		texturefile = "gfx/interface/ideas/laws/women/patriarchal_society.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lotf_society_nominal_equality"
+		texturefile = "gfx/interface/ideas/laws/women/nominal_equality.dds"
+	}
+	
+	#Sufferage
+	spriteType = {
+		name = "GFX_idea_lotf_society_universal_suffrage"
+		texturefile = "gfx/interface/ideas/laws/sufferage/universal_sufferage.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lotf_society_restricted_voting"
+		texturefile = "gfx/interface/ideas/laws/sufferage/limited_sufferage.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lotf_society_elite_voting"
+		texturefile = "gfx/interface/ideas/laws/sufferage/elite_voting.png"
+	}
+	spriteType = {
+		name = "GFX_idea_lotf_society_no_voting"
+		texturefile = "gfx/interface/ideas/laws/sufferage/no_voting.png"
+	}
+	
+	#Welfare
+	spriteType = {
+		name = "GFX_idea_lotf_society_military_pensions"
+		texturefile = "gfx/interface/ideas/laws/welfare/military_pension.png"
+	}
+	spriteType = {
+		name = "GFX_idea_lotf_society_philanthropy"
+		texturefile = "gfx/interface/ideas/laws/welfare/philanthropy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lotf_society_no_welfare"
+		texturefile = "gfx/interface/ideas/laws/welfare/no_welfare.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lotf_society_universal_welfare"
+		texturefile = "gfx/interface/ideas/laws/welfare/free_welfare.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lotf_society_basic_welfare"
+		texturefile = "gfx/interface/ideas/laws/welfare/basic_welfare.dds"
+	}
+	
+	#Segregation
+	spriteType = {
+		name = "GFX_idea_lotf_society_total_racial_equality"
+		texturefile = "gfx/interface/ideas/laws/race/total_racial_equality.png"
+	}
+	spriteType = {
+		name = "GFX_idea_lotf_society_early_integration"
+		texturefile = "gfx/interface/ideas/laws/race/limited_integration.png"
+	}
+	spriteType = {
+		name = "GFX_idea_lotf_society_non_enforced"
+		texturefile = "gfx/interface/ideas/laws/race/unofficial_segregation.png"
+	}
+	spriteType = {
+		name = "GFX_idea_lotf_society_enforced_segregation"
+		texturefile = "gfx/interface/ideas/laws/race/enforced_segregation.png"
+	}
+	spriteType = {
+		name = "GFX_idea_lotf_society_jim_crow"
+		texturefile = "gfx/interface/ideas/laws/race/jim_crow.png"
+	}
+	
+	#Press
+	spriteType = {
+		name = "GFX_idea_lotf_society_free_press"
+		texturefile = "gfx/interface/ideas/laws/press/free_press.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_lotf_society_press_censorship"
+		texturefile = "gfx/interface/ideas/laws/press/press_censorship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_lotf_society_state_media"
+		texturefile = "gfx/interface/ideas/laws/press/state_media.dds"
+	}
+	
+	#Food
+	spriteType = {
+		name = "GFX_idea_lotf_society_famine"
+		texturefile = "gfx/interface/ideas/laws/food/famine.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_lotf_society_food_crisis"
+		texturefile = "gfx/interface/ideas/laws/food/food_crisis.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_lotf_society_food_instability"
+		texturefile = "gfx/interface/ideas/laws/food/food_instability.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_lotf_society_food_stability"
+		texturefile = "gfx/interface/ideas/laws/food/food_stability.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_lotf_society_food_surplus"
+		texturefile = "gfx/interface/ideas/laws/food/food_surplus.png"
+	}
+}

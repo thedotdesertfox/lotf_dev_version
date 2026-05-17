@@ -1,0 +1,54 @@
+﻿l_english:
+ #Laws
+ societial_laws:0 "Societal Laws"
+ segregation:0 "Racial Segregation"
+ voting:0 "Voting Rights"
+ religion:0 "Religious Policies"
+ womens_rights:0 "Gender Equality"
+ welfare:0 "Welfare"
+ media:0 "Media"
+ #Segregation
+ lotf_society_jim_crow:0 "Jim Crow"
+ lotf_society_enforced_segregation:0 "Enforced Segregation"
+ lotf_society_non_enforced:0 "Unofficial Segregation"
+ lotf_society_early_integration:0 "Early Integration"
+ lotf_society_total_racial_equality:0 "Total Racial Equality"
+ #Religion
+ lotf_society_secular:0 "Secularism"
+ lotf_society_strong_church:0 "Strong Religious Institutions"
+ lotf_society_state_religion:0 "State Religion"
+ lotf_society_anti_clerical:0 "Anti-Clericalism"
+ lotf_society_state_atheism:0 "State Atheism"
+ #Voting
+ lotf_society_universal_suffrage:0 "Universal Suffrage"
+ lotf_society_universal_suffrage_desc:0 "This state is fully committed to the idea that every adult person, no matter gender, race, religion, or any other factor, is entitled to vote in all matters of their Governance. "
+ lotf_society_restricted_voting:0 "Nominal Suffrage"
+ lotf_society_restricted_voting_desc:0 "Unlike some living under limited suffrage, very little liberty is given to those under nominal suffrage. Any choice one may have is more often than not inconsequential, and can be easily overruled by the central bureaucracy."
+ lotf_society_elite_voting:0 "Limited Suffrage"
+ lotf_society_elite_voting_desc:0 "Social hierarchy has entirely determined the ability to vote in this state. Those groups relatively closer to the top of the hierarchy may enjoy the freedoms often granted by universal suffrage, any group who happens to fall to the bottom however, have either heavy restrictions placed upon them or are completely disenfranchised. "
+ lotf_society_no_voting:0 "No Suffrage"
+ lotf_society_no_voting_desc:0 "Under this state, the government exercises absolute control over its policymaking, with no room for dissent or public opinion. "
+ #Women's Rights
+ lotf_society_nominal_equality:0 "Nominal Equality"
+ lotf_society_domesticity:0 "Cult of Domesticity"
+ lotf_society_patriachal:0 "Patriachal Society"
+ lotf_society_total_equality:0 "Total Gender Equality"
+ #Media 
+ lotf_society_free_press:0 "Free Press"
+ lotf_society_press_censorship:0 "Press Censorship"
+ lotf_society_state_media:0 "State Media"
+ #Welfare 
+ lotf_society_basic_welfare:0 "Basic Welfare"
+ lotf_society_no_welfare:0 "No Welfare"
+ lotf_society_military_pensions:0 "Service Benefits"
+ lotf_society_universal_welfare:0 "Free Welfare" #free elfcare, quite sad innit
+ lotf_society_philanthropy:0 "Philantropy"
+ #Food 
+ lotf_society_famine:0 "Famine"
+ lotf_society_food_crisis:0 "Food Crisis"
+ lotf_society_food_instability:0 "Food Instability"
+ lotf_society_food_stability:0 "Food Stability"
+ lotf_society_food_surplus:0 "Food Surplus"
+ ######
+ GENERIC_midwest_refugee_crisis:0 "Refugee Crisis"
+ GENERIC_midwest_refugee_crisis_desc:0 ""
