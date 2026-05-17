@@ -1,0 +1,146 @@
+division_template = {
+	name = "Police Department"
+	division_names_group = IEF_IRG_02
+	is_locked = yes
+	force_allow_recruiting = yes
+
+	regiments = {
+        irregular_infantry = { x = 0 y = 0 }
+        irregular_infantry = { x = 0 y = 1 }
+		irregular_infantry = { x = 0 y = 2 }
+		irregular_infantry = { x = 0 y = 3 }
+    }
+	support = {
+    }
+	priority = 1
+}
+division_template = {
+	name = "Volunteer Brigade"
+	division_names_group = IEF_INF_02
+	is_locked = yes
+	force_allow_recruiting = yes
+
+	regiments = {
+        militia = { x = 0 y = 0 }
+        militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 0 y = 3 }
+    }
+	support = {
+    }
+	priority = 1
+}
+division_template = {
+	name = "Restructured Infantry Division"
+	division_names_group = IEF_INF_01
+	is_locked = yes
+	force_allow_recruiting = yes
+	division_cap = 10
+
+	regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+    }
+	support = {
+		engineer = { x = 0 y = 0 }
+    }
+	priority = 1
+}
+division_template = {
+	name = "Foreign Volunteers"
+	division_names_group = IEF_INF_03
+	is_locked = yes
+	force_allow_recruiting = no
+
+	regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+    }
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+    }
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "Springfield Police Department"
+		location = 12697
+		division_template = "Police Department"
+	}
+	division = {
+		name = "Indianapolis Police Department"
+		location = 1595
+		division_template = "Police Department"
+	}
+	division = {
+		name = "Lafayette Police Department"
+		location = 4531
+		division_template = "Police Department"
+	}
+	division = {
+		name = "Bloomington Police Department"
+		location = 10448
+		division_template = "Police Department"
+	}
+	division = {
+		name = "Evansville Police Department"
+		location = 11635
+		division_template = "Police Department"
+	}
+	division = {
+		name = "Champaign Police Department"
+		location = 4508
+		division_template = "Police Department"
+	}
+	division = {
+		name = "Quincy Police Department"
+		location = 4590
+		division_template = "Police Department"
+	}
+	division = {
+		name = "Galesburg Police Department"
+		location = 10393
+		division_template = "Police Department"
+	}
+	division = {
+		name = "1st Illinois Volunteers"
+		location = 720
+		division_template = "Volunteer Brigade"
+	}
+	division = {
+		name = "1st Indianapolis Volunteers"
+		location = 9810
+		division_template = "Volunteer Brigade"
+	}
+	division = {
+		name = "1st Reformed Division"
+		location = 12697
+		division_template = "Restructured Infantry Division"
+	}
+	division = {
+		name = "2nd Reformed Division"
+		location = 1595
+		division_template = "Restructured Infantry Division"
+	}
+	division = {
+		name = "4th Infantry Division(Britishj)"
+		location = 1881
+		division_template = "Foreign Volunteers"
+	}
+	division = {
+		name = "Expédition de l'Illinois"
+		location = 12497
+		division_template = "Foreign Volunteers"
+	}
+}

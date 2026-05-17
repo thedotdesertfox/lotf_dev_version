@@ -1,0 +1,85 @@
+division_template = {
+	name = "Police Department"
+	division_names_group = IEF_IRG_02
+	is_locked = yes
+	force_allow_recruiting = yes
+
+	regiments = {
+        irregular_infantry = { x = 0 y = 0 }
+        irregular_infantry = { x = 0 y = 1 }
+		irregular_infantry = { x = 0 y = 2 }
+		irregular_infantry = { x = 0 y = 3 }
+    }
+	support = {
+    }
+	priority = 1
+}
+division_template = {
+	name = "Racketeers"
+	division_names_group = IEF_INF_02
+	is_locked = yes
+	force_allow_recruiting = yes
+
+	regiments = {
+        militia = { x = 0 y = 0 }
+        militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 0 y = 3 }
+    }
+	support = {
+    }
+	priority = 1
+}
+division_template = {
+	name = "Gang Outfits"
+	division_names_group = IEF_INF_01
+	is_locked = yes
+	force_allow_recruiting = yes
+	division_cap = 10
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 0 y = 3 }
+		motorized = { x = 0 y = 4 }
+	}
+
+	support = {
+		armored_car_recon = { x = 0 y = 0 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "Paducah Police Department"
+		location = 954
+		division_template = "Police Department"
+	}
+	division = {
+		name = "Missouri Collection Squad"
+		location = 7831
+		division_template = "Racketeers"
+	}
+	division = {
+		name = "Illinois Collection Squad"
+		location = 954
+		division_template = "Racketeers"
+	}
+	division = {
+		name = "Lucky's Outfit"
+		location = 954
+		division_template = "Gang Outfits"
+	}
+	division = {
+		name = "Bugsy's Outfit"
+		location = 7831
+		division_template = "Gang Outfits"
+	}
+	division = {
+		name = "Meyer's Outfit"
+		location = 12305
+		division_template = "Gang Outfits"
+	}
+}

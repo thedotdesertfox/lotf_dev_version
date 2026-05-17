@@ -1,0 +1,40 @@
+state={
+	id=1050
+	name="STATE_1050"
+	resources={
+	}
+
+	history={
+		owner = IEF
+		add_core_of = IEF
+		
+		buildings = {
+			infrastructure = 2 #was: 7
+			arms_factory = 1
+			industrial_complex = 3
+			air_base = 3
+		}
+		
+		victory_points = {
+			12697 5
+		}
+		victory_points = {
+			4508 3
+		}
+		victory_points = {
+			10393 1
+		}
+		victory_points = {
+			4590 1
+		}
+	}
+
+	provinces={
+		720 1527 1604 1655 4508 4590 7626 10393 10457 12365 12497 12697
+	}
+	manpower = 2856000
+	buildings_max_level_factor = 1.000
+	state_category = city
+
+	local_supplies=0.0 
+}

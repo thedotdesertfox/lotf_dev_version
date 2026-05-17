@@ -1,0 +1,38 @@
+state={
+	id=1048
+	name="STATE_1048"
+	resources={
+	}
+
+	history={
+		owner = CMP
+		add_core_of = CMP
+		
+		buildings = {
+			infrastructure = 2 #was: 6
+			industrial_complex = 1
+		}
+		
+		victory_points = {
+			689 5
+		}
+		victory_points = {
+			870 3
+		}
+		victory_points = {
+			695 1
+		}
+		victory_points = {
+			6713 1
+		}
+	}
+
+	provinces={
+		689 691 695 870 4437 6713 9653 9654 9684 11637 11641 11685
+	}
+	manpower = 1543575
+	buildings_max_level_factor = 1.000
+	state_category = large_town
+
+	local_supplies=0.0 
+}

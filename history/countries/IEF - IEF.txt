@@ -1,0 +1,89 @@
+﻿capital = 1050
+
+oob = "IEF_1936"
+
+set_research_slots = 3
+set_stability = 0.45
+set_war_support = 0.25
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	tech_trucks = 1
+	basic_train = 1
+}
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = {
+		
+		has_dlc = "No Step Back"
+		
+	}
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
+
+recruit_character = IEF_walter_bedell_smith
+recruit_character = IEF_albert_cowper_smith
+recruit_character = IEF_alvin_york
+recruit_character = IEF_frederick_edgworth_morgan
+recruit_character = IEF_lewis_h_brereton
+recruit_character = IEF_lucius_d_clay
+recruit_character = IEF_leland_hobbs
+recruit_character = IEF_roy_urquhart
+recruit_character = IEF_collapsed_authority
+
+set_convoys = 100
+
+set_variable = { normal_infantry_cap@IEF = 10 }
+
+set_politics = {
+	ruling_party = anocratic
+	elections_allowed = no
+}
+set_popularities = {
+	communism = 7
+	democratic = 10
+	conservative_democracy = 8
+	anocratic = 30
+	neutrality = 15
+	fascism = 30
+}
+
+add_ideas = {
+	civilian_economy
+	volunteer_only
+	free_trade
+	#
+	lotf_society_enforced_segregation
+	lotf_society_press_censorship
+	lotf_society_state_media
+	lotf_society_military_pensions
+	lotf_society_no_voting
+	lotf_society_domesticity
+	lotf_society_food_instability
+}
+add_ideas = {
+	IEF_ohio_ief_cooperation
+	IEF_professional_army_01
+	IEF_angry_population_01
+}
+
+
+
+### Ship Variants ###

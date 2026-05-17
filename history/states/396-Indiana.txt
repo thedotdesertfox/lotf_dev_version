@@ -1,0 +1,41 @@
+
+state={
+	id=396
+	name="STATE_396"
+	manpower = 2738501
+	
+	resources = {
+		coal = 14 #initial distribution = with infra 44.8 / 1280 total
+	}
+
+	state_category = large_city
+
+	history={
+		owner = IEF
+		add_core_of = IEF
+		
+		buildings = {
+			infrastructure = 3 #was: 6
+			industrial_complex = 4
+		}
+		victory_points = {
+			1595 5 
+		}
+		victory_points = {
+			10448 1 
+		}
+		victory_points = {
+			11635 1 
+		}
+		victory_points = {
+			4531 1 
+		}
+
+	}
+
+	provinces={
+		1595 1881 4527 4531 7551 9796 9810 10448 11621 11635 12437 
+	}
+
+	local_supplies=0.0 
+}

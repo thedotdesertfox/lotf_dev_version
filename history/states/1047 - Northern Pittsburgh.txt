@@ -1,0 +1,39 @@
+state={
+	id=1047
+	name="STATE_1047"
+	resources={
+	}
+
+	history={
+		owner = ERR
+		add_core_of = ERR
+		
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 3
+		}
+
+		victory_points = {
+			11800 15
+		}
+		victory_points = {
+			6890 10 
+		}
+		victory_points = {
+			6874 3 
+		}
+		victory_points = {
+			3687 1 
+		}
+	}
+
+	provinces={
+		882 3687 4442 6705 6707 6874 6890 9662 9808 9825 11648 11800 13154
+	}
+	manpower = 3023900
+	buildings_max_level_factor = 1.000
+	state_category = large_city
+
+	local_supplies=0.0 
+}

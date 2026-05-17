@@ -1,0 +1,38 @@
+
+state={
+	id=394
+	name="STATE_394"
+	manpower = 2339004
+	state_category = town
+	
+	resources={
+		steel=33 # was: 84
+	}
+
+	history={
+		owner = WSC
+		add_core_of = WSC
+
+		buildings = {
+			infrastructure = 3 #was: 6
+			industrial_complex = 3
+		}
+
+		victory_points = {
+			9657 5 
+		}
+		victory_points = {
+			4029 3 
+		}
+		victory_points = {
+			4166 3 
+		}
+
+	}
+
+	provinces={
+		703 926 1760 1849 3699 4029 4166 4738 4834 7776 7829 9657 9678 10341 10526 
+	}
+
+	local_supplies=0.0 
+}
