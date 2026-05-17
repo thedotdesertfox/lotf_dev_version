@@ -1,0 +1,37 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			#Refugees
+
+			every_country = {
+				limit = {
+					exists = yes
+					OR = {
+						tag = ERR
+						tag = ARA
+						tag = CMP
+						tag = MCH
+						tag = WSC
+					}
+				}
+				add_ideas = GENERIC_midwest_refugee_crisis
+			}
+			
+		}
+	}
+	on_peaceconference_ended = {
+		effect = {
+			FROM = {
+				limit = {
+					exists = yes
+				}
+				ROOT = {
+					annex_country = {
+						target = PREV
+						transfer_troops = no
+					}
+				}				
+			}
+		}
+	}
+}

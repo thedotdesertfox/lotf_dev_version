@@ -1,0 +1,15 @@
+characters = {
+	OHI_robert_beightler = {
+		name = "Robert Beightler"
+		portraits = {
+			civilian={
+				large = "gfx/leaders/OHI/OHI_robert_beightler.png"
+			}
+		}
+		country_leader = {
+			ideology = gen_anocratic
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

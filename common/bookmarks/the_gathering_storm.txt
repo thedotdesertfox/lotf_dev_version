@@ -1,0 +1,76 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "ERR"
+		default = yes
+		
+		"ERR"={
+			history = "ERR_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"CMP"={
+			history = "CMP_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"IEF"={
+			history = "IEF_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				IEF_ohio_ief_cooperation
+			}
+			focuses = {
+			}
+		}
+		"WSC"={
+			history = "WSC_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+
+		# minors from DLC ####
+		"OHI"={
+			minor = yes
+			history = "OHI_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				OHI_ohio_ief_cooperation
+			}
+			focuses = {
+			}
+		}
+		"MCH"={
+			minor = yes
+			history = "MCH_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

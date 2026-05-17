@@ -1,0 +1,55 @@
+characters = {
+	N01_mackenzie_king = {
+		name = "William Mackenzie King"
+		portraits = {
+			civilian={
+				large = "gfx/leaders/NA Countries/N01_mackenzie_king.png"
+			}
+		}
+		country_leader = {
+			ideology = gen_liberal_republicanism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	N02_plutarco_elias_calles = {
+		name = "Plutarco Elías Calles"
+		portraits = {
+			civilian={
+				large = "gfx/leaders/NA Countries/N02_plutarco_elias_calles.png"
+			}
+		}
+		country_leader = {
+			ideology = gen_anocratic
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	N03_anarchy = {
+		name = "Anarchy"
+		portraits = {
+			civilian={
+				large = "gfx/leaders/NA Countries/N03_anarchy.png"
+			}
+		}
+		country_leader = {
+			ideology = anarchic_chaos
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	
+	NFL_humphrey_walwyn = {
+		name = "Humphrey Walwyn"
+		portraits = {
+			civilian={
+				large = "gfx/leaders/NA Countries/NFL_humphrey_walwyn.png"
+			}
+		}
+		country_leader = {
+			ideology = gen_anocratic
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

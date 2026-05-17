@@ -1,0 +1,26 @@
+# Scripted cost modifiers for peace actions.
+# See documentation.info file for more detailed scripting information.
+
+peace_action_modifiers = {
+
+    ### States
+	
+	 lotf_take_state_cost = {
+        category = other
+        peace_action_type = take_states
+
+        enable = { always = yes }
+
+        cost_multiplier = 0.1
+    }
+	
+    lotf_not_take_state_cost = {
+        category = other
+        peace_action_type = { puppet liberate force_government }
+
+        enable = { always = yes }
+
+        cost_multiplier = 10.0
+    }
+
+}

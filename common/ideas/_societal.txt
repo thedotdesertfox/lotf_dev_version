@@ -1,0 +1,605 @@
+ideas = {
+	segregation = {
+		law = yes
+		use_list_view = yes
+		lotf_society_total_racial_equality = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_cost = 0.15
+				stability_factor = 0.15
+				war_support_factor = 0.05
+				conscription_factor = 0.05
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+
+		lotf_society_early_integration = {
+		
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_cost = 0.1
+				stability_factor = -0.05
+				war_support_factor = -0.04
+				conscription_factor = -0.03
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+
+		lotf_society_non_enforced = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.08
+				war_support_factor = -0.06
+				conscription_factor = -0.06
+				research_speed_factor = -0.05
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+	
+
+		lotf_society_enforced_segregation = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = -0.1
+				war_support_factor = -0.08
+				conscription_factor = -0.09
+				research_speed_factor = -0.07
+				production_factory_efficiency_gain_factor = -0.05
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+
+		lotf_society_jim_crow = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.2
+				stability_factor = -0.15
+				war_support_factor = -0.1
+				conscription_factor = -0.13
+				research_speed_factor = -0.09
+				production_factory_efficiency_gain_factor = -0.07
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+	}
+	religion = {
+		law = yes
+		use_list_view = yes
+		lotf_society_secular = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.05
+				research_speed_factor = 0.02
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+		lotf_society_strong_church = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.1
+				army_morale_factor = 0.05
+				consumer_goods_factor = 0.05
+				research_speed_factor = -0.05
+				conscription_factor = 0.05
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+		lotf_society_state_religion = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.15
+				army_morale_factor = 0.1
+				conscription_factor = 0.1
+				consumer_goods_factor = 0.1
+				research_speed_factor = -0.1
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+		lotf_society_anti_clerical = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.15
+				research_speed_factor = 0.07
+				consumer_goods_factor = -0.05
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+		lotf_society_state_atheism = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.20
+				research_speed_factor = 0.1
+				consumer_goods_factor = -0.07
+				stability_factor = -0.15
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+	}
+	voting = {
+		law = yes
+		use_list_view = yes
+		lotf_society_universal_suffrage = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+		lotf_society_restricted_voting = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_cost = -0.1
+				drift_defence_factor = 0.15
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+		lotf_society_elite_voting = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				party_popularity_stability_factor = 0.1
+				drift_defence_factor = 0.2
+				political_power_cost = -0.05
+				stability_factor = -0.05
+				war_stability_factor = -0.1
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+		lotf_society_no_voting = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_cost = -0.15
+				drift_defence_factor = 0.25
+				stability_factor = -0.1
+				war_support_factor = -0.05
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+	}
+	womens_rights = {
+		law = yes
+		use_list_view = yes
+		lotf_society_total_equality = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.15
+				research_speed_factor = 0.08
+				conscription_factor = 0.1
+				war_support_factor = -0.15
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+		lotf_society_nominal_equality = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.05
+				monthly_population = 0.1
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+		lotf_society_domesticity = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.02
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.05
+				monthly_population = 0.15
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+		lotf_society_patriachal = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.7
+				consumer_goods_factor = -0.05
+				research_speed_factor = -0.05
+				monthly_population = 0.2
+				war_support_factor = 0.15
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+	}
+	media = {
+		law = yes
+		use_list_view = yes
+		lotf_society_free_press = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_cost = 0.05
+				stability_factor = 0.05
+				drift_defence_factor = -0.1
+				compliance_growth = 0.05
+				resistance_growth = -0.02
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+		lotf_society_press_censorship = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.05
+				resistance_damage_to_garrison = -0.15
+				resistance_growth = -0.08
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+		lotf_society_state_media = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				war_stability_factor = 0.15
+				war_support_factor = 0.1
+				conscription_factor = 0.05
+				army_morale_factor = 0.05
+				resistance_growth = 0.05
+				compliance_growth = -0.05
+				resistance_damage_to_garrison = 0.05
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+	}
+	welfare = {
+		law = yes
+		use_list_view = yes
+		lotf_society_universal_welfare = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 0.1
+				consumer_goods_factor = 0.15
+				stability_factor = 0.08
+				monthly_population = 0.2
+				production_speed_buildings_factor = 0.15
+				global_building_slots_factor = 0.15
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+		lotf_society_basic_welfare = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_factor = 0.05
+				monthly_population = 0.15
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.1
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+		lotf_society_military_pensions = {
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.03
+				conscription_factor = 0.07
+				army_morale_factor = 0.1
+				experience_gain_army = 0.08
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+		lotf_society_philanthropy = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.07
+				industrial_capacity_factory = 0.07
+				global_building_slots_factor = 0.03
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+		lotf_society_no_welfare = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = -0.05
+				monthly_population = -0.1
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+	}
+	food = {
+		law = yes
+		use_list_view = yes
+		lotf_society_famine = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+		lotf_society_food_crisis = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+		lotf_society_food_instability = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+		lotf_society_food_stability = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+		lotf_society_food_surplus = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+	}
+}

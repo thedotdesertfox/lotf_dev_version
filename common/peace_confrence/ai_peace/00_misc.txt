@@ -1,0 +1,19 @@
+# Scripted AI desire for peace actions.
+# See documentation.info file for more detailed scripting information.
+
+peace_ai_desires = {
+	only_take_states = {
+		peace_action_type = { liberate puppet force_government }
+		enable = {
+			always = yes
+		}
+		ai_desire = -50000
+	}
+	desire_states = {
+		peace_action_type = take_states
+		enable = {
+			always = yes
+		}
+		ai_desire = 100
+	}
+}

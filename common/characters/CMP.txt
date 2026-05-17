@@ -1,0 +1,15 @@
+characters = {
+	CMP_norman_thomas = {
+		name = "Norman Thomas"
+		portraits = {
+			civilian={
+				large = "gfx/leaders/CMP/CMP_norman_thomas.png"
+			}
+		}
+		country_leader = {
+			ideology = gen_revolutionary_socialism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

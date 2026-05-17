@@ -1,0 +1,74 @@
+characters = {
+	STL_lucky_luciano = {
+		name = "Lucky Luciano"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/STL/STL_lucky_luciano.png"
+			}
+		}
+		country_leader = {
+			ideology = gen_despotism
+			desc = ""
+			traits = {
+			}
+		}
+		field_marshal = {
+			skill = 2
+			traits = {
+				politically_connected
+				trickster
+			}
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	STL_bugsy_siegel = {
+		name = "Bugsy Siegel"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/STL/STL_bugsy_siegel.png"
+			}
+			army = {
+				large = "gfx/leaders/STL/STL_bugsy_siegel.png"
+				small = "GFX_idea_europe_generic_land_19"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = {
+				politically_connected
+				substance_abuser
+				trait_reckless
+			}
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	STL_meyer_lansky = {
+		name = "Meyer Lansky"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/STL/STL_meyer_lansky.png"
+			}
+			army = {
+				large = "gfx/leaders/STL/STL_meyer_lansky.png"
+				small = "GFX_idea_europe_generic_5"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = {
+				politically_connected
+				organizer
+			}
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}

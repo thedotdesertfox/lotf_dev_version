@@ -1,0 +1,298 @@
+ideas = {
+	country = {
+		IEF_ohio_ief_cooperation = {
+			picture = ohio_ief_cooperation
+			modifier = {
+				experience_gain_army = 0.01
+				stability_factor = 0.05
+			}
+		}
+		IEF_riverine_warefare_01 = {
+			picture = generic_coastal_navy
+			modifier = {
+				terrain_penalty_reduction = 0.1
+				modifier_army_sub_unit_irregular_infantry_attack_factor = 0.15
+				modifier_army_sub_unit_irregular_infantry_defence_factor = 0.1
+				modifier_army_sub_unit_irregular_infantry_max_org_factor = 0.05
+				modifier_army_sub_unit_militia_attack_factor = 0.15
+				modifier_army_sub_unit_militia_defence_factor = 0.1
+				modifier_army_sub_unit_militia_max_org_factor = 0.05
+			}
+		}
+		IEF_riverine_warefare_02 = {
+			picture = generic_coastal_navy
+			modifier = {
+				terrain_penalty_reduction = 0.25
+				breakthrough_factor = 0.05
+				experience_gain_army_unit_factor = 0.1
+			}
+		}
+		IEF_lack_of_army_confidence = {
+			picture = generic_army_problems
+			modifier = {
+				army_attack_factor = -0.25
+				army_defence_factor = -0.1
+				breakthrough_factor = -0.1
+				army_morale_factor = -0.1
+			}
+		}
+		IEF_international_army = {
+			picture = eng_imperial_conscription
+			modifier = {
+				army_defence_factor = 0.1
+				army_org_factor = -0.10
+				army_attack_factor = 0.1
+				army_morale_factor = -0.2
+				planning_speed = -0.10
+				weekly_manpower = 250
+			}
+		}
+		IEF_unrest = {
+			picture = generic_purge
+			modifier = {
+				fascism_drift = 0.05
+				political_power_factor = -0.2
+				party_popularity_stability_factor = -0.2
+			}
+		}
+		IEF_professional_army_01 = {
+			picture = eng_imperial_conscription
+			modifier = {
+				army_defence_factor = 0.1
+				army_org_factor = -0.10
+				army_attack_factor = 0.1
+				army_morale_factor = -0.2
+				planning_speed = -0.10
+				weekly_manpower = 250
+			}
+		}
+		IEF_professional_army_02 = {
+			picture = eng_imperial_conscription
+			modifier = {
+				army_defence_factor = 0.1
+				army_org_factor = -0.05
+				army_attack_factor = 0.1
+				army_morale_factor = -0.1
+				weekly_manpower = 100
+			}
+		}
+		IEF_professional_army_03 = {
+			picture = eng_imperial_conscription
+			modifier = {
+				army_defence_factor = 0.2
+				army_org_factor = -0.05
+				army_attack_factor = 0.15
+				army_morale_factor = -0.1
+				max_planning = 0.1
+				planning_speed = 0.1
+				weekly_manpower = 100
+			}
+		}
+		IEF_american_army = {
+			picture = generic_reserve_divisions
+			modifier = {
+				army_defence_factor = 0.05
+				army_org_factor = 0.15
+				army_attack_factor = 0.05
+				army_morale_factor = 0.15
+			}
+		}	
+		IEF_terror_bombing = {
+			picture = strategic_bombing_focus
+			modifier = {
+				consumer_goods_factor = 0.15
+				supply_consumption_factor = 0.10
+				industry_repair_factor  = -0.15
+				army_speed_factor = -0.1
+			}
+		}	
+		IEF_slashed = {
+			picture = chi_incompetent_officers
+			modifier = {
+				consumer_goods_factor = 0.2
+				army_org_factor = -0.1
+				industrial_capacity_factory = -0.15
+				production_speed_buildings_factor = -0.15
+				political_power_cost = 0.2
+				neutrality_drift = -0.15
+			}
+		}
+		IEF_slashed1 = {
+			picture = chi_incompetent_officers
+			modifier = {
+				consumer_goods_factor = 0.1
+				army_org_factor = -0.05
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.05
+				political_power_cost = 0.05
+			}
+		}
+		IEF_kill_ara = {
+			picture = SPR_anti_fascist_crusade
+			targeted_modifier = {
+				tag = ARA
+				defense_bonus_against = 0.15
+			}
+		}
+		IEF_angry_population_01 = {
+			picture = generic_purge
+			modifier = {
+				political_power_cost = 1
+				war_support_factor = -0.3
+			}
+		}
+		IEF_angry_population_02 = {
+			picture = generic_purge
+			modifier = {
+				political_power_cost = 0.8
+				war_support_factor = -0.25
+			}
+		}
+		IEF_angry_population_03 = {
+			picture = generic_purge
+			modifier = {
+				political_power_cost = 0.7
+				war_support_factor = -0.15
+			}
+		}
+		IEF_angry_population_04 = {
+			picture = generic_purge
+			modifier = {
+				political_power_cost = 0.5
+				war_support_factor = -0.1
+			}
+		}
+		IEF_angry_population_05 = {
+			picture = generic_purge
+			modifier = {
+				political_power_cost = 0.4
+			}
+		}
+		IEF_supply_lines_01 = {
+			picture = saf_ossewabrandwag_fascism
+			modifier = {
+				supply_consumption_factor = 0.15
+				army_org_factor = -0.15
+				land_reinforce_rate = -0.02
+			}
+		}
+		IEF_supply_lines_02 = {
+			picture = saf_ossewabrandwag_fascism
+			modifier = {
+				supply_consumption_factor = 0.1
+				army_org_factor = -0.1
+			}
+		}		
+		IEF_low_morale_01 = {
+			picture = prc_low_popular_support
+			targeted_modifier = {
+				tag = ARA
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.05
+			}
+		}
+		IEF_low_morale_02 = {
+			picture = prc_low_popular_support
+			targeted_modifier = {
+				tag = ARA
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+			}
+		}
+		IEF_low_morale_03 = {
+			picture = prc_low_popular_support
+			targeted_modifier = {
+				tag = ARA
+				attack_bonus_against = -0.15
+				defense_bonus_against = -0.15
+			}
+		}
+		IEF_low_morale_04 = {
+			picture = prc_low_popular_support
+			targeted_modifier = {
+				tag = ARA
+				attack_bonus_against = -0.20
+				defense_bonus_against = -0.20
+			}
+		}
+		IEF_low_morale_05 = {
+			picture = prc_low_popular_support
+			targeted_modifier = {
+				tag = ARA
+				attack_bonus_against = -0.25
+				defense_bonus_against = -0.25
+			}
+		}		
+		IEF_low_morale_06 = {
+			picture = prc_low_popular_support
+			targeted_modifier = {
+				tag = ARA
+				attack_bonus_against = -0.30
+				defense_bonus_against = -0.30
+			}
+		}
+		IEF_international_help = {
+			picture = hol_caved_to_the_british
+			modifier = {
+				stability_weekly = 0.005
+				neutrality_drift = 0.05
+				anocratic_drift = 0.1
+			}
+		}
+		IEF_self_help = {
+			picture = generic_intel_bonus
+			modifier = {
+				political_power_factor = 0.3
+				anocratic_drift = 0.2
+			}
+		}	
+		IEF_league_loan = {
+			picture = generic_foreign_capital
+			modifier = {
+				political_power_factor = -0.1
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.2
+			}
+		}
+		IEF_open_the_border = {
+			picture = generic_victors_of_ww1
+			modifier = {
+				stability_factor = -0.05
+				monthly_population = 0.5
+				war_support_factor = 0.05
+			}
+		}
+		IEF_war_plan_red_ideas = {
+			picture = ger_bulwark_against_bolshevism
+			targeted_modifier = {
+				tag = CMP
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.15
+			}
+		}	
+		IEF_war_plan_blue_ideas = {
+			picture = YUG_federal_defense_council
+			targeted_modifier = {
+				tag = ERR
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.15
+			}
+		}	
+		IEF_war_plan_purple_ideas = {
+			picture = CZE_planning_bonus
+			targeted_modifier = {
+				tag = WSC
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.15
+			}
+		}
+		IEF_volunteers = {
+			picture = hol_expand_the_colonial_army
+			modifier = {
+				send_volunteer_size = 1
+				send_volunteer_divisions_required = -1
+				#send_volunteers_tension = -1
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+characters = {
+	ARA_gerald_lk_smith = {
+		name = "Gerald L.K. Smith"
+		portraits = {
+			civilian={
+				large = "gfx/leaders/ARA/ARA_gerald_lk_smith.png"
+			}
+		}
+		country_leader = {
+			ideology = gen_fascism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

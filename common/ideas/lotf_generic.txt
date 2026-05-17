@@ -1,0 +1,12 @@
+ideas = {
+	country = {
+		GENERIC_midwest_refugee_crisis = {
+			picture = refugee_evacuation
+			modifier = {
+				conscription_factor = -0.35
+				political_power_factor = -0.25
+				stability_factor = -0.15
+			}
+		}
+	}
+}

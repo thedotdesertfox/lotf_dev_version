@@ -1,0 +1,12 @@
+IEF_debug_crap = {
+	first_crap_decision = {
+		icon = GFX_decision_generic_military
+		visible = {
+		}
+		available = {
+		}
+		complete_effect = {
+			template_cap_increase_one = yes
+		}
+	}
+}

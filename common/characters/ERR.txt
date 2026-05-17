@@ -1,0 +1,15 @@
+characters = {
+	ERR_douglas_macarthur = {
+		name = "Douglas MacArthur"
+		portraits = {
+			civilian={
+				large = "gfx/leaders/ERR/ERR_douglas_macarthur.png"
+			}
+		}
+		country_leader = {
+			ideology = gen_despotism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

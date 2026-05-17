@@ -1,0 +1,28 @@
+characters = {
+	NMD_lon_administration = {
+		name = "LoN Administration"
+		portraits = {
+			civilian={
+				large = "gfx/leaders/Mandates/LON_lon_administration.png"
+			}
+		}
+		country_leader = {
+			ideology = gen_anocratic
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	SMD_lon_administration = {
+		name = "LoN Administration"
+		portraits = {
+			civilian={
+				large = "gfx/leaders/Mandates/LON_lon_administration.png"
+			}
+		}
+		country_leader = {
+			ideology = gen_anocratic
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

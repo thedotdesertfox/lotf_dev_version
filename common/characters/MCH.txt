@@ -1,0 +1,15 @@
+characters = {
+	MCH_al_smith = {
+		name = "Al Smith"
+		portraits = {
+			civilian={
+				large = "gfx/leaders/MCH/MCH_al_smith.png"
+			}
+		}
+		country_leader = {
+			ideology = gen_liberal_republicanism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

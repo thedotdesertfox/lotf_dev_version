@@ -1,0 +1,97 @@
+#	Example:
+#
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+
+###############################
+##### Capitulation Events #####
+###############################
+
+pismark_capitulation_event_scripted_effect = {
+	if = {
+		limit = {
+			ROOT = MIN
+		}
+		country_event = bismark_capitualtion.1
+		set_global_flag = bismark_dead
+	}
+	else_if = {
+		limit = {
+			ROOT = MIL
+		}
+		country_event = bismark_capitualtion.2
+		set_global_flag = bismark_dead
+	}
+	else_if = {
+		limit = {
+			ROOT = ABS
+		}
+		country_event = bismark_capitualtion.72
+		set_global_flag = bismark_dead
+	}
+}
+
+#complete_effect = {
+#if =
+#	limit = {
+#		NOT = {
+#			has_global_flag = bismark_dead
+#		}
+#		pismark_capitulation_event_scripted_effect = yes
+#	}
+#}
+
+template_cap_increase_one = {
+	add_to_variable = {
+		var = normal_infantry_cap@ROOT
+		value = 1
+	}
+	set_division_template_cap = { 
+		division_template = "Restructured Infantry Division" 
+		division_cap = normal_infantry_cap@ROOT
+	}
+}
+template_cap_increase_two = {
+	add_to_variable = {
+		var = normal_infantry_cap@ROOT
+		value = 2
+	}
+	set_division_template_cap = { 
+		division_template = "Restructured Infantry Division" 
+		division_cap = normal_infantry_cap@ROOT
+	}
+}
+template_cap_increase_three = {
+	add_to_variable = {
+		var = normal_infantry_cap@ROOT
+		value = 3
+	}
+	set_division_template_cap = { 
+		division_template = "Restructured Infantry Division" 
+		division_cap = normal_infantry_cap@ROOT
+	}
+}
+template_cap_increase_five = {
+	add_to_variable = {
+		var = normal_infantry_cap@ROOT
+		value = 5
+	}
+	set_division_template_cap = { 
+		division_template = "Restructured Infantry Division" 
+		division_cap = normal_infantry_cap@ROOT
+	}
+}

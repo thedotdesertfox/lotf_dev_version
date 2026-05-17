@@ -1,0 +1,15 @@
+characters = {
+	WSC_mark_clark = {
+		name = "Mark Clark"
+		portraits = {
+			civilian={
+				large = "gfx/leaders/WSC/WSC_mark_clark.png"
+			}
+		}
+		country_leader = {
+			ideology = gen_despotism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

@@ -1,0 +1,396 @@
+focus_tree = {
+    id = ief_civil_war
+	continuous_focus_position = { x = 20 y = 1000 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 600
+			tag = CMP
+		}
+	}
+	#For the Good of Our Nation
+	focus = {
+		id = IEF_for_the_good_of_our_nation
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 11
+		y = 0
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			country_event = {
+
+			days = 1 
+
+			id = ief.5
+			}
+
+		}
+	}
+
+	focus = {
+		id = IEF_anti_fascism 
+		icon = GFX_ERR_disgr-131377
+		x = 11
+		y = 1
+		cost = 2
+		prerequisite = { focus = IEF_for_the_good_of_our_nation }
+		completion_reward = {
+			add_war_support = 0.05
+			IEF_fix_anger = yes
+		}
+	}
+	
+	#Publicize Legionary Atrocities
+	focus = {
+		id = IEF_publicize_legionary_atrocities
+		icon = GFX_focus_SWE_radiotjanst
+		x = 11
+		y = 2
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = IEF_anti_fascism  }
+		completion_reward = {
+			ARA = {
+				add_stability = -0.1
+				add_war_support = -0.05
+				add_manpower = -900
+			}
+			add_war_support = 0.1
+			add_manpower = 500
+		}
+	}
+
+		#Defend the Skies
+		focus = {
+		id = IEF_defend_the_skies
+		icon = GFX_focus_generic_air_defense
+		x = 11
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = IEF_publicize_legionary_atrocities  }
+		completion_reward = {
+			custom_effect_tooltip = IEF_air_support
+			395 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_dlc = "By Blood Alone"
+					}
+					load_oob = IEF_air_bba
+				}
+			}			
+		}
+	}
+
+	focus = {
+		id = IEF_RAF_terror_bombing
+		icon = GFX_goal_generic_air_bomber
+		cost = 2
+		x = 12
+		y = 4
+		prerequisite = {
+			focus = IEF_defend_the_skies
+		}
+		prerequisite = {
+			focus = IEF_reinforcements_from_the_south
+		}
+		completion_reward = { 
+			ARA = {
+				add_timed_idea = {
+					idea = IEF_terror_bombing
+					days = 60
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = IEF_towards_people 
+		icon = GFX_ERR_lift_martial-131627
+		x = 8
+		y = 1
+		cost = 2
+		prerequisite = { focus = IEF_for_the_good_of_our_nation }
+		completion_reward = {
+			add_stability = 0.05
+			IEF_fix_anger = yes
+		}
+	}
+	
+	focus = {
+		id = IEF_propaganda 
+		icon = GFX_goal_generic_propaganda
+		x = 7
+		y = 2
+		cost = 2
+		prerequisite = {
+			focus = IEF_towards_people
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_manpower = 1500
+		}
+	}
+	
+	focus = {
+		id = IEF_democracy
+		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
+		x = 8
+		y = 3
+		cost = 2
+		prerequisite = {
+			focus = IEF_overrun_insurgents
+			focus = IEF_propaganda
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.03
+			add_war_support = 0.03
+			add_popularity = {
+				ideology = anocracy
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = IEF_good_fight
+		icon = GFX_focus_texanpromisequickvictory_Icon
+		x = 8
+		y = 4
+		cost = 2
+		prerequisite = {
+			focus = IEF_democracy
+		}
+		completion_reward = {
+			add_manpower = 3000
+			IEF_fix_anger = yes
+		}
+	}
+
+	#Overrun Insurgents
+	focus = {
+		id = IEF_overrun_insurgents
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		x = 9
+		y = 2
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = IEF_towards_people  }
+		prerequisite = { focus = IEF_anti_fascism }
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 30
+				has_idea = IEF_supply_lines
+			}
+		}
+		completion_reward = {
+			add_manpower = -200
+			add_stability = 0.02
+			custom_effect_tooltip = IEF_supply_fix
+			IF = {
+				limit = {
+					has_idea = IEF_supply_lines
+				}
+				remove_ideas = IEF_supply_lines
+				add_timed_idea = {
+					idea = IEF_supply_lines
+					days = 60
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = IEF_towards_britain 
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 14
+		y = 1
+		cost = 2
+		ai_will_do = {
+			base = 50
+		}
+		prerequisite = { focus = IEF_for_the_good_of_our_nation }
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = IEF_french_guns 
+		icon = GFX_focus_CHL_a_french_alliance
+		x = 15
+		y = 2
+		cost = 2
+		prerequisite = {
+			focus = IEF_towards_britain
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				producer = FRA
+				amount = 800
+			}
+		}
+	}
+
+	focus = {
+		id = IEF_italian_guns 
+		icon = GFX_goal_generic_army_artillery2
+		x = 15
+		y = 3
+		cost = 2
+		prerequisite = {
+			focus = IEF_french_guns
+		}
+		completion_reward = {
+			add_political_power = -30
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				producer = ITA
+				amount = 100
+			}
+		}
+	}
+
+	focus = {
+		id = IEF_escalation
+		icon = GFX_focus_eng_global_defense
+		x = 14
+		y = 4
+		cost = 2
+		prerequisite = {
+			focus = IEF_italian_guns
+		}
+		prerequisite = {
+			focus = IEF_industry_britain
+		}
+		completion_reward = {
+			add_war_support = -0.1
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.1
+			}
+			custom_effect_tooltip = IEF_lon_expedition
+			MIA = {
+				add_timed_idea = {
+					idea = IEF_volunteers
+					days = 60
+				}
+			}
+			CSA = {
+				add_timed_idea = {
+					idea = IEF_volunteers
+					days = 60
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = IEF_industry_britain
+		icon = GFX_focus_generic_american_investments 
+		x = 13
+		y = 3
+		cost = 4
+		prerequisite = {
+			focus = IEF_reinforcements_from_the_south
+		}
+		completion_reward = {
+			53 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = IEF_reinforcements_from_the_south
+		icon = GFX_focus_focus_fra_ratify_stresa
+		x = 13
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		available = {
+			is_neighbor_of = CSA
+		}
+		ai_will_do = {
+			base = 50
+		}
+		prerequisite = { focus = IEF_towards_britain  }
+		completion_reward = {
+			add_war_support = -0.05
+			add_manpower = 2000
+			custom_effect_tooltip = IEF_briish
+			hidden_effect = {
+				191 = {
+					create_unit = {
+						division = "name = \"British Peacekeeping Force\" division_template = \"International Forces\" start_experience_factor = 0.7" 
+						owner = IEF
+					}
+					create_unit = {
+						division = "name = \"Kentucky National Guard\" division_template = \"Local Garrisons\" start_experience_factor = 0.4 start_equipment_factor = 0.7" 
+						owner = IEF
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = IEF_final_offensive
+		icon = GFX_focus_texansecuringlubbock_Icon
+		x = 11
+		y = 5
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = IEF_defend_the_skies
+		} 
+		prerequisite = {
+			focus = IEF_good_fight
+		}
+		prerequisite = {
+			focus = IEF_escalation
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = IEF_kill_ara
+				days = 60
+			}
+		}
+	}
+
+
+}

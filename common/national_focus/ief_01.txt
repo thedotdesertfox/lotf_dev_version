@@ -1,0 +1,328 @@
+focus_tree = {
+	id = ief_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 50
+			tag = IEF
+		}
+	}
+	
+	focus = {
+		id = IEF_the_long_road
+		icon = GFX_focus_prc_infiltration
+		cost = 1
+		x = 13
+		y = 0
+		completion_reward = {
+			country_event = ief.1
+		}
+	}
+	
+	focus = {
+		id = IEF_request_hoovers_help
+		icon = GFX_goal_generic_consumer_goods
+		relative_position_id = IEF_the_long_road
+		x = -4
+		y = 1
+		cost = 5
+		prerequisite = { focus = IEF_the_long_road }
+		completion_reward = {
+			hidden_effect = {
+				set_variable = { iefh_political_power_factor = -0.1 }
+				set_variable = { iefh_stability_factor = 0.01 }
+				set_variable = { iefh_consumer_goods_factor = 0.1 }
+				set_variable = { iefh_conscription_factor = 0.01 }
+				add_dynamic_modifier = {
+					modifier = ief_hoover_relief
+				}
+			}
+			country_event = ief.4
+			custom_effect_tooltip = IEF_request_hoovers_help_custom_tt
+		}
+	}
+	
+	focus = {
+		id = IEF_southern_foodstuff
+		icon = GFX_focus_generic_farmland
+		relative_position_id = IEF_request_hoovers_help
+		x = -2
+		y = 1
+		cost = 6
+		prerequisite = { focus = IEF_request_hoovers_help }
+		completion_reward = {
+			hidden_effect = {
+				add_to_variable = { iefh_stability_factor = 0.1 }
+				add_to_variable = { iefh_conscription_factor = 0.1 }
+				add_to_variable = { iefh_consumer_goods_factor = 0.1 }
+			}
+			custom_effect_tooltip = IEF_southern_foodstuff_custom_tt
+		}
+	}
+	
+	focus = {
+		id = IEF_hoover_camps
+		icon = GFX_SOV_respect_baltic_self_determination_ccp_2d_sov_compatibility
+		relative_position_id = IEF_request_hoovers_help
+		x = 0
+		y = 1
+		cost = 4
+		prerequisite = { focus = IEF_request_hoovers_help }
+		completion_reward = {
+			hidden_effect = {
+				add_to_variable = { iefh_stability_factor = 0.05 }
+				add_to_variable = { iefh_conscription_factor = 0.05 }
+				add_to_variable = { iefh_political_power_factor = -0.1 }
+			}
+			custom_effect_tooltip = IEF_hoover_camps_custom_tt
+		}
+	}
+	
+	focus = {
+		id = IEF_strict_rationing
+		icon = GFX_focus_generic_price_controls
+		relative_position_id = IEF_request_hoovers_help
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = { focus = IEF_request_hoovers_help }
+		completion_reward = {
+			hidden_effect = {
+				add_to_variable = { iefh_stability_factor = 0.05 }
+				add_to_variable = { iefh_consumer_goods_factor = -0.15 }
+				add_to_variable = { iefh_political_power_factor = -0.1 }
+			}
+			custom_effect_tooltip = IEF_strict_rationing_custom_tt
+		}
+	}
+	
+	focus = {
+		id = IEF_aras_scars
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		relative_position_id = IEF_the_long_road
+		x = 4
+		y = 1
+		cost = 3
+		prerequisite = { focus = IEF_the_long_road }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = IEF_angry_population_01
+				add_idea = IEF_angry_population_02
+			}
+		}
+	}
+	focus = {
+		id = IEF_expand_urquharts_powers
+		icon = GFX_focus_chi_british_cooperation
+		relative_position_id = IEF_aras_scars
+		x = -2
+		y = 1
+		cost = 3
+		prerequisite = { focus = IEF_aras_scars }
+		completion_reward = {
+			IEF_roy_urquhart = {
+				promote_leader = yes
+			}
+			add_command_power = 25
+		}
+	}
+	focus = {
+		id = IEF_distribute_vetran_formations
+		icon = GFX_SOV_strengthen_the_mobilization_plan_ccp_2d_sov_compatibility
+		relative_position_id = IEF_expand_urquharts_powers
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = { focus = IEF_expand_urquharts_powers }
+		completion_reward = {
+			hidden_effect = {
+				template_cap_increase_three = yes
+			}
+			army_experience = 25
+			custom_effect_tooltip = template_cap_increase_three_tt
+		}
+	}
+	focus = {
+		id = IEF_import_vickers_tank
+		icon = GFX_goal_generic_army_tanks
+		relative_position_id = IEF_expand_urquharts_powers
+		x = 1
+		y = 1
+		cost = 6
+		prerequisite = { focus = IEF_expand_urquharts_powers }
+		completion_reward = {
+			if = {
+				limit = {
+					has_tech = basic_light_tank
+				}
+				set_technology = {
+					improved_light_tank = 1
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_equipment_2
+					amount = 250
+					producer = ENG
+				}
+				load_oob = "IEF_british_02"
+			}
+			else = {
+				set_technology = {
+					basic_light_tank = 1
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_equipment_1
+					amount = 250
+					producer = ENG
+				}
+				load_oob = "IEF_british_01"
+			}
+		}
+	}
+	focus = {
+		id = IEF_increase_enlisted_family_rations
+		icon = GFX_focus_generic_population_growth
+		relative_position_id = IEF_aras_scars
+		x = 1
+		y = 1
+		cost = 4
+		prerequisite = { focus = IEF_aras_scars }
+		available = { focus = IEF_strict_rationing }
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = IEF_expand_non_combat_roles
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = IEF_increase_enlisted_family_rations
+		x = 0
+		y = 1
+		cost = 3
+		prerequisite = { focus = IEF_increase_enlisted_family_rations }
+		completion_reward = {
+			add_manpower = 8000
+			add_tech_bonus = {
+				bonus = 0.4
+				uses = 3
+				category = support_tech
+			}
+		}
+	}	
+	
+	focus = {
+		id = IEF_punishing_st_louis
+		icon = GFX_focus_generic_little_entente
+		x = 25
+		y = 0
+		cost = 1
+		available = { always = NOT }
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = IEF_riverine_troops
+		icon = GFX_focus_generic_naval_invasion
+		relative_position_id = IEF_punishing_st_louis
+		x = -1
+		y = 1
+		cost = 3
+		prerequisite = { focus = IEF_punishing_st_louis }
+		completion_reward = {
+			country_event = ief.6
+		}
+	}
+	focus = {
+		id = IEF_anti_vehicle_tactics
+		icon = GFX_focus_generic_anti_tank_guns
+		relative_position_id = IEF_punishing_st_louis
+		x = 1
+		y = 1
+		cost = 3
+		prerequisite = { focus = IEF_punishing_st_louis }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 1
+				category = artillery
+			}
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+	focus = {
+		id = IEF_proper_learning_experience
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = IEF_punishing_st_louis
+		x = -1
+		y = 2
+		cost = 4
+		prerequisite = { focus = IEF_riverine_troops focus = IEF_anti_vehicle_tactics }
+		mutually_exclusive = { focus = IEF_an_embarassing_failure }
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			add_mastery = {
+				amount = 25
+				# FILTERS:
+				folder = land
+			}
+			every_army_leader = {
+				gain_xp = 750
+			}
+		}
+	}
+	focus = {
+		id = IEF_an_embarassing_failure
+		icon = GFX_SOV_liberate_ryutin_ccp_2d_sov_compatibility
+		relative_position_id = IEF_punishing_st_louis
+		x = 1
+		y = 2
+		cost = 2
+		prerequisite = { focus = IEF_riverine_troops focus = IEF_anti_vehicle_tactics }
+		mutually_exclusive = { focus = IEF_proper_learning_experience }
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.4
+				uses = 1
+				category = land_doctrine
+			}
+			every_army_leader = {
+				gain_xp = 200
+			}
+			add_timed_idea = {
+				idea = IEF_lack_of_army_confidence
+				days = 100
+			}
+		}
+	}
+	focus = {
+		id = IEF_rooting_out_army_corruption
+		icon = GFX_focus_ARG_crackdown_on_corruption
+		relative_position_id = IEF_punishing_st_louis
+		x = 0
+		y = 3
+		cost = 1
+		prerequisite = { focus = IEF_proper_learning_experience focus = IEF_an_embarassing_failure }
+		completion_reward = {
+			if = {
+				limit = {
+					owns_state = 1051
+				}
+				1051 = {
+					remove_core_of = STL
+					add_core_of = IEF
+				}
+			}
+		}
+	}
+}
