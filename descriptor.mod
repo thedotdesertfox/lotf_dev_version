@@ -7,5 +7,6 @@ tags={
 	"National Focuses"
 	"Ideologies"
 }
-name="LoTF 2026 V2"
+name="loTFRD_Dev_version"
 supported_version="1.18.1.0"
+remote_file_id="3725124207"
