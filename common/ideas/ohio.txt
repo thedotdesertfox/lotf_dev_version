@@ -1,0 +1,12 @@
+ideas = {
+	country = {
+		OHI_ohio_ief_cooperation = {
+			picture = ohio_ief_cooperation
+			modifier = {
+				experience_gain_army = 0.02
+				stability_factor = 0.1
+				weekly_manpower = 50
+			}
+		}
+	}
+}

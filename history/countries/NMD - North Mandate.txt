@@ -60,6 +60,7 @@ add_ideas = {
 	free_trade
 }
 add_ideas = {
+	LON_mandate_government
 }
 
 

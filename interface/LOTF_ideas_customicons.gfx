@@ -6,6 +6,26 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/generic/GEN_refugees.png"	
 	}
 	
+	###MEX###
+	SpriteType = {
+		name = "GFX_idea_mexico_veracruz_expedition"
+		texturefile = "gfx/interface/ideas/MEX/veracruz_expedition.png"	
+	}
+	
+	###MANDATES###
+	SpriteType = {
+		name = "GFX_idea_southern_ulcer"
+		texturefile = "gfx/interface/ideas/mandates/southern_ulcer.png"	
+	}
+	SpriteType = {
+		name = "GFX_idea_mandate_government"
+		texturefile = "gfx/interface/ideas/mandates/mandate_government.png"	
+	}
+	SpriteType = {
+		name = "GFX_idea_mandate_government_02"
+		texturefile = "gfx/interface/ideas/mandates/mandate_government_02.png"	
+	}
+	
 	###IEF###
 	SpriteType = {
 		name = "GFX_idea_ohio_ief_cooperation"

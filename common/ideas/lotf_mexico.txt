@@ -1,0 +1,7 @@
+ideas = {
+	country = {
+		MEX_veracruz_expedition = {
+			picture = mexico_veracruz_expedition
+		}
+	}
+}

@@ -60,6 +60,7 @@ add_ideas = {
 	free_trade
 }
 add_ideas = {
+	MEX_veracruz_expedition
 }
 
 

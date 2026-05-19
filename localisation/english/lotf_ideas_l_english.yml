@@ -52,3 +52,11 @@
  ######
  GENERIC_midwest_refugee_crisis:0 "Refugee Crisis"
  GENERIC_midwest_refugee_crisis_desc:0 ""
+ #
+ MEX_veracruz_expedition:0 "Die Veracruz-Expedition"
+ MEX_veracruz_expedition_desc:0 ""
+ #
+ LON_mandate_government:0 "Mandate Government"
+ LON_mandate_government_desc:0 ""
+ LON_southern_ulcer:0 "Southern Ulcer"
+ LON_southern_ulcer_desc:0 ""

@@ -1,0 +1,14 @@
+ideas = {
+	country = {
+		LON_mandate_government = {
+			picture = mandate_government
+			modifier = {
+			}
+		}
+		LON_southern_ulcer = {
+			picture = southern_ulcer
+			modifier = {
+			}
+		}
+	}
+}
