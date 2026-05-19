@@ -11,5 +11,148 @@ characters = {
 			expire = "1965.1.1.1"
 			id = -1
 		}
+		field_marshal = {
+			skill = 4
+			traits = {
+				media_personality
+				war_hero
+				politically_connected
+				brilliant_strategist
+				offensive_doctrine
+			}
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor={
+			cost = 200
+			
+			slot = high_command
+			idea_token = douglas_macarthur
+			ledger = army				
+				traits = {
+					army_chief_morale_2
+				}
+		}
+	}
+	ERR_jonathan_wainwright = {
+		name = "Jonathan Wainwright"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ERR/ERR_jonathan_wainwright.png"
+				small = "GFX_idea_USA_jonathan_wainwright"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = {
+				cavalry_officer
+				trait_reckless
+			}
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	ERR_robert_eichelberger = {
+		name = "Robert L. Eichelberger"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ERR/ERR_robert_eichelberger.png"
+				small = "GFX_idea_USA_lloyd_frendendall"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = {
+				harsh_leader
+				commando
+			}
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	ERR_richard_sutherland = {
+		name = "Richard K. Sutherland"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ERR/ERR_richard_sutherland.png"
+				small = "GFX_idea_USA_generic_3"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = {
+				politically_connected
+				infantry_officer
+			}
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	ERR_edwin_harding = {
+		name = "Edwin F. Harding"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ERR/ERR_edwin_harding.png"
+			}
+			army = {
+				small = "GFX_idea_USA_generic_land_2"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = {
+				trait_engineer
+				commando
+				trait_cautious
+			}
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	#ERR_joseph_may
+	
+	ERR_george_gunert = {
+		name = "George Gunert"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ERR/ERR_george_gunert.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = {
+			}
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	ERR_lloyd_fredendall = {
+		name = "Lloyd Fredendall"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ERR/ERR_lloyd_fredendall.png"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = {
+			}
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
 	}
 }

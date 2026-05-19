@@ -39,6 +39,12 @@ if = {
 }
 
 recruit_character = ERR_douglas_macarthur
+recruit_character = ERR_edwin_harding
+recruit_character = ERR_george_gunert
+recruit_character = ERR_jonathan_wainwright
+recruit_character = ERR_lloyd_fredendall
+recruit_character = ERR_richard_sutherland
+recruit_character = ERR_robert_eichelberger
 
 set_convoys = 100
 
