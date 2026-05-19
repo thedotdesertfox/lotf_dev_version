@@ -1274,6 +1274,28 @@ WSC = {
 }
 
 
+
+IOW = {
+	color = rgb { 165 165 65 }
+	color_ui = rgb { 165 165 65 }
+}
+
+MIN = {
+	color = rgb { 70 60 155 }
+	color_ui = rgb { 70 60 155 }
+}
+
+BIS = {
+	color = rgb { 77 132 99 }
+	color_ui = rgb { 77 132 99 }
+}
+
+DUL = {
+	color = rgb { 165 43 80 }
+	color_ui = rgb { 165 43 80 }
+}
+
+
 STL = {
 	color = rgb { 103 135 175 }
 	color_ui = rgb { 103 135 175 }

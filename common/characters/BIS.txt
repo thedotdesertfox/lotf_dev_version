@@ -1,0 +1,15 @@
+characters = {
+	BIS_gerald_macguire = {
+		name = "Gerald MacGuire"
+		portraits = {
+			civilian={
+				large = "gfx/leaders/BIS/BIS_gerald_macguire.png"
+			}
+		}
+		country_leader = {
+			ideology = gen_fascism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

@@ -379,5 +379,10 @@ CMP = "countries/Chicago.txt"
 MCH = "countries/Michigan.txt"
 WSC = "countries/Wisconsin.txt"
 
+IOW = "countries/Des Moines.txt"
+MIN = "countries/Minneapolis.txt"
+BIS = "countries/Bismark.txt"
+DUL = "countries/Duluth.txt"
+
 STL = "countries/St Louis.txt"
 #NOTE: Useful to add a basic default loc entry for each tag in 00_countries.txt so that hovering over a tag will show the tag's name in loc (ie. PAP: "Papal States")

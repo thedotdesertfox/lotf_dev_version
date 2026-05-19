@@ -1,0 +1,28 @@
+state={
+	id=1052
+	name="STATE_1052"
+	resources={
+	}
+
+	history={
+		owner = DUL
+		add_core_of = DUL
+		
+		buildings = {
+			infrastructure = 3
+		}
+		
+		victory_points = {
+			1734 2
+		}
+	}
+
+	provinces={
+		1734 6767 7896 11667 12588 12597
+	}
+	manpower = 76500
+	buildings_max_level_factor = 1.000
+	state_category = rural
+
+	local_supplies=0.0 
+}

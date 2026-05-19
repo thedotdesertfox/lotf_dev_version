@@ -1,0 +1,15 @@
+characters = {
+	MIN_floyd_olson = {
+		name = "Floyd B. Olson"
+		portraits = {
+			civilian={
+				large = "gfx/leaders/MIN/MIN_floyd_olson.png"
+			}
+		}
+		country_leader = {
+			ideology = gen_anocratic
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

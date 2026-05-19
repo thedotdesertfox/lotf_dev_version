@@ -54,7 +54,21 @@
  
  ###
  
+ IOW:0 "Des Moines"
+ IOW_DEF:0 "the State of Iowa"
+ IOW_ADJ:0 "Iowan"
  
+ MIN:0 "Minneapolis"
+ MIN_DEF:0 "the Republic of Minnesota"
+ MIN_ADJ:0 "Minnesotan"
+ 
+ DUL:0 "Duluth"
+ DUL_DEF:0 "the Duluth Socialist Army"
+ DUL_ADJ:0 "Duluthan"
+ 
+ BIS:0 "Bismark"
+ BIS_DEF:0 "the Dakota State"
+ BIS_ADJ:0 "Dakotan"
  
  ###
  STL:0 "St. Louis"

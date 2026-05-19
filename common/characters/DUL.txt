@@ -1,0 +1,15 @@
+characters = {
+	DUL_farrell_dobbs = {
+		name = "Farrell Dobbs"
+		portraits = {
+			civilian={
+				large = "gfx/leaders/DUL/DUL_farrell_dobbs.png"
+			}
+		}
+		country_leader = {
+			ideology = gen_communism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

@@ -1,0 +1,15 @@
+characters = {
+	IOW_clyde_herring = {
+		name = "Clyde L. Herring"
+		portraits = {
+			civilian={
+				large = "gfx/leaders/IOW/IOW_clyde_herring.png"
+			}
+		}
+		country_leader = {
+			ideology = gen_conservate_republicanism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}
