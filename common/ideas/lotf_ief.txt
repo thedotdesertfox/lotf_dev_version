@@ -117,7 +117,7 @@ ideas = {
 				neutrality_drift = -0.15
 			}
 		}
-		IEF_slashed1 = {
+		IEF_slashed_01 = {
 			picture = chi_incompetent_officers
 			modifier = {
 				consumer_goods_factor = 0.1

@@ -3482,7 +3482,9 @@
  SMD_LON_DEF:0 "the League of Nations Mandate of Dixieland"
  SMD_LON_ADJ:0 "Dixie"
 
-
+ IEF_unify_01:0 "International Army for the Liberation of America"
+ IEF_unify_01_DEF:0 "the International Army for the Liberation of America"
+ IEF_unify_01_ADJ:0 "American"
 
 
 

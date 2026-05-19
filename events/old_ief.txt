@@ -1,9 +1,9 @@
-add_namespace = old_ief
+add_namespace = xxxxxxx
 
 country_event = {
-	id = old_ief.1
-	title = old_ief.1.t
-	desc = old_ief.1.d
+	id = xxxxxxx.1
+	title = xxxxxxx.1.t
+	desc = xxxxxxx.1.d
 	picture = GFX_report_event_generic_read_write
 	
 	#is_triggered_only = yes
@@ -13,14 +13,14 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = old_ief.1.a
+		name = xxxxxxx.1.a
 		ai_chance = { factor = 100 }
 		declare_war_on = {
 			target = STL
 			type =  take_state_focus
 		}
 		hidden_effect = {
-			country_event = { days = 60 id = old_ief.2 }
+			country_event = { days = 60 id = xxxxxxx.2 }
 			STL = { country_event = { days = 1 id = stl.3 } }
 			STL = {
 				add_ideas = too_angry_to_die
@@ -29,21 +29,21 @@ country_event = {
 	}	
 }
 country_event = {
-	id = old_ief.2
-	title = old_ief.2.t
-	desc = old_ief.2.d
+	id = xxxxxxx.2
+	title = xxxxxxx.2.t
+	desc = xxxxxxx.2.d
 	picture = GFX_report_event_generic_read_write
 	
 	is_triggered_only = yes
 	
 	
 	option = {
-		name = old_ief.2.a
+		name = xxxxxxx.2.a
 		ai_chance = { factor = 100 }
 		#white_peace = STL
 		custom_effect_tooltip = IEF_squash
 		hidden_effect = {
-			#country_event = { days = 20 id = old_ief.3 }
+			#country_event = { days = 20 id = xxxxxxx.3 }
 			IEF = {
 				remove_state_core = 189
 				remove_state_core = 55
@@ -95,12 +95,12 @@ country_event = {
 		}
 	}	
 	option = {
-		name = old_ief.2.b
+		name = xxxxxxx.2.b
 		ai_chance = { factor = 100 }
 		#white_peace = STL
 		custom_effect_tooltip = IEF_squash
 		hidden_effect = {
-			#country_event = { days = 20 id = old_ief.3 }
+			#country_event = { days = 20 id = xxxxxxx.3 }
 			IEF = {
 				remove_state_core = 189
 				remove_state_core = 55
@@ -128,16 +128,16 @@ country_event = {
 	}	
 }
 country_event = {
-	id = old_ief.3
-	title = old_ief.3.t
-	desc = old_ief.3.d
+	id = xxxxxxx.3
+	title = xxxxxxx.3.t
+	desc = xxxxxxx.3.d
 	picture = GFX_report_event_generic_read_write
 	
 	is_triggered_only = yes
 	timeout_days = 3
 	
 	option = {
-		name = old_ief.3.a
+		name = xxxxxxx.3.a
 		ai_chance = { factor = 100 }
 		set_country_flag = losstostl
 		set_country_flag = STL_war_over
@@ -158,16 +158,16 @@ country_event = {
 
 }
 country_event = {
-	id = old_ief.4
-	title = old_ief.4.t
-	desc = old_ief.4.d
+	id = xxxxxxx.4
+	title = xxxxxxx.4.t
+	desc = xxxxxxx.4.d
 	picture = GFX_report_event_generic_read_write
 	
 	is_triggered_only = yes
 	timeout_days = 3
 	
 	option = {
-		name = old_ief.4.a
+		name = xxxxxxx.4.a
 		ai_chance = { factor = 100 }
 		transfer_state = 168
 		set_country_flag = ownageofstl
@@ -187,16 +187,16 @@ country_event = {
 }
 
 country_event = {
-	id = old_ief.5
-	title = old_ief.5.t
-	desc = old_ief.5.d
+	id = xxxxxxx.5
+	title = xxxxxxx.5.t
+	desc = xxxxxxx.5.d
 	picture = GFX_report_event_usa_funeral
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = old_ief.5.a
+		name = xxxxxxx.5.a
 		ai_chance = { factor = 10 }
 		add_political_power = 15
 		add_stability = 0.05
@@ -204,16 +204,16 @@ country_event = {
 }
 
 country_event = {
-	id = old_ief.6
-	title = old_ief.6.t
-	desc = old_ief.6.d
+	id = xxxxxxx.6
+	title = xxxxxxx.6.t
+	desc = xxxxxxx.6.d
 	picture = GFX_report_event_military_planning
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = old_ief.6.a
+		name = xxxxxxx.6.a
 		ai_chance = { factor = 50 }
 		add_war_support = -0.05
 		add_stability = 0.1
@@ -233,7 +233,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = old_ief.6.b
+		name = xxxxxxx.6.b
 		ai_chance = { factor = 50 }
 		custom_effect_tooltip = IEF_ARA_stronger
 		add_to_variable = {
@@ -257,16 +257,16 @@ country_event = {
 }
 
 country_event = {
-	id = old_ief.7
-	title = old_ief.7.t
-	desc = old_ief.7.d
+	id = xxxxxxx.7
+	title = xxxxxxx.7.t
+	desc = xxxxxxx.7.d
 	picture = GFX_report_event_crowd_in_prague
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = old_ief.7.a
+		name = xxxxxxx.7.a
 		ai_chance = { factor = 50 }
 		custom_effect_tooltip = IEF_ARA_stronger
 		add_stability = -0.05
@@ -291,7 +291,7 @@ country_event = {
 	}
 
 	option = {
-		name = old_ief.7.b
+		name = xxxxxxx.7.b
 		ai_chance = { factor = 50 }
 		add_war_support = 0.05
 		add_stability = 0.05
@@ -313,16 +313,16 @@ country_event = {
 }
 
 country_event = {
-	id = old_ief.8
-	title = old_ief.8.t
-	desc = old_ief.8.d
+	id = xxxxxxx.8
+	title = xxxxxxx.8.t
+	desc = xxxxxxx.8.d
 	picture = GFX_report_event_crowd_in_prague
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = old_ief.8.a
+		name = xxxxxxx.8.a
 		ai_chance = { factor = 50 }
 		add_equipment_to_stockpile = {
 			type = infantry_equipment
@@ -343,7 +343,7 @@ country_event = {
 		}
 
 	option = {
-		name = old_ief.8.b
+		name = xxxxxxx.8.b
 		ai_chance = { factor = 50 }
 		custom_effect_tooltip = IEF_ARA_stronger
 		send_equipment = { target = ARA type = infantry_equipment amount = 500 }  
@@ -367,9 +367,9 @@ country_event = {
 }
 
 country_event = {
-	id = old_ief.9 
-	title = old_ief.9.t
-	desc = old_ief.9.d
+	id = xxxxxxx.9 
+	title = xxxxxxx.9.t
+	desc = xxxxxxx.9.d
 	picture = GFX_report_smith
 
 	fire_only_once = yes
@@ -380,7 +380,7 @@ country_event = {
 	}
 
 	option = {
-		name = old_ief.9.a
+		name = xxxxxxx.9.a
 		ai_chance = { factor = 50 }
 		add_political_power = 100
 		ARA = {
@@ -401,16 +401,16 @@ country_event = {
 }
 
 country_event = {
-	id = old_ief.10
-	title = old_ief.10.t
-	desc = old_ief.10.d
+	id = xxxxxxx.10
+	title = xxxxxxx.10.t
+	desc = xxxxxxx.10.d
 	picture = GFX_report_event_british_inspect_troops
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
-		name = old_ief.10.a
+		name = xxxxxxx.10.a
 		ai_chance = { factor = 50 }
 		add_stability = 0.1
 		add_war_support = -0.1
@@ -428,7 +428,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = old_ief.10.b
+		name = xxxxxxx.10.b
 		ai_chance = { factor = 50 }
 		add_stability = -0.1
 		add_war_support = 0.15
@@ -452,16 +452,16 @@ country_event = {
 }
 
 country_event = {
-	id = old_ief.11
-	title = old_ief.11.t
-	desc = old_ief.11.d
+	id = xxxxxxx.11
+	title = xxxxxxx.11.t
+	desc = xxxxxxx.11.d
 	picture = GFX_report_event_iww_demonstration
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
-		name = old_ief.11.a
+		name = xxxxxxx.11.a
 		ai_chance = { factor = 50 }
 		add_stability = 0.15
 		add_political_power = -100
@@ -475,7 +475,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = old_ief.11.b
+		name = xxxxxxx.11.b
 		ai_chance = { factor = 50 }
 		add_stability = -0.1
 		add_war_support = -0.1
@@ -492,16 +492,16 @@ country_event = {
 }
 
 country_event = {
-	id = old_ief.12
-	title = old_ief.12.t
-	desc = old_ief.12.d
+	id = xxxxxxx.12
+	title = xxxxxxx.12.t
+	desc = xxxxxxx.12.d
 	picture = GFX_report_event_eng_blackshirt_march
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
-		name = old_ief.12.a
+		name = xxxxxxx.12.a
 		ai_chance = { factor = 50 }
 		delete_unit_template_and_units = { 
 		division_template = "International Forces"
@@ -509,7 +509,7 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = {
-				id = old_ief.13
+				id = xxxxxxx.13
 				days = 5
 			}
 		}
@@ -517,29 +517,29 @@ country_event = {
 }
 
 country_event = {
-	id = old_ief.13
-	title = old_ief.13.t
-	desc = old_ief.13.d
+	id = xxxxxxx.13
+	title = xxxxxxx.13.t
+	desc = xxxxxxx.13.d
 	picture = GFX_report_event_generic_sign_treaty3
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
-		name = old_ief.13.a
+		name = xxxxxxx.13.a
 		ai_chance = { factor = 40 }
 		add_stability = 0.02
 		set_variable = { british_coup_chance = 1 }
 		hidden_effect = {
 			country_event = {
-				id = old_ief.14
+				id = xxxxxxx.14
 				days = 5
 			}
 		}
 	}
 
 	option = {
-		name = old_ief.13.b
+		name = xxxxxxx.13.b
 		ai_chance = { factor = 60 }
 		add_equipment_to_stockpile = {
 			type = infantry_equipment
@@ -549,23 +549,23 @@ country_event = {
 		add_political_power = 20
 		set_variable = { british_coup_chance = 0 }
 		country_event = {
-			id = old_ief.14
+			id = xxxxxxx.14
 			days = 5
 		}
 	}
 }
 
 country_event = {
-	id = old_ief.14
-	title = old_ief.14.t
-	desc = old_ief.14.d
+	id = xxxxxxx.14
+	title = xxxxxxx.14.t
+	desc = xxxxxxx.14.d
 	picture = GFX_report_event_generic_army
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
-		name = old_ief.14.a
+		name = xxxxxxx.14.a
 		ai_chance = { factor = 40 }
 		add_political_power = 50
 		add_stability = 0.05
@@ -575,14 +575,14 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = {
-				id = old_ief.15
+				id = xxxxxxx.15
 				days = 5
 			}
 		}
 	}
 
 	option = {
-		name = old_ief.14.b
+		name = xxxxxxx.14.b
 		ai_chance = { factor = 60 }
 		add_political_power = -25
 		add_stability = -0.1
@@ -592,23 +592,23 @@ country_event = {
 			value = -1 
 		}
 		country_event = {
-			id = old_ief.15
+			id = xxxxxxx.15
 			days = 5
 		}
 	}
 }
 
 country_event = {
-	id = old_ief.15
-	title = old_ief.15.t
-	desc = old_ief.15.d
+	id = xxxxxxx.15
+	title = xxxxxxx.15.t
+	desc = xxxxxxx.15.d
 	picture = GFX_report_event_generic_battle
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
-		name = old_ief.15.a
+		name = xxxxxxx.15.a
 		ai_chance = { factor = 40 }
 		add_to_variable = { 
 			var =  british_coup_chance 
@@ -625,7 +625,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = old_ief.16
+					id = xxxxxxx.16
 					days = 5
 				}
 			}
@@ -638,7 +638,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = old_ief.16
+					id = xxxxxxx.16
 					days = 5
 				}
 			}
@@ -653,13 +653,13 @@ country_event = {
 				random_list = {
 					50 = {
 						country_event = {
-							id = old_ief.16
+							id = xxxxxxx.16
 							days = 5
 						}
 					}
 					50 = {
 						country_event = {
-							id = old_ief.17
+							id = xxxxxxx.17
 							days = 5
 						}
 					}
@@ -676,13 +676,13 @@ country_event = {
 				random_list = {
 					25 = {
 						country_event = {
-							id = old_ief.16
+							id = xxxxxxx.16
 							days = 5
 						}
 					}
 					75 = {
 						country_event = {
-							id = old_ief.17
+							id = xxxxxxx.17
 							days = 5
 						}
 					}
@@ -697,7 +697,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = old_ief.17
+					id = xxxxxxx.17
 					days = 5
 				}
 			}
@@ -710,7 +710,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = old_ief.17
+					id = xxxxxxx.17
 					days = 5
 				}
 			}												
@@ -718,7 +718,7 @@ country_event = {
 	}
 
 	option = {
-		name = old_ief.15.b
+		name = xxxxxxx.15.b
 		ai_chance = { factor = 60 }
 		add_political_power = 5
 		add_to_variable = { 
@@ -735,7 +735,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = old_ief.16
+					id = xxxxxxx.16
 					days = 5
 				}
 			}
@@ -748,7 +748,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = old_ief.16
+					id = xxxxxxx.16
 					days = 5
 				}
 			}
@@ -763,13 +763,13 @@ country_event = {
 				random_list = {
 					50 = {
 						country_event = {
-							id = old_ief.16
+							id = xxxxxxx.16
 							days = 5
 						}
 					}
 					50 = {
 						country_event = {
-							id = old_ief.17
+							id = xxxxxxx.17
 							days = 5
 						}
 					}
@@ -786,13 +786,13 @@ country_event = {
 				random_list = {
 					25 = {
 						country_event = {
-							id = old_ief.16
+							id = xxxxxxx.16
 							days = 5
 						}
 					}
 					75 = {
 						country_event = {
-							id = old_ief.17
+							id = xxxxxxx.17
 							days = 5
 						}
 					}
@@ -807,7 +807,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = old_ief.17
+					id = xxxxxxx.17
 					days = 5
 				}
 			}
@@ -820,7 +820,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = old_ief.17
+					id = xxxxxxx.17
 					days = 5
 				}
 			}					
@@ -829,16 +829,16 @@ country_event = {
 }
 
 country_event = {
-	id = old_ief.16
-	title = old_ief.16.t
-	desc = old_ief.16.d
+	id = xxxxxxx.16
+	title = xxxxxxx.16.t
+	desc = xxxxxxx.16.d
 	picture = GFX_report_event_generic_riot
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
-		name = old_ief.16.a
+		name = xxxxxxx.16.a
 		ai_chance = { factor = 50 }
 		add_popularity = {
 			ideology = despotism
@@ -852,16 +852,16 @@ country_event = {
 }
 
 country_event = {
-	id = old_ief.17
-	title = old_ief.17.t
-	desc = old_ief.17.d
+	id = xxxxxxx.17
+	title = xxxxxxx.17.t
+	desc = xxxxxxx.17.d
 	picture = GFX_report_event_eng_mosley_speech
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
-		name = old_ief.17.a
+		name = xxxxxxx.17.a
 		ai_chance = { factor = 50 }
 		add_stability = -0.15
 		retire_character = IEF_walter_smith
@@ -874,9 +874,9 @@ country_event = {
 }
 
 country_event = { #Eisenhower Meeting
-	id = old_ief.18
-	title = old_ief.18.t
-	desc = old_ief.18.d
+	id = xxxxxxx.18
+	title = xxxxxxx.18.t
+	desc = xxxxxxx.18.d
 
 	picture = GFX_report_event_usa_macarthur_speech
 
@@ -884,7 +884,7 @@ country_event = { #Eisenhower Meeting
 	is_triggered_only = yes
 
 	option = {
-		name = old_ief.18.a
+		name = xxxxxxx.18.a
 		ai_chance = { factor = 50 }
 		add_popularity = {
 			ideology = guided_democracy
@@ -909,7 +909,7 @@ country_event = { #Eisenhower Meeting
 		}
 	}
 	option = {
-		name = old_ief.18.b
+		name = xxxxxxx.18.b
 		ai_chance = {
 			factor = 40
 		}
@@ -923,7 +923,7 @@ country_event = { #Eisenhower Meeting
 		}
 		IEF = {
 			country_event = {
-				id = old_ief.19
+				id = xxxxxxx.19
 				days = 1
 			}
 			set_country_flag = ERR_said_no
@@ -932,9 +932,9 @@ country_event = { #Eisenhower Meeting
 }
 
 country_event = { #cucked
-id = old_ief.19
-title = old_ief.19.t
-desc = old_ief.19.d
+id = xxxxxxx.19
+title = xxxxxxx.19.t
+desc = xxxxxxx.19.d
 
 picture = GFX_report_event_usa_macarthur_speech
 
@@ -942,7 +942,7 @@ fire_only_once = yes
 is_triggered_only = yes
 
 	option = {
-		name = old_ief.19.a
+		name = xxxxxxx.19.a
 		ai_chance = {
 			factor = 5
 		}
@@ -952,9 +952,9 @@ is_triggered_only = yes
 }
 
 country_event = { #Early calls
-	id = old_ief.20
-	title = old_ief.20.t
-	desc = old_ief.20.d
+	id = xxxxxxx.20
+	title = xxxxxxx.20.t
+	desc = xxxxxxx.20.d
 
 	picture = GFX_report_event_usa_macarthur_speech
 
@@ -962,7 +962,7 @@ country_event = { #Early calls
 	is_triggered_only = yes
 
 	option = {
-		name = old_ief.20.a
+		name = xxxxxxx.20.a
 		ai_chance = { factor = 50 }
 		custom_effect_tooltip = ERR_eisenhower_time
 		set_politics = {
@@ -979,13 +979,13 @@ country_event = { #Early calls
 		}
 		IEF = {
 			country_event = {
-				id = old_ief.21
+				id = xxxxxxx.21
 				days = 3
 			}
 		}
 	}
 	option = {
-		name = old_ief.20.b
+		name = xxxxxxx.20.b
 		ai_chance = {
 			factor = 40
 		}
@@ -1002,7 +1002,7 @@ country_event = { #Early calls
 		add_political_power = -50
 		IEF = {
 			country_event = {
-				id = old_ief.22
+				id = xxxxxxx.22
 				days = 3
 			}
 		}
@@ -1010,9 +1010,9 @@ country_event = { #Early calls
 }
 
 country_event = { #time to die
-id = old_ief.21
-title = old_ief.21.t
-desc = old_ief.21.d
+id = xxxxxxx.21
+title = xxxxxxx.21.t
+desc = xxxxxxx.21.d
 
 picture = GFX_report_event_usa_macarthur_speech
 
@@ -1020,7 +1020,7 @@ fire_only_once = yes
 is_triggered_only = yes
 
 	option = {
-		name = old_ief.21.a
+		name = xxxxxxx.21.a
 		ai_chance = {
 			factor = 5
 		}
@@ -1048,9 +1048,9 @@ is_triggered_only = yes
 }
 
 country_event = { #You were the chosen one!
-id = old_ief.22
-title = old_ief.22.t
-desc = old_ief.22.d
+id = xxxxxxx.22
+title = xxxxxxx.22.t
+desc = xxxxxxx.22.d
 
 picture = GFX_report_event_usa_macarthur_speech
 
@@ -1058,7 +1058,7 @@ fire_only_once = yes
 is_triggered_only = yes
 
 	option = {
-		name = old_ief.22.a
+		name = xxxxxxx.22.a
 		ai_chance = {
 			factor = 5
 		}
@@ -1076,9 +1076,9 @@ is_triggered_only = yes
 }
 
 country_event = { #finishing what the LON started
-	id = old_ief.23
-	title = old_ief.23.t
-	desc = old_ief.23.d
+	id = xxxxxxx.23
+	title = xxxxxxx.23.t
+	desc = xxxxxxx.23.d
 
 	picture = GFX_report_event_communist_leader
 
@@ -1086,14 +1086,14 @@ country_event = { #finishing what the LON started
 	is_triggered_only = yes
 
 		option = {
-			name = old_ief.23.a
+			name = xxxxxxx.23.a
 			ai_chance = {
 				factor = 5
 			}
 			add_political_power = 50
 			MIA = {
 				country_event = {
-					id = old_ief.24
+					id = xxxxxxx.24
 					days = 3
 				}
 			}
@@ -1101,9 +1101,9 @@ country_event = { #finishing what the LON started
 }
 
 country_event = { #fate of thomas
-	id = old_ief.24
-	title = old_ief.24.t
-	desc = old_ief.24.d
+	id = xxxxxxx.24
+	title = xxxxxxx.24.t
+	desc = xxxxxxx.24.d
 
 	picture = GFX_report_event_communist_leader
 
@@ -1111,7 +1111,7 @@ country_event = { #fate of thomas
 	is_triggered_only = yes
 
 		option = {
-			name = old_ief.24.a
+			name = xxxxxxx.24.a
 			ai_chance = {
 				factor = 5
 			}
@@ -1126,7 +1126,7 @@ country_event = { #fate of thomas
 			}
 		}
 		option = {
-			name = old_ief.24.a
+			name = xxxxxxx.24.a
 			ai_chance = {
 				factor = 5
 			}
@@ -1140,9 +1140,9 @@ country_event = { #fate of thomas
 }
 
 country_event = { #The Fate of the King
-	id = old_ief.25
-	title = old_ief.25.t
-	desc = old_ief.25.d
+	id = xxxxxxx.25
+	title = xxxxxxx.25.t
+	desc = xxxxxxx.25.d
 
 	picture = GFX_report_event_royal_visit
 
@@ -1150,7 +1150,7 @@ country_event = { #The Fate of the King
 	is_triggered_only = yes
 
 		option = {
-			name = old_ief.25.a
+			name = xxxxxxx.25.a
 			ai_chance = {
 				factor = 5
 			}
@@ -1169,9 +1169,9 @@ country_event = { #The Fate of the King
 }
 
 country_event = { #handing over mac
-	id = old_ief.26
-	title = old_ief.26.t
-	desc = old_ief.26.d
+	id = xxxxxxx.26
+	title = xxxxxxx.26.t
+	desc = xxxxxxx.26.d
 
 	picture = GFX_report_event_usa_election_roosevelt_macarthur
 
@@ -1179,14 +1179,14 @@ country_event = { #handing over mac
 	is_triggered_only = yes
 
 		option = {
-			name = old_ief.26.a
+			name = xxxxxxx.26.a
 			ai_chance = {
 				factor = 5
 			}
 			add_stability = 0.05
 			MIA = {
 				country_event = {
-					id = old_ief.27
+					id = xxxxxxx.27
 					days = 3
 				}
 			}
@@ -1194,9 +1194,9 @@ country_event = { #handing over mac
 }
 
 country_event = { #no more caesar
-	id = old_ief.27
-	title = old_ief.27.t
-	desc = old_ief.27.d
+	id = xxxxxxx.27
+	title = xxxxxxx.27.t
+	desc = xxxxxxx.27.d
 
 	picture = GFX_report_event_usa_election_roosevelt_macarthur
 
@@ -1204,7 +1204,7 @@ country_event = { #no more caesar
 	is_triggered_only = yes
 
 		option = {
-			name = old_ief.27.a
+			name = xxxxxxx.27.a
 			ai_chance = {
 				factor = 5
 			}
@@ -1221,9 +1221,9 @@ country_event = { #no more caesar
 }
 
 country_event = { #DO IT AGAIN
-	id = old_ief.28
-	title = old_ief.28.t
-	desc = old_ief.28.d
+	id = xxxxxxx.28
+	title = xxxxxxx.28.t
+	desc = xxxxxxx.28.d
 
 	picture = GFX_report_event_usa_macarthur_speech
 
@@ -1231,7 +1231,7 @@ country_event = { #DO IT AGAIN
 	is_triggered_only = yes
 
 	option = {
-		name = old_ief.28.a
+		name = xxxxxxx.28.a
 		ai_chance = { factor = 50 }
 		custom_effect_tooltip = DEATH_WEAKNESS_DESTRUCTION
 		IEF = {
@@ -1256,7 +1256,7 @@ country_event = { #DO IT AGAIN
 		}
 	}
 	option = {
-		name = old_ief.28.b
+		name = xxxxxxx.28.b
 		ai_chance = {
 			factor = 40
 		}

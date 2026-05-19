@@ -32,10 +32,7 @@ country_event = {
 	option = {
 		name = ief.2.a
 		ai_chance = { factor = 100 }
-		create_wargoal = {
-			type = annex_everything
-			target = STL
-		}
+		complete_national_focus = IEF_punishing_st_louis
 		hidden_effect = {
 			country_event = {
 				id = ief.5

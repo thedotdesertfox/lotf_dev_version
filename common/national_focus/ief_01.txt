@@ -37,6 +37,7 @@ focus_tree = {
 				set_variable = { iefh_conscription_factor = 0.01 }
 				add_dynamic_modifier = {
 					modifier = ief_hoover_relief
+					days = 365
 				}
 			}
 			country_event = ief.4
@@ -220,6 +221,10 @@ focus_tree = {
 		cost = 1
 		available = { always = NOT }
 		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = STL
+			}
 			add_war_support = 0.1
 		}
 	}
@@ -229,7 +234,7 @@ focus_tree = {
 		relative_position_id = IEF_punishing_st_louis
 		x = -1
 		y = 1
-		cost = 3
+		cost = 1
 		prerequisite = { focus = IEF_punishing_st_louis }
 		completion_reward = {
 			country_event = ief.6
@@ -241,7 +246,7 @@ focus_tree = {
 		relative_position_id = IEF_punishing_st_louis
 		x = 1
 		y = 1
-		cost = 3
+		cost = 1
 		prerequisite = { focus = IEF_punishing_st_louis }
 		completion_reward = {
 			add_tech_bonus = {
@@ -262,7 +267,8 @@ focus_tree = {
 		relative_position_id = IEF_punishing_st_louis
 		x = -1
 		y = 2
-		cost = 4
+		cost = 2
+		available = { always = NOT }
 		prerequisite = { focus = IEF_riverine_troops focus = IEF_anti_vehicle_tactics }
 		mutually_exclusive = { focus = IEF_an_embarassing_failure }
 		completion_reward = {
@@ -288,6 +294,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		cost = 2
+		available = { always = NOT }
 		prerequisite = { focus = IEF_riverine_troops focus = IEF_anti_vehicle_tactics }
 		mutually_exclusive = { focus = IEF_proper_learning_experience }
 		completion_reward = {
@@ -323,6 +330,1112 @@ focus_tree = {
 					add_core_of = IEF
 				}
 			}
+		}
+	}
+	
+	######################
+	######BRANCH TWO######
+	######################
+	
+	#For Freedom
+	focus = {
+		id = IEF_the_ara_returns
+		icon = GFX_focus_RAJ_a_private_military
+		relative_position_id = IEF_the_long_road
+		x = 0
+		y = 4
+		cost = 2
+		#allow_branch = {
+		#	has_country_flag = ARA_have_revolted
+		#}
+		prerequisite = { focus = IEF_the_long_road }
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = IEF_against_the_fascists
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		relative_position_id = IEF_the_ara_returns
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = IEF_the_ara_returns }
+		completion_reward = {
+			add_war_support = 0.05
+			IEF_fix_anger = yes
+		}
+	}
+	
+	#Publicize Legionary Atrocities
+	focus = {
+		id = IEF_publicize_legionary_atrocities
+		icon = GFX_focus_SWE_radiotjanst
+		relative_position_id = IEF_against_the_fascists
+		x = 0
+		y = 1
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = IEF_against_the_fascists  }
+		completion_reward = {
+			ARA = {
+				add_stability = -0.1
+				add_war_support = -0.05
+				add_manpower = -900
+			}
+			add_war_support = 0.1
+			add_manpower = 500
+		}
+	}
+
+		#Defend the Skies
+		focus = {
+		id = IEF_defend_the_skies
+		icon = GFX_focus_generic_air_defense
+		relative_position_id = IEF_publicize_legionary_atrocities
+		x = 0
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = IEF_publicize_legionary_atrocities  }
+		completion_reward = {
+			custom_effect_tooltip = IEF_air_support
+			395 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_dlc = "By Blood Alone"
+					}
+					load_oob = IEF_air_bba
+				}
+			}			
+		}
+	}
+
+	focus = {
+		id = IEF_RAF_terror_bombing
+		icon = GFX_goal_generic_air_bomber
+		cost = 2
+		relative_position_id = IEF_defend_the_skies
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = IEF_defend_the_skies
+		}
+		prerequisite = {
+			focus = IEF_reinforcements_from_the_south
+		}
+		completion_reward = { 
+			ARA = {
+				add_timed_idea = {
+					idea = IEF_terror_bombing
+					days = 60
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = IEF_towards_the_people 
+		icon = GFX_SOV_military_engineering_university_ccp_2d_sov_compatibility
+		relative_position_id = IEF_the_ara_returns
+		x = -3
+		y = 1
+		cost = 2
+		prerequisite = { focus = IEF_the_ara_returns }
+		completion_reward = {
+			add_stability = 0.05
+			IEF_fix_anger = yes
+		}
+	}
+	
+	focus = {
+		id = IEF_radio_propaganda 
+		icon = GFX_SOV_collectivist_propaganda_ccp_2d_sov_compatibility
+		relative_position_id = IEF_towards_the_people
+		x = -1
+		y = 1
+		cost = 2
+		prerequisite = {
+			focus = IEF_towards_the_people
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_manpower = 1500
+		}
+	}
+	
+	#Overrun Insurgents
+	focus = {
+		id = IEF_overrun_insurgents
+		icon = GFX_focus_generic_army_attack
+		relative_position_id = IEF_towards_the_people
+		x = 1
+		y = 1
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = IEF_towards_the_people  }
+		prerequisite = { focus = IEF_against_the_fascists }
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 30
+				has_idea = IEF_supply_lines
+			}
+		}
+		completion_reward = {
+			add_manpower = -200
+			add_stability = 0.02
+			custom_effect_tooltip = IEF_supply_fix
+			IF = {
+				limit = {
+					has_idea = IEF_supply_lines
+				}
+				remove_ideas = IEF_supply_lines
+				add_timed_idea = {
+					idea = IEF_supply_lines
+					days = 60
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = IEF_defending_democracy
+		icon = GFX_IEF_defend_democracy_shine
+		relative_position_id = IEF_towards_the_people
+		x = 0
+		y = 2
+		cost = 2
+		prerequisite = {
+			focus = IEF_overrun_insurgents
+			focus = IEF_radio_propaganda
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.03
+			add_war_support = 0.03
+			add_popularity = {
+				ideology = anocratic
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = IEF_fighting_the_good_fight
+		icon = GFX_SOV_muster_the_old_guard_ccp_2d_sov_compatibility
+		relative_position_id = IEF_defending_democracy
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = {
+			focus = IEF_defending_democracy
+		}
+		completion_reward = {
+			add_manpower = 3000
+			IEF_fix_anger = yes
+		}
+	}
+
+	focus = {
+		id = IEF_with_the_world 
+		icon = GFX_focus_generic_league_of_nations
+		relative_position_id = IEF_the_ara_returns
+		x = 3
+		y = 1
+		cost = 2
+		ai_will_do = {
+			base = 50
+		}
+		prerequisite = { focus = IEF_the_ara_returns }
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = IEF_french_guns 
+		icon = GFX_focus_CHL_a_french_alliance
+		relative_position_id = IEF_with_the_world
+		x = 1
+		y = 1
+		cost = 2
+		prerequisite = {
+			focus = IEF_with_the_world
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				producer = FRA
+				amount = 800
+			}
+		}
+	}
+
+	focus = {
+		id = IEF_italian_artillery 
+		icon = GFX_focus_generic_money_for_equipment
+		relative_position_id = IEF_french_guns
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = {
+			focus = IEF_french_guns
+		}
+		completion_reward = {
+			add_political_power = -30
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				producer = ITA
+				amount = 100
+			}
+		}
+	}
+	
+	focus = {
+		id = IEF_reinforcements_from_the_south
+		icon = GFX_focus_focus_fra_ratify_stresa
+		relative_position_id = IEF_with_the_world
+		x = -1
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		available = {
+			is_neighbor_of = SMD
+		}
+		ai_will_do = {
+			base = 50
+		}
+		prerequisite = { focus = IEF_with_the_world  }
+		completion_reward = {
+			add_war_support = -0.05
+			add_manpower = 2000
+			custom_effect_tooltip = IEF_briish
+			hidden_effect = {
+			}
+		}
+	}
+
+	focus = {
+		id = IEF_economic_ties_to_washington
+		icon = GFX_focus_generic_american_investments 
+		relative_position_id = IEF_reinforcements_from_the_south
+		x = 0
+		y = 1
+		cost = 4
+		prerequisite = {
+			focus = IEF_reinforcements_from_the_south
+		}
+		completion_reward = {
+			53 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+		}
+	}
+	
+	focus = {
+		id = IEF_escalate_the_intervention
+		icon = GFX_focus_eng_global_defense
+		relative_position_id = IEF_with_the_world
+		x = 0
+		y = 3
+		cost = 2
+		prerequisite = {
+			focus = IEF_italian_artillery
+		}
+		prerequisite = {
+			focus = IEF_economic_ties_to_washington
+		}
+		completion_reward = {
+			add_war_support = -0.1
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.1
+			}
+			custom_effect_tooltip = IEF_lon_expedition
+			NMD = {
+				add_timed_idea = {
+					idea = IEF_volunteers
+					days = 60
+				}
+			}
+			SMD = {
+				add_timed_idea = {
+					idea = IEF_volunteers
+					days = 60
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = IEF_final_offensive
+		icon = GFX_focus_generic_limited_social_mobilization
+		relative_position_id = IEF_the_ara_returns
+		x = 0
+		y = 5
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = IEF_defend_the_skies
+		} 
+		prerequisite = {
+			focus = IEF_fighting_the_good_fight
+		}
+		prerequisite = {
+			focus = IEF_escalate_the_intervention
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = IEF_kill_ara
+				days = 60
+			}
+		}
+	}
+	
+	########################
+	######BRANCH THREE######
+	########################
+	
+	#For The Central Plains Burn
+	focus = {
+		id = IEF_the_central_plains_burn
+		icon = GFX_focus_RAJ_bathe_in_hellfire
+		relative_position_id = IEF_final_offensive
+		x = 0
+		y = 1
+		cost = 1
+		prerequisite = { focus = IEF_final_offensive  }
+		completion_reward = { }
+	}
+	
+	#Rebuild Indiana
+	focus = {
+		id = IEF_rebuild_indiana
+		icon = GFX_goal_generic_construction2
+		relative_position_id = IEF_the_central_plains_burn
+		x = -4
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = IEF_the_central_plains_burn  }
+		completion_reward = {
+			396 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	#Relief Effort
+	focus = {
+		id = IEF_relief_effort
+		icon = GFX_goal_generic_major_alliance
+		relative_position_id = IEF_rebuild_indiana
+		x = -2
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = IEF_rebuild_indiana  }
+		completion_reward = {
+			#country_event = {
+			#	id = IEF.11
+			#	days = 1
+			#}
+		}
+	}
+	
+	#Jobs for the People
+	focus = {
+		id = IEF_jobs_for_the_people
+		icon = GFX_focus_generic_worker_administration
+		relative_position_id = IEF_rebuild_indiana
+		x = 0
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = IEF_rebuild_indiana  }
+		completion_reward = {
+			#modify_american_warlord = yes
+			395 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	 
+			}
+			#IEF_old_fix_anger = yes
+		}
+	}
+	
+	#Root out Treason
+	focus = {
+		id = IEF_root_out_treason
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		relative_position_id = IEF_rebuild_indiana
+		x = 2
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = IEF_rebuild_indiana  }
+		completion_reward = {
+			add_manpower = -6328
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.08
+			}
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+	
+	#Build the Roads
+	focus = {
+		id = IEF_build_the_roads
+		icon = GFX_focus_generic_road_investment
+		relative_position_id = IEF_jobs_for_the_people
+		x = 0
+		y = 1
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = IEF_relief_effort  } prerequisite = { focus = IEF_root_out_treason  } prerequisite = { focus = IEF_jobs_for_the_people  }
+		completion_reward = {
+			396 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+				}
+			}
+			395 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#Coordinate International Relief
+	focus = {
+		id = IEF_coordinate_international_relief
+		icon = GFX_focus_hol_the_fourth_ally
+		relative_position_id = IEF_the_central_plains_burn
+		x = -1
+		y = 1
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = IEF_the_central_plains_burn  }
+		mutually_exclusive = { focus = IEF_asserting_our_independence  }
+		completion_reward = {
+			add_timed_idea = {
+				idea = IEF_international_help
+				days = 300
+			}
+		}
+	}
+
+	#Asserting our Independence
+	focus = {
+		id = IEF_asserting_our_independence
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		relative_position_id = IEF_the_central_plains_burn
+		x = 1
+		y = 1
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = IEF_the_central_plains_burn  }
+		mutually_exclusive = { focus = IEF_coordinate_international_relief  }
+		completion_reward = {
+			add_timed_idea = {
+				idea = IEF_self_help
+				days = 300
+			}
+		}
+	}
+	
+	#Create the Peace Corps
+	focus = {
+		id = IEF_create_the_peace_corps
+		icon = GFX_focus_usa_recruit_the_free_corps
+		relative_position_id = IEF_the_central_plains_burn
+		x = 0
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = IEF_coordinate_international_relief  focus = IEF_asserting_our_independence  }
+		completion_reward = {
+			#add_manpower = 5000
+			#army_experience = 15
+			#IEF_old_fix_anger = yes
+		}
+	}
+	
+	#Savior of the Nation
+	focus = {
+		id = IEF_savior_of_the_nation
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		relative_position_id = IEF_the_central_plains_burn
+		x = 4
+		y = 1
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = IEF_the_central_plains_burn  }
+		completion_reward = {
+			#add_political_power = 50
+			#IEF_old_walter_bedell_smith = {
+			#	remove_trait = {
+			#		ideology = anocratic
+			#		trait = benedict
+			#	}
+			#}
+			
+		}
+	}
+	
+	#The Fate of the Officer Corps
+	focus = {
+		id = IEF_the_fate_of_the_officer_corps
+		icon = GFX_focus_generic_military_mission
+		relative_position_id = IEF_savior_of_the_nation
+		x = -1
+		y = 1
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = IEF_savior_of_the_nation  }
+		completion_reward = {
+			#country_event = {
+			#	id = IEF.10
+			#	days = 1
+			#}
+		}
+	}
+	
+	#Gradual Restoration
+	focus = {
+		id = IEF_gradual_restoration
+		icon = GFX_focus_generic_the_giant_wakes
+		relative_position_id = IEF_savior_of_the_nation
+		x = 1
+		y = 1
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = IEF_savior_of_the_nation  }
+		completion_reward = {
+			#IEF_fix_anger = yes
+			#add_popularity = {
+			#	ideology = anocratic
+			#	popularity = 0.05
+			#}
+		}
+	}
+
+	#Instill Fighting Spirit
+	focus = {
+		id = IEF_instill_fighting_spirit
+		icon = GFX_focus_generic_manpower
+		relative_position_id = IEF_savior_of_the_nation
+		x = 0
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = IEF_the_fate_of_the_officer_corps  focus = IEF_gradual_restoration  }
+		completion_reward = {
+			#swap_ideas = {
+			#	remove_idea = IEF_professional_army
+			#	add_idea = IEF_professional_army1
+			#}
+		}
+	}
+	
+	#Affirm Loyalty to the League
+	focus = {
+		id = IEF_affirm_loyalty_to_the_league
+		icon = GFX_focus_chi_british_cooperation
+		relative_position_id = IEF_create_the_peace_corps
+		x = -2
+		y = 1
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			OR = {
+				neutrality > 0.4
+			}
+		}
+		prerequisite = { focus = IEF_create_the_peace_corps  } prerequisite = { focus = IEF_instill_fighting_spirit  } prerequisite = { focus = IEF_build_the_roads  }
+		mutually_exclusive = { focus = IEF_treading_our_own_path  }
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
+			add_political_power = 50
+			add_war_support = -0.05
+			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = focus_unlock
+		}
+	}
+
+	#Treading Our Own Path
+	focus = {
+		id = IEF_treading_our_own_path
+		icon = GFX_focus_AST_never_gallipoli
+		relative_position_id = IEF_create_the_peace_corps
+		x = 2
+		y = 1
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			anocratic > 0.4
+		}
+		select_effect = {
+			country_event = {
+				id = IEF.12
+				days = 3
+			}
+		}
+		prerequisite = { focus = IEF_create_the_peace_corps  } prerequisite = { focus = IEF_instill_fighting_spirit  } prerequisite = { focus = IEF_build_the_roads  }
+		mutually_exclusive = { focus = IEF_affirm_loyalty_to_the_league  }
+		completion_reward = {
+			add_popularity = {
+				ideology = anocratic
+				popularity = 0.1
+			}
+			add_timed_idea = {
+				idea = IEF_slashed
+				days = 120
+			}
+			NMD = {
+				add_opinion_modifier = { target = IEF modifier = large_decrease }
+			}
+			SMD = {
+				add_opinion_modifier = { target = IEF modifier = large_decrease }
+			}
+			mark_focus_tree_layout_dirty = yes
+			set_capital = { state = 396 }
+			custom_effect_tooltip = focus_unlock
+		}
+	}
+	
+	#################################
+	######BRANCH THREE - LAPDOG######
+	#################################
+	
+	#League Loans
+	focus = {
+		id = IEF_league_loans
+		icon = GFX_focus_mex_privatisation
+		x = 35
+		y = 0
+		cost = 2
+		#allow_branch = {
+		#	has_completed_focus = IEF_affirm_loyalty_to_the_league
+		#}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_timed_idea = {
+				days = 360
+				idea = IEF_league_loan
+			}
+			modify_american_warlord = yes
+		}
+	}
+	
+	#Invite British Advisors
+	focus = {
+		id = IEF_invite_british_advisors
+		icon = GFX_focus_eng_the_sun_never_sets
+		relative_position_id = IEF_league_loans
+		x = -2
+		y = 1
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = IEF_league_loans  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = IEF_professional_army_01
+				add_idea = IEF_professional_army_02
+			}
+		}
+	}
+	
+	#Call for Volunteers
+	focus = {
+		id = IEF_call_for_volunteers
+		icon = GFX_focus_generic_support_the_left_right
+		relative_position_id = IEF_league_loans
+		x = 0
+		y = 1
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = IEF_league_loans  }
+		completion_reward = {
+			add_manpower = 5000
+		}
+	}
+	
+	#Purchase Equipment
+	focus = {
+		id = IEF_purchase_equipment
+		icon = GFX_focus_focus_fra_maquis
+		relative_position_id = IEF_league_loans
+		x = 2
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available = {
+			has_political_power > 0
+		}
+		prerequisite = { focus = IEF_league_loans  }
+		completion_reward = {
+			add_political_power = -50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+			}
+		}
+	}
+	
+	#The 4th Chars de Combat Division
+	focus = {
+		id = IEF_the_4th_chars_de_combat_division
+		icon = GFX_goal_generic_army_tanks
+		relative_position_id = IEF_invite_british_advisors
+		x = -1
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = IEF_invite_british_advisors  }
+		completion_reward = {
+			custom_effect_tooltip = IEF_call_for_volunteers_tooltip
+			hidden_effect = {
+				load_oob = "IEF_1938"
+			}
+		}
+	}
+	
+	#Open the Border
+	focus = {
+		id = IEF_open_the_border
+		icon = GFX_focus_prc_infiltration
+		relative_position_id = IEF_purchase_equipment
+		x = 1
+		y = 1
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = IEF_purchase_equipment  }
+		completion_reward = {
+			add_ideas = IEF_open_the_border
+		}
+	}
+	
+	#Review the Plans
+	focus = {
+		id = IEF_review_the_plans
+		icon = GFX_focus_chi_army_reform
+		relative_position_id = IEF_call_for_volunteers
+		x = 0
+		y = 1
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = IEF_call_for_volunteers  }
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+	
+	#War Plan Red
+	focus = {
+		id = IEF_war_plan_red
+		icon = GFX_goal_generic_war_with_comintern
+		relative_position_id = IEF_review_the_plans
+		x = -4
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		available = {
+			has_war_with = CMP
+		}
+		bypass = {
+			CMP = {
+				exists = no
+			}
+		}
+		prerequisite = { focus = IEF_review_the_plans  }
+		completion_reward = {
+			add_timed_idea = {
+				days = 90
+				idea = IEF_war_plan_red_ideas
+			}
+		}
+	}
+	
+	#Establish the ICII
+	focus = {
+		id = IEF_establish_the_icii
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = IEF_war_plan_red
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = IEF_war_plan_red  }
+		available = {
+			owns_state = 395
+			owns_state = 1048
+		}
+		completion_reward = {
+			395 = {
+					remove_core_of = CMP
+					add_core_of = IEF
+				}
+			1048 = {
+				remove_core_of = CMP
+				add_core_of = IEF
+			}
+		}
+	}
+	
+	#War Plan Purple
+	focus = {
+		id = IEF_war_plan_purple
+		icon = GFX_focus_rom_handle_king
+		relative_position_id = IEF_review_the_plans
+		x = 0
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = IEF_review_the_plans  }
+		available = {
+			has_war_with = MIL
+		}
+		bypass = {
+			MIL = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			add_timed_idea = {
+				days = 90
+				idea = IEF_war_plan_purple_ideas
+			}
+		}
+	}
+	
+	#Reorganize the North
+	focus = {
+		id = IEF_reorganize_the_north
+		icon = GFX_focus_generic_concessions
+		relative_position_id = IEF_war_plan_purple
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = IEF_war_plan_purple  }
+		available = {
+			OR = {
+				AND = {
+					MCH = {
+						exists = no
+					}
+					owns_state = 394
+					owns_state = 1049
+					owns_state = 393
+				}
+				AND = {
+					MCH = {
+						exists = yes
+					}
+					owns_state = 394
+					owns_state = 1049
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					MCH = {
+						exists = yes
+					}
+				}
+				annex_country = {
+					target = MCH
+					transfer_troops = yes
+				}
+				393 = {
+					remove_core_of = MCH
+					add_core_of = IEF
+				}
+				394 = {
+					remove_core_of = WSC
+					add_core_of = IEF
+				}
+				1049 = {
+					remove_core_of = WSC
+					add_core_of = IEF
+				}
+			}
+		}
+	}
+	
+	#War Plan Blue
+	focus = {
+		id = IEF_war_plan_blue
+		icon = GFX_focus_generic_strike_at_democracy3
+		relative_position_id = IEF_review_the_plans
+		x = 4
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = IEF_review_the_plans  }
+		available = {
+			has_war_with = ERR
+		}
+		bypass = {
+			ERR = {
+				exists = no
+			}
+		}
+		#completion_reward = {
+		#	add_timed_idea = {
+		#		days = 90
+		#		idea = IEF_war_plan_blue_ideas
+		#	}
+		#}
+	}
+	
+	#Dismantle the East
+	focus = {
+		id = IEF_dismantle_the_east
+		icon = GFX_goal_generic_forceful_treaty
+		relative_position_id = IEF_war_plan_blue
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		available = {
+			owns_state = 261
+			owns_state = 1047
+		}
+		prerequisite = { focus = IEF_war_plan_blue  }
+		completion_reward = {
+			261 = {
+					remove_core_of = OHI
+					add_core_of = IEF
+				}
+			1047 = {
+				remove_core_of = ERR
+				add_core_of = IEF
+			}
+		}
+	}
+	
+	#Peace in the North
+	focus = {
+		id = IEF_peace_in_the_north
+		icon = GFX_focus_eng_imperial_federation
+		relative_position_id = IEF_reorganize_the_north
+		x = 0
+		y = 1
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = IEF_establish_the_icii  } prerequisite = { focus = IEF_reorganize_the_north  } prerequisite = { focus = IEF_dismantle_the_east  }
+		completion_reward = {
+			add_stability= 0.15  
+			add_war_support= 0.10  
+			add_research_slot = 1
+			create_faction = "International Expeditionary Forces in America"
+			set_cosmetic_tag = IEF_unify_01
 		}
 	}
 }

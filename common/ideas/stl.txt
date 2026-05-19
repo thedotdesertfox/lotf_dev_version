@@ -1,0 +1,14 @@
+ideas = {
+
+	#KSC
+	country = {
+		STL_money = {
+			picture = ARG_invest_in_railways
+			modifier = {
+				trade_opinion_factor = 0.5
+				stability_factor = 0.2
+				army_core_defence_factor = 0.15
+			}
+		}
+	}	
+}

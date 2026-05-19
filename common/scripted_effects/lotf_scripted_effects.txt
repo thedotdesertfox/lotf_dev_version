@@ -95,3 +95,125 @@ template_cap_increase_five = {
 		division_cap = normal_infantry_cap@ROOT
 	}
 }
+
+#####IEF#####
+
+ief_improve_professional_army = {
+	if = {
+		limit = {
+			has_idea = IEF_professional_army_01
+		}
+		swap_ideas = {
+			remove_idea = IEF_professional_army_01
+			add_idea = IEF_professional_army_02
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = IEF_professional_army_02
+		}
+		swap_ideas = {
+			remove_idea = IEF_professional_army_02
+			add_idea = IEF_professional_army_03
+		}
+	}
+}
+
+ief_improve_angry_population = {
+	if = {
+		limit = {
+			has_idea = IEF_angry_population_01
+		}
+		swap_ideas = {
+			remove_idea = IEF_angry_population_01
+			add_idea = IEF_angry_population_02
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = IEF_angry_population_02
+		}
+		swap_ideas = {
+			remove_idea = IEF_angry_population_02
+			add_idea = IEF_angry_population_03
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = IEF_angry_population_03
+		}
+		swap_ideas = {
+			remove_idea = IEF_angry_population_03
+			add_idea = IEF_angry_population_04
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = IEF_angry_population_04
+		}
+		swap_ideas = {
+			remove_idea = IEF_angry_population_04
+			add_idea = IEF_angry_population_05
+		}
+	}
+}
+
+ief_improve_supply_lines = {
+	if = {
+		limit = {
+			has_idea = IEF_supply_lines_01
+		}
+		swap_ideas = {
+			remove_idea = IEF_supply_lines_01
+			add_idea = IEF_supply_lines_02
+		}
+	}
+}
+
+ief_improve_low_morale = {
+	if = {
+		limit = {
+			has_idea = IEF_low_morale_01
+		}
+		swap_ideas = {
+			remove_idea = IEF_low_morale_01
+			add_idea = IEF_low_morale_02
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = IEF_low_morale_02
+		}
+		swap_ideas = {
+			remove_idea = IEF_low_morale_02
+			add_idea = IEF_low_morale_03
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = IEF_low_morale_03
+		}
+		swap_ideas = {
+			remove_idea = IEF_low_morale_03
+			add_idea = IEF_low_morale_04
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = IEF_low_morale_04
+		}
+		swap_ideas = {
+			remove_idea = IEF_low_morale_04
+			add_idea = IEF_low_morale_05
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = IEF_low_morale_05
+		}
+		swap_ideas = {
+			remove_idea = IEF_low_morale_05
+			add_idea = IEF_low_morale_06
+		}
+	}
+}
