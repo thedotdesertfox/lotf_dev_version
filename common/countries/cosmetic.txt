@@ -1,3 +1,24 @@
+# 
+MIN_Aligned = {
+	color = rgb { 70 60 155 }
+	color_ui = rgb { 70 60 155 }
+}
+
+ERR_Aligned = {
+	color = rgb { 25 62 109 }
+	color_ui = rgb { 25 62 109 }
+}
+
+CMP_Aligned = {
+	color = rgb { 201 8 8 }
+	color_ui = rgb { 201 8 8 }
+}
+
+BIS_Aligned = {
+	color = rgb { 77 132 99 }
+	color_ui = rgb { 77 132 99 }
+}
+##################
 MAL_UK = {
     color = rgb { 201 56 93 }
     color_ui = rgb { 255 73 121 }

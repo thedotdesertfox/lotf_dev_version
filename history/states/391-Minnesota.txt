@@ -6,7 +6,7 @@ state={
 	state_category = city
 
 	resources={
-		steel=110 # was: 208
+		steel=25 # was: 208
 	}
 
 	history={
@@ -15,12 +15,18 @@ state={
 		
 		buildings = {
 			infrastructure = 3 #was: 6
-			industrial_complex = 3
+			industrial_complex = 2
+			arms_factory = 1
 		}
 		victory_points = {
 			1866 5 
 		}
-
+		victory_points = {
+			1719 10 
+		}
+		victory_points = {
+			4664 2
+		}
 	}
 
 	provinces={

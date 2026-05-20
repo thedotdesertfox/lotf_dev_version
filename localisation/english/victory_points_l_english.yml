@@ -640,6 +640,9 @@
  VICTORY_POINTS_709:0 "Escanaba"
  ##Saint Louis
  VICTORY_POINTS_954:0 "Paducah"
+ #Minnesota
+ VICTORY_POINTS_1719:0 "St. Paul"
+ VICTORY_POINTS_4664:0 "Rochester"
  #
  VICTORY_POINTS_6732:0 "Boston"
  VICTORY_POINTS_6845:0 "Philadelphia"

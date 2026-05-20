@@ -1,4 +1,5 @@
 characters = {
+	#Democratic Aligned
 	IOW_clyde_herring = {
 		name = "Clyde L. Herring"
 		portraits = {
@@ -12,4 +13,279 @@ characters = {
 			id = -1
 		}
 	}
+	DIA_willard_wyman = {
+		name = "Willard G. Wyman"
+		portraits = {
+			army = {
+				large = "gfx/leaders/DIA/Wyman.jfif"
+				small = "GFX_idea_USA_generic_land_1"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = {
+				infantry_leader
+				career_officer
+			}
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	DIA_william_sharp = {
+		name = "William F. Sharp"
+		portraits = {
+			army = {
+				large = "gfx/leaders/DIA/Sharp.jpg"
+				small = "GFX_idea_USA_generic_land_1"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = {
+				commando
+				infantry_officer
+			}
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	#Federalist Aligned
+	IWA_hanford_macnider = {
+		name = "Hanford MacNider"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IWA/Hanford.dds"
+			}
+			army = {
+				large = "gfx/leaders/IWA/Hanford.dds"
+			}
+			army = {
+				small = "GFX_idea_USA_generic_land_2"
+			}
+		}
+		country_leader = {
+			ideology = gen_despotism
+			traits = {
+				weak_authority
+			}
+		}
+		field_marshal = {
+			skill = 3
+			traits = {
+				inflexible_strategist
+				trait_reckless
+				politically_connected
+				commando
+				career_officer
+			}
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	IWA_jonathan_wainwright = {
+		name = "Jonathan Wainwright"
+		portraits = {
+			army = {
+				large = "gfx/leaders/IWA/wainwright.jfif"
+			}
+			army = {
+				small = "GFX_idea_USA_jonathan_wainwright"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = {
+				cavalry_officer
+				career_officer
+				trait_reckless
+				trait_federalist
+			}
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	IWA_clovis_byers = {
+		name = "Clovis E. Byers"
+		portraits = {
+			army = {
+				large = "gfx/leaders/IWA/Byers.jpg"
+				small = "GFX_idea_USA_generic_land_5"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = {
+				commando
+			}
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	IWA_frank_mccoy = {
+		name = "Frank Ross McCoy"
+		portraits = {
+			army = {
+				large = "gfx/leaders/DBQ/McCoy.png"
+				small = "GFX_idea_USA_generic_land_3"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = {
+				commando
+				old_guard
+				politically_connected
+				organizer
+				career_officer
+			}
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	IWA_wendell_fertig = {
+		name = "Wendell Fertig"
+		portraits = {
+			army = {
+				large = "gfx/leaders/DIA/Fertig.jpg"
+				small = "GFX_idea_USA_generic_land_3"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			traits = {
+				trickster
+				trait_engineer
+				guerilla_fighter
+			}
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	IWA_george_parker = {
+		name = "George M. Parker"
+		portraits = {
+			army = {
+				large = "gfx/leaders/IWA/Parker.jpg"
+				small = "GFX_idea_USA_generic_land_5"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = {
+				trickster
+				trait_reckless
+			}
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	IWA_willard_wyman = {
+		name = "Willard G. Wyman"
+		portraits = {
+			army = {
+				large = "gfx/leaders/IWA/Wyman.jfif"
+				small = "GFX_idea_USA_generic_land_1"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = {
+				infantry_leader
+				career_officer
+			}
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	IWA_william_sharp = {
+		name = "William F. Sharp"
+		portraits = {
+			army = {
+				large = "gfx/leaders/IWA/Sharp.jpg"
+				small = "GFX_idea_USA_generic_land_1"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = {
+				commando
+				infantry_officer
+			}
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	# Socialist Aligned
+	COM_ernest_hemingway = {
+		name = "Ernest Hemingway"
+		portraits = {
+			army = {
+				large = "gfx/leaders/DBQ/Hemingway.jpg"
+				small = "GFX_idea_USA_generic_land_3"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			traits = {
+				compassionate_leader
+				politically_connected
+				media_personality
+				militia_leader
+			}
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	COM_david_shoup = {
+		name = "David Monroe Shoup"
+		portraits = {
+			army = {
+				large = "gfx/leaders/COM/David_Shoup.dds"
+			}
+			army = {
+				small = "GFX_idea_USA_generic_land_2"
+			}
+		}
+		country_leader = {
+			ideology = gen_revolutionary_socialism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		corps_commander = {
+			skill = 2
+			traits = {
+				adaptable
+				commando
+				urban_assault_specialist
+				ranger
+			}
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+
 }

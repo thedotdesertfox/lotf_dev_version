@@ -1,0 +1,910 @@
+
+add_namespace = min
+
+country_event = {
+	id = min.1
+	title = min.1.t
+	desc = min.1.d
+	picture = GFX_olson_spitting_facts_event_image
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = min.1.a
+		ai_chance = {
+			base = 10
+		}
+		hidden_effect = {
+			country_event = { days = 415 id = min.25 }
+		}
+	}
+}
+country_event = {
+	id = min.2
+	title = min.2.t
+	desc = min.2.d
+	picture = GFX_olson_spitting_facts_event_image
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = min.2.a
+		ai_chance = {
+			base = 10
+		}
+		custom_effect_tooltip = min_negociations_bad
+		MIN = {
+			country_event = { days = 1 id = min.3 }
+		}
+		set_country_flag = hostile_to_min
+	}
+	option = {
+		name = min.2.b
+		ai_chance = {
+			base = 10
+		}
+		custom_effect_tooltip = min_negociations_good
+		MIN = {
+			country_event = { days = 1 id = min.3 }
+			set_country_flag = friendly_to_min
+		}
+		diplomatic_relation = { 
+			country = MIN
+			relation = non_aggression_pact 
+		}
+		set_country_flag = friendly_to_min
+	}
+	option = {
+		name = min.2.c
+		ai_chance = {
+			base = 10
+		}
+		custom_effect_tooltip = min_negociations_good
+		MIN = {
+			country_event = { days = 1 id = min.4 }
+		}
+		add_political_power = -15
+		FROM = {
+			set_country_flag = COM_transfer_pp
+		}
+		diplomatic_relation = { 
+			country = MIN
+			relation = non_aggression_pact 
+		}
+		set_country_flag = friendly_to_min
+	}
+}
+country_event = {
+	id = min.3
+	title = min.3.t
+	desc = min.3.d
+	picture = GFX_olson_spitting_facts_event_image
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = min.3.a
+		ai_chance = {
+			base = 10
+		}
+		add_political_power = -5
+	}
+}
+country_event = {
+	id = min.4
+	title = min.4.t
+	desc = min.4.d
+	picture = GFX_olson_spitting_facts_event_image
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = min.4.a
+		ai_chance = {
+			base = 10
+		}
+		diplomatic_relation = { 
+			country = COM 
+			relation = non_aggression_pact 
+		}
+		IF = {
+			limit = {
+				has_country_flag = COM_transfer_pp
+			}
+			add_political_power = 15
+		}
+	}
+}
+country_event = {
+	id = min.5
+	title = min.5.t
+	desc = min.5.d
+	picture = GFX_olson_spitting_facts_event_image
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = min.5.a
+		ai_chance = {
+			base = 10
+		}
+		custom_effect_tooltip = min_event_5
+		set_country_flag = min_funding_iowa_flag
+		add_timed_idea = {
+			idea = MIN_funding_iowa
+			days = 180
+		}
+	}
+}
+country_event = {
+	id = min.6
+	title = min.6.t
+	desc = min.6.d
+	picture = GFX_olson_spitting_facts_event_image
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = min.6.a
+		ai_chance = {
+			base = 10
+		}
+		custom_effect_tooltip = Min_election_1936_decisions_flag_tooltip1
+		set_country_flag = Min_election_1936_decisions_flag1
+		set_variable = {
+			var = 36dflpopularity
+			value = 52
+		}
+		set_variable = {
+			var = 36ndpopularity
+			value = 24
+		}
+		set_variable = {
+			var = 36rpopularity
+			value = 38
+		}
+		clamp_variable = {
+			var = 36ndpopularity
+			min = 0
+			max = 200
+		}
+		clamp_variable = {
+			var = 36dflpopularity
+			min = 0
+			max = 200
+		}
+		clamp_variable = {
+			var = 36rpopularity
+			min = 0
+			max = 200
+		}
+	}
+	option = {
+		name = min.6.b
+		ai_chance = {
+			base = 10
+		}
+		custom_effect_tooltip = Min_election_1936_decisions_flag_tooltip
+		set_country_flag = Min_election_1936_decisions_flag
+		set_variable = {
+			var = 36dflpopularity
+			value = 46
+		}
+		set_variable = {
+			var = 36ndpopularity
+			value = 24
+		}
+		set_variable = {
+			var = 36rpopularity
+			value = 38
+		}
+		clamp_variable = {
+			var = 36ndpopularity
+			min = 0
+			max = 101
+		}
+		clamp_variable = {
+			var = 36dflpopularity
+			min = 0
+			max = 101
+		}
+		clamp_variable = {
+			var = 36rpopularity
+			min = 0
+			max = 101
+		}
+	}
+}
+country_event = {
+	id = min.7
+	title = min.7.t
+	desc = min.7.d
+	picture = GFX_report_event_worker_protests
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = min.7.a
+		ai_chance = {
+			base = 10
+		}
+		add_manpower = -29
+		add_political_power = -15
+		add_stability = -0.02
+	}
+}
+country_event = {
+	id = min.8
+	title = min.8.t
+	desc = min.8.d
+	picture = GFX_report_event_election_vote
+	
+	fire_only_once = yes
+
+    mean_time_to_happen = { days = 5 }
+
+	trigger = {
+		tag = MIN
+		date > 1936.11.1
+	}
+	
+	option = {
+		name = min.8.a
+		ai_chance = {
+			base = 10
+		}
+		trigger = {
+			check_variable = { 36dflpopularity < 36rpopularity }
+		}
+		clr_country_flag = Min_election_1936_decisions_flag1
+		clr_country_flag = Min_election_1936_decisions_flag
+		set_politics = {
+			ruling_party = conservatism
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.10
+		}
+		add_popularity = {
+			ideology = guided_democracy
+			popularity = 0.06
+		}
+		hidden_effect = {
+			remove_country_leader_role = {
+				character = MIN_floyd_olson
+				ideology = gen_guided_democracy
+			}
+		}
+	}
+	option = {
+		name = min.8.b
+		ai_chance = {
+			base = 10
+		}
+		trigger = {
+			check_variable = { 36dflpopularity > 36rpopularity }
+		}
+		clr_country_flag = Min_election_1936_decisions_flag1
+		clr_country_flag = Min_election_1936_decisions_flag
+		set_politics = {
+			ruling_party = democratic_socialism
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = democratic_socialism
+			popularity = 0.1
+		}
+		hidden_effect = {
+			
+			remove_country_leader_role = {
+				character = MIN_floyd_olson
+				ideology = gen_guided_democracy
+			}
+		}
+	}
+}
+country_event = {
+	id = min.9
+	title = min.9.t
+	desc = min.9.d
+	picture = GFX_report_event_dead_soldiers
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {days = 1}
+	
+	option = {
+		name = min.9.a
+		ai_chance = { factor = 100 }
+		add_command_power = 75
+		army_experience = 10
+
+	}
+}
+country_event = {
+	id = min.10
+	title = min.10.t
+	desc = min.10.d
+	picture = GFX_report_event_dead_soldiers
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {days = 1}
+	
+	option = {
+		name = min.10.a
+		ai_chance = { factor = 50 }
+		add_political_power = -50
+
+	}
+	option = {
+		name = min.10.b
+		ai_chance = { factor = 50 }
+		add_political_power = -25
+		add_stability = -0.05
+
+	}	
+}
+country_event = {
+	id = min.11
+	title = min.11.t
+	desc = min.11.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+
+	
+	option = {
+		name = min.11.a
+		ai_chance = { factor = 100 }
+		OJB = {
+			country_event = { id = min.14 days = 7}
+		}
+	}
+}
+
+country_event = {
+	id = min.12
+	title = min.12.t
+	desc = min.12.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+
+	
+	option = {
+		name = min.12.a
+		ai_chance = { factor = 100 }
+		annex_country = { target = OJB }		
+		hidden_effect = {
+			country_event = { days = 14 id = min.15}
+		}
+	}
+}
+country_event = {
+	id = min.13
+	title = min.13.t
+	desc = min.13.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+
+	
+	option = {
+		name = min.13.a
+		ai_chance = { factor = 100 }
+		declare_war_on = { type = annex_everything    target = OJB }
+	}
+}
+country_event = {
+	id = min.14
+	title = min.14.t
+	desc = min.14.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+
+	
+	option = {
+		name = min.14.a
+		ai_chance = { factor = 50 }
+		MIN = {
+			country_event = { days = 7 id = min.12 }
+		}
+	}
+	option = {
+		name = min.14.b
+		ai_chance = { factor = 50 }
+		MIN = {
+			country_event = { days = 7 id = min.13 }
+		}
+	}	
+}
+country_event = {
+	id = min.15
+	title = min.15.t
+	desc = min.15.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+
+	
+	option = {
+		name = min.15.a
+		ai_chance = { factor = 100 }
+		add_manpower = 1820
+	}
+}
+country_event = {
+	id = min.16
+	title = min.16.t
+	desc = min.16.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = min.16.a
+		ai_chance = { factor = 100 }
+		add_popularity = {
+			ideology = ROOT
+			popularity = -0.03
+		}
+		add_stability = 0.05
+	}
+	option = {
+		name = min.16.b
+		ai_chance = { factor = 100 }
+		add_popularity = {
+			ideology = ROOT
+			popularity = 0.03
+		}
+		add_stability = -0.05
+	}	
+}
+country_event = {
+	id = min.17
+	title = min.17.t
+	desc = min.17.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = min.17.a
+		ai_chance = { factor = 100 }
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = min.18
+	title = min.18.t
+	desc = min.18.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = min.18.a
+		ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = min.19
+	title = min.19.t
+	desc = min.19.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = min.19.a
+		ai_chance = { factor = 100 }
+		add_timed_idea = {
+			idea = MIN_sioux_reparations
+			days = 180
+		}
+		annex_country = { target = NDA }		
+	}
+}
+country_event = {
+	id = min.20
+	title = min.20.t
+	desc = min.20.d
+	picture = GFX_report_event_worker_protests
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = min.20.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.01
+	}
+}
+country_event = {
+	id = min.21
+	title = min.21.t
+	desc = min.21.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = min.21.a
+		ai_chance = { 
+			factor = 5 
+			modifier = {
+				factor = 10
+				has_government = democratic_socialism
+			}
+		}
+		trigger = {
+			COM = {
+				exists = yes
+			}
+			NOT = {
+				COM = {
+					has_country_flag = war_occupied
+				}
+			}
+		}
+		custom_effect_tooltip = MIN_prochicago
+		custom_effect_tooltip = midwest_invasion_tooltip
+		add_opinion_modifier = { 
+			target = COM
+			modifier = medium_increase
+		}
+		add_opinion_modifier = { 
+			target = ERR
+			modifier = large_decrease
+		}
+		set_country_flag = min_invasion_flag1
+		set_country_flag = min_prochicagodecision
+		COM = {
+			country_event = {
+				hours = 6
+				id = min.22
+			}
+		}
+	}
+	option = {
+		name = min.21.b
+		ai_chance = { 
+			factor = 5 
+			modifier = {
+				factor = 50
+				has_government = conservatism
+			}
+		}
+		trigger = {
+			ERR = {
+				exists = yes
+			}
+		}
+		custom_effect_tooltip = MIN_proerie
+		custom_effect_tooltip = midwest_invasion_tooltip
+		add_opinion_modifier = { 
+			target = ERR
+			modifier = medium_increase
+		}
+		add_opinion_modifier = { 
+			target = COM
+			modifier = large_decrease
+		}
+		set_country_flag = min_invasion_flag1
+		set_country_flag = min_proeriedecision
+		ERR = {
+			country_event = {
+				hours = 6
+				id = min.22
+			}
+		}
+	}
+	option = {
+		name = min.21.c
+		ai_chance = { factor = 5 }
+		set_country_flag = min_invasion_flag1
+		custom_effect_tooltip = midwest_invasion_tooltip
+	}
+}
+country_event = {
+	id = min.22
+	title = min.22.t
+	desc = min.22.d
+	picture = GFX_report_event_worker_protests
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = min.22.a
+		ai_chance = { factor = 100 }
+		diplomatic_relation = { 
+			country = MIN
+			relation = non_aggression_pact 
+		}
+		give_guarantee = MIN
+		give_military_access = MIN
+		MIN = {
+			give_guarantee = ROOT
+			give_military_access = ROOT
+		}
+	}
+}
+country_event = {
+	id = min.23
+	title = min.23.t
+	desc = min.23.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = min.23.a
+		ai_chance = { factor = 100 }
+		annex_country = { target = COM }
+		COM = {
+			every_unit_leader = { 
+				set_nationality = MIN 
+
+			}
+		}
+		clr_country_flag = war_occupied
+	}
+}
+country_event = {
+	id = min.24
+	title = min.24.t
+	desc = min.24.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = min.24.a
+		ai_chance = { factor = 100 }
+		declare_war_on = { target = COM type = annex_everything }
+		clr_country_flag = war_occupied
+	}
+}
+country_event = {
+	id = min.25
+	title = min.25.t
+	desc = min.25.d
+	picture = GFX_report_spam_event
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = min.25.a
+		ai_chance = {
+			base = 10
+		}
+		add_ideas = idea_wonders_spam 
+		set_global_flag = idea_wonders_spam_flag
+	}
+}
+country_event = {
+	id = min.26
+	title = min.26.t
+	desc = min.26.d
+	picture = GFX_olson_spitting_facts_event_image
+	
+	#is_triggered_only = yes
+	trigger = {
+		original_tag = MIN
+		date > 1937.8.22
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { days = 10 }
+	
+	option = {
+		name = min.26.a
+		ai_chance = {
+			base = 10
+		}
+		retire_character = MIN_floyd_olson
+		hidden_effect = {
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.2
+			}
+		}
+	}
+}
+country_event = {
+	id = min.27
+	title = min.27.t
+	desc = min.27.d
+	picture = GFX_report_event_election_vote
+	
+	#is_triggered_only = yes
+	trigger = {
+		original_tag = MIN
+		date > 1940.1.15
+		has_government = democratic_socialism
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { days = 10 }
+	
+	option = {
+		name = min.27.a
+		ai_chance = {
+			base = 10
+		}
+		#trigger = { has_government = democratic_socialism }
+	}
+	option = {
+		name = min.27.b
+		ai_chance = {
+			base = 10
+		}
+		#trigger = { has_government = conservatism }
+	}
+	option = {
+		name = min.27.c
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = min.27.e
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+country_event = {
+	id = min.28
+	title = min.28.t
+	desc = min.28.d
+	picture = GFX_report_event_election_vote
+	
+	#is_triggered_only = yes
+	trigger = {
+		original_tag = MIN
+		date > 1940.1.15
+		has_government = conservatism
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { days = 10 }
+	
+	option = {
+		name = min.28.a
+		ai_chance = {
+			base = 10
+		}
+		#trigger = { has_government = democratic_socialism }
+	}
+	option = {
+		name = min.28.b
+		ai_chance = {
+			base = 10
+		}
+		#trigger = { has_government = conservatism }
+	}
+	option = {
+		name = min.28.c
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = min.28.e
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+country_event = {
+	id = min.29
+	title = min.29.t
+	desc = min.29.d
+	picture = GFX_report_event_worker_protests
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = min.29.a
+		ai_chance = {
+			base = 10
+		}
+		#add_war_support = 0.05
+		MIL = {
+			add_war_support = -0.02
+		}
+	}
+}
+
+country_event = {
+	id = min.30
+	title = min.30.d
+	desc =  = min.30.t
+
+	fire_only_once = yes
+	mean_time_to_happen = { days = 2 }
+
+	trigger = {
+		tag = NDA
+		MIN = {
+			has_war_with = BMK
+			surrender_progress > 0.3
+		}
+	}
+
+	option = {
+		name = min.30.a
+		ai_chance = {
+			base = 5
+		}
+		add_war_support = 0.1
+		add_stability = -0.1
+		declare_war_on = {
+			target = BMK
+			type = annex_everything
+		}
+	}
+	option = {
+		name = min.30.b
+		ai_chance = {
+			base = 5
+		}
+		add_political_power = 20
+	}
+
+}
+
+country_event = {
+	id = min.31
+	title = min.31.d
+	desc =  = min.31.t
+
+	fire_only_once = yes
+	mean_time_to_happen = { days = 2 }
+
+	trigger = {
+		tag = NDA
+		OJB = {
+			OR = {
+				has_war_with = BMK
+				has_war_with = IWA
+				has_war_with = DIA
+			}
+		}
+	}
+
+	option = {
+		name = min.31.a
+		ai_chance = {
+			base = 5
+		}
+		add_war_support = 0.1
+		declare_war_on = {
+			target = OJB
+			type = annex_everything
+		}
+	}
+	option = {
+		name = min.31.b
+		ai_chance = {
+			base = 5
+		}
+		add_political_power = 20
+	}
+
+}

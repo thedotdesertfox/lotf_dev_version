@@ -1,0 +1,475 @@
+ideas = {
+	# MILITARY
+#Minnesota Ideas
+country = {
+	MIN_democratic_bastion = {
+        picture = generic_volunteer_expedition_bonus
+        modifier = {
+            
+        }
+    }
+	MIN_sluggish = {
+		picture = chi_hyper_inflation
+		modifier = {
+			stability_factor = -0.1
+			consumer_goods_factor = 0.2
+			industrial_capacity_factory = -0.1
+			production_speed_buildings_factor = -0.1
+			local_resources_factor = -0.15
+			production_factory_max_efficiency_factor = -0.15
+			production_factory_efficiency_gain_factor = -0.1
+		}
+	}
+	MIN_sluggish1 = {
+		name = MIN_sluggish
+		picture = chi_hyper_inflation
+		modifier = {
+			stability_factor = -0.05
+			consumer_goods_factor = 0.15
+			industrial_capacity_factory = -0.1
+			production_speed_buildings_factor = -0.1
+			local_resources_factor = -0.05
+		}
+	}
+	MIN_sluggish2 = {
+		name = MIN_sluggish
+		picture = chi_hyper_inflation
+		modifier = {
+			stability_factor = -0.05
+			consumer_goods_factor = 0.1
+		}
+	}
+	MIN_funding_iowa = {
+        picture = generic_foreign_capital
+        modifier = {
+            political_power_factor = -0.1
+            war_support_weekly = 0.005
+        }
+    }
+    MIN_sioux_reparations = {
+        picture = generic_disjointed_gov
+        modifier = {
+            political_power_factor = -0.10
+            stability_factor = -0.1
+        }
+    }
+    MIN_xenophobia2 = {
+        picture = chi_war_of_resistance
+        modifier = {
+            political_power_factor = 0.1
+            stability_factor = -0.15
+        }
+    }		
+
+    MIN_milita_force = {
+        picture = chi_army_corruption3
+        modifier = {
+			#winter_attrition = -0.35
+			#acclimatization_cold_climate_gain_factor = 0.5
+			supply_consumption_factor = -0.25
+			experience_gain_army_factor = -0.25
+			max_planning = -0.15
+			army_org_factor = -0.15
+			planning_speed = -0.15
+        }
+    }
+
+	MIN_federal_legitimacy = {
+		picture = SPR_torchbearers_of_tomorrow
+		modifier = {
+			political_power_factor = -0.1
+			#surrender_limit = 0.15
+			weekly_manpower = 300
+			required_garrison_factor = -0.10
+			compliance_growth = 0.10
+		}
+	}
+    MIN_milita_force1 = {
+        picture = chi_army_corruption3
+        modifier = {
+            army_speed_factor = 0.05
+            army_attack_factor = 0.05
+            winter_attrition = -0.1
+        }
+    }
+    MIN_breadbasket_country = {
+        picture = generic_agrarian_reform
+        modifier = {
+            monthly_population = 0.1
+            weekly_manpower = 70
+        }
+    }
+    MIN_breadbasket_country1 = {
+        picture = generic_agrarian_reform
+        modifier = {
+            monthly_population = 0.15
+            weekly_manpower = 70
+        }
+    }	
+    MIN_breadbasket_country2 = {
+        picture = generic_agrarian_reform
+        modifier = {
+            monthly_population = 0.1
+            weekly_manpower = 70
+            political_power_gain = 0.1
+        }
+    }		
+}
+###
+
+	political_advisor = {
+		MIN_wi = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = MIN
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { war_industrialist }
+		}
+		
+
+		MIN_cg = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = MIN
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { compassionate_gentleman }
+		}
+		
+		MIN_qg = {
+
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = MIN
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { quartermaster_general }
+		}
+
+		MIN_bb = {
+
+			picture = generic_political_advisor_europe_2
+				
+			allowed = {
+				original_tag = MIN
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { backroom_backstabber }
+		}
+		
+		MIN_pot = {
+
+			picture = generic_political_advisor_europe_2
+
+			allowed = {
+				original_tag = MIN
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { prince_of_terror }
+		}
+
+		MIN_coi = {
+
+			picture = generic_political_advisor_europe_1
+				
+			allowed = {
+				original_tag = MIN
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { captain_of_industry }
+		}
+
+		MIN_stc = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = MIN
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { smooth_talking_charmer }
+		}
+	}
+
+	army_chief = {
+
+		MIN_aco2 = {
+
+			picture = generic_army_europe_4
+			
+			allowed = {
+				original_tag = MIN
+			}		
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { army_chief_organizational_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		MIN_acd2 = {
+
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = MIN
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+
+		MIN_acr = {
+
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = MIN
+			}
+			
+			traits = { air_chief_reform_2 }
+			available = {
+				has_country_flag = not_warlord4
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		MIN_acgs = {
+
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = MIN
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	navy_chief = {
+
+		MIN_nccr = {
+
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = MIN
+			}
+					
+			traits = { navy_chief_commerce_raiding_2 }
+			available = {
+				has_country_flag = not_warlord4
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		MIN_ncm = {
+
+			picture = generic_navy_europe_3
+			
+			allowed = {
+				original_tag = MIN
+			}
+					
+			traits = { navy_chief_maneuver_2 }
+			available = {
+				has_country_flag = not_warlord4
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	high_command = {
+
+		MIN_ar = {
+			ledger = army
+			
+			picture = generic_army_europe_5
+			
+			allowed = {
+				original_tag = MIN
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		MIN_ai2 = {
+			ledger = army
+
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = MIN
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		MIN_aa2 = {
+			ledger = army
+
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = MIN
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { army_armored_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		MIN_acas = {
+			ledger = air
+
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = MIN
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { air_close_air_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		MIN_ncs = {
+			ledger = navy
+
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = MIN
+			}
+			
+			traits = { navy_capital_ship_2 }
+			available = {
+				has_country_flag = not_warlord4
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}	
+
+	theorist = {
+		MIN_mt = {
+			ledger = army
+			
+			picture = generic_army_europe_6
+
+			allowed = {
+				original_tag = MIN
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { military_theorist }
+		}
+		
+		MIN_nt = {
+			ledger = navy
+
+			picture = generic_navy_europe_3
+			
+			allowed = {
+				original_tag = MIN
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { naval_theorist }
+		}	
+
+		MIN_awt = {
+			ledger = air
+
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = MIN
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+	}
+}

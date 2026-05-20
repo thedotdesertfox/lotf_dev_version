@@ -39,8 +39,18 @@ if = {
 }
 
 recruit_character = IOW_clyde_herring
+recruit_character = DIA_willard_wyman
+recruit_character = DIA_william_sharp
 
+recruit_character = IWA_hanford_macnider
+recruit_character = IWA_jonathan_wainwright
+recruit_character = IWA_clovis_byers
+recruit_character = IWA_frank_mccoy
+recruit_character = IWA_wendell_fertig
+recruit_character = IWA_george_parker
 
+recruit_character = COM_ernest_hemingway
+recruit_character = COM_david_shoup
 
 
 set_convoys = 100
@@ -51,7 +61,14 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	conservative_democracy = 100
+	communism = 2
+	revolutionary_socialism = 15
+	socialist_democracy = 5
+	democratic = 23
+	conservative_democracy = 26
+	neutrality = 19
+	fascism = 10
+
 }
 
 add_ideas = {

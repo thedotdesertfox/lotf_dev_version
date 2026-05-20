@@ -1,0 +1,1737 @@
+focus_tree = {
+	id = focus.min.1
+	country = {
+		factor = 0
+		modifier = {
+			add = 50
+			tag = MIN
+		}
+	}
+	continuous_focus_position = { x = 615 y = 550 }
+
+	#Focus for Fortify the Twin Cities
+	focus = {
+		id = MIN_fortify_the_twin_cities
+		icon = GFX_goal_generic_defence
+		x = 2
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_calls_for_unity }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = minfortifytwincitiestooltip
+			hidden_effect = {
+				32 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 3782
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 6968
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Crack Open Federal Caches
+	focus = {
+		id = MIN_crack_open_federal_caches
+		icon = GFX_goal_generic_military_sphere
+		x = 4
+		y = 5
+		cost = 4.5
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_calls_for_unity }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 600
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 100
+			}
+		}
+	}
+
+
+	#Focus for The Fargo Gamble
+	focus = {
+		id = MIN_the_fargo_gamble
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = 11
+		y = 3
+		cost = 4.5
+		available_if_capitulated = yes
+		available = {
+			has_war = no
+		}
+		prerequisite = { 
+			focus = MIN_subvert_the_sioux_government 
+			focus = MIN_mission_to_chicago 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 15
+			start_border_war = {
+				change_state_after_war = no
+					attacker = {
+						state = 32
+						num_provinces = 4
+						on_win = min.9
+						on_lose = min.10
+						on_cancel = min.10
+					}
+					defender = {
+						state = 220
+						num_provinces = 4
+						on_win = min.9
+						on_lose = min.10
+						on_cancel = min.10
+					}
+			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36dflpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36dflpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36dflpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36dflpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag1
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36rpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36rpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36rpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36rpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+			}
+		}	
+	}
+
+	#Focus for Help the Local Famer
+	focus = {
+		id = MIN_help_the_local_famer
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = 2
+		y = 2
+		cost = 4.5
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_ensure_the_public }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			modify_american_warlord = yes
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36dflpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36dflpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36dflpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36dflpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag1
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36rpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36rpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36rpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36rpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Fix the Twin Cities Infrastructure
+	focus = {
+		id = MIN_fix_the_twin_cities_infrastructure
+		icon = GFX_goal_generic_construct_civilian
+		x = 0
+		y = 2
+		cost = 4.5
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_ensure_the_public }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			32 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+				remove_idea = MIN_sluggish
+				add_idea = MIN_sluggish1
+			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36dflpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36dflpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36dflpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36dflpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag1
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36rpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36rpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36rpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36rpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Last Bastion of Democracy
+	focus = {
+		id = MIN_last_bastion_of_democracy
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		x = 6
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = { hours = 1 id=min.1 } 
+		}
+	}
+
+	#Focus for Ensure the Public
+	focus = {
+		id = MIN_ensure_the_public
+		icon = GFX_focus_generic_self_management
+		x = 3
+		y = 1
+		cost = 4.5
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_last_bastion_of_democracy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = { hours = 6 id = min.6 } 
+		}
+	}
+
+	#Focus for Contact Friendly Neighbors
+	focus = {
+		id = MIN_contact_friendly_neighbors
+		icon = GFX_goal_generic_major_alliance
+		x = 8
+		y = 1
+		cost = 4.5
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_last_bastion_of_democracy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	
+			add_opinion_modifier = { 
+				target = IWA
+				modifier = medium_increase
+			}
+			add_opinion_modifier = { 
+				target = BMK
+				modifier = large_decrease
+			}	
+			add_opinion_modifier = { 
+				target = COM
+				modifier = small_increase
+			}	
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36dflpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36dflpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36dflpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36dflpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag1
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36rpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36rpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36rpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36rpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+			}		
+		}
+	}
+
+	#Focus for Influence Iowa's Politics
+	focus = {
+		id = MIN_influence_iowas_politics
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 8
+		y = 3
+		cost = 4.5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MIN_prepare_for_the_getyear_election 
+		}
+		prerequisite = { 
+			focus = MIN_contact_friendly_neighbors 
+		}
+		bypass = {
+			has_country_flag = iwacivilwarisgoingon
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = { id = min.5 }
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36dflpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36dflpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36dflpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36dflpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag1
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36rpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36rpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36rpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36rpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Subvert the Sioux Government
+	focus = {
+		id = MIN_subvert_the_sioux_government
+		icon = GFX_goal_generic_political_pressure
+		x = 9
+		y = 2
+		cost = 4.5
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_contact_friendly_neighbors }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			NDA = { exists = no }
+		}
+		completion_reward = {
+			add_political_power = 10
+			NDA = {
+				add_stability = -0.1
+			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36dflpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36dflpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36dflpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36dflpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag1
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36rpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36rpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36rpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36rpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Mission to Chicago
+	focus = {
+		id = MIN_mission_to_chicago
+		icon = GFX_goal_generic_improve_relations
+		x = 13
+		y = 2
+		cost = 4.5
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_contact_friendly_neighbors }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			COM = { exists = no }
+		}
+		completion_reward = {
+			COM = {
+				country_event = { days = 2 id = min.2 }   
+			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36dflpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36dflpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36dflpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36dflpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag1
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36rpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36rpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36rpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36rpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Prepare for the [Get.Year] Election
+	focus = {
+		id = MIN_prepare_for_the_getyear_election
+		icon = GFX_goal_generic_national_unity
+		x = 5
+		y = 2
+		cost = 4.5
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_ensure_the_public }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 15
+			add_manpower = 35000
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36dflpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36dflpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36dflpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36dflpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag1
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36rpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36rpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36rpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36rpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Fulfill Legislative Promises
+	focus = {
+		id = MIN_fulfill_legislative_promises
+		icon = GFX_focus_generic_treaty
+		x = 4
+		y = 3
+		cost = 4.5
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_prepare_for_the_getyear_election }
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = MIN_fulfill_legislative_promises123
+		}
+		completion_reward = {
+			IF = {
+				limit = {
+					OR = {
+						has_country_flag = Min_election_1936_decisions_flag
+						has_country_flag = Min_election_1936_decisions_flag1
+					}
+				}
+				custom_effect_tooltip = 36dflpopularityboost8_tooltip
+			}
+            add_to_variable = { 36dflpopularity = 8 }
+			add_political_power = 50
+			modify_american_warlord = yes
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36dflpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36dflpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36dflpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36dflpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag1
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36rpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36rpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36rpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36rpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = MIN_fulfill_legislative_promises123
+		icon = GFX_focus_generic_self_management
+		x = 6
+		y = 3
+		cost = 4.5
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_prepare_for_the_getyear_election }
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = MIN_fulfill_legislative_promises
+		}
+		completion_reward = {
+			IF = {
+				limit = {
+					OR = {
+						has_country_flag = Min_election_1936_decisions_flag
+						has_country_flag = Min_election_1936_decisions_flag1
+					}
+				}
+				custom_effect_tooltip = 36rpopularityboost8_tooltip
+				custom_effect_tooltip = 36ndpopularityboost4_tooltip
+			}
+            add_to_variable = { 36rpopularity = 8 }
+			add_to_variable = { 36ndpopularity = 4 }
+			add_stability = 0.05
+			modify_american_warlord = yes
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36dflpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36dflpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36dflpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36dflpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag1
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36rpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36rpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36rpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36rpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+			}
+		}
+	}
+	#Focus for Review the Plan of Action
+	focus = {
+		id = MIN_review_the_plan_of_action1
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 1
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_help_the_local_famer }
+		prerequisite = { focus = MIN_fix_the_twin_cities_infrastructure }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 25
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36dflpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36dflpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36dflpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36dflpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag1
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36rpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36rpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36rpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36rpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Review the Plan of Action
+	focus = {
+		id = MIN_review_the_plan_of_action2
+		icon = GFX_focus_generic_license_production
+		x = 1
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_review_the_plan_of_action1 }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36dflpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36dflpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36dflpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36dflpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag1
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36rpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36rpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36rpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36rpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Review the Plan of Action
+	focus = {
+		id = MIN_review_the_plan_of_action3
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_help_the_local_famer }
+		prerequisite = { focus = MIN_fix_the_twin_cities_infrastructure }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			32 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+				remove_idea = MIN_sluggish1
+				add_idea = MIN_sluggish2
+			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36dflpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36dflpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36dflpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36dflpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag1
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36rpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36rpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36rpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36rpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Review the Plan of Action
+	focus = {
+		id = MIN_review_the_plan_of_action
+		icon = GFX_goal_generic_territory_or_war
+		x = 3
+		y = 6
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_fortify_the_twin_cities }
+		prerequisite = { focus = MIN_crack_open_federal_caches } 
+		available = {
+			date > 1937.11.1
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			country_event = { hours = 6 id = min.29 }
+			add_war_support = 0.2
+			add_manpower = 25000
+		}
+	}
+
+	#Focus for Operation: Northern Lights
+	focus = {
+		id = MIN_operation_northern_lights
+		icon = GFX_DBQ_bruh2-1264681
+		x = 0
+		y = 7
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_review_the_plan_of_action }
+		mutually_exclusive = { focus = MIN_a_chance_at_redemption }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = no			
+		}				
+		bypass = {
+			OJB = { exists = no}
+		}
+		will_lead_to_war_with = OJB
+		completion_reward = {
+			declare_war_on = { type = annex_everything    target = OJB }
+		}
+	}
+
+	#Focus for A Chance at Redemption
+	focus = {
+		id = MIN_a_chance_at_redemption
+		icon = GFX_DBQ_bruh2-126468
+		x = 2
+		y = 7
+		cost = 4
+		available = {
+			has_war = no 
+			has_government = democratic_socialism
+		}
+		bypass = {
+			OJB = { exists = no }
+		}
+		select_effect = {
+			country_event = { days = 7 id = min.11 }
+		}
+		cancelable = no
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_review_the_plan_of_action }
+		mutually_exclusive = { focus = MIN_operation_northern_lights }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = minojbultatimum
+		}
+	}
+
+	#Focus for Meet with Herring
+	focus = {
+		id = MIN_meet_with_herring
+		icon = GFX_DBQ_bruh-126465
+		x = 13
+		y = 7
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MIN_send_in_weapons 
+		}
+		prerequisite = { 
+			focus = MIN_review_the_plan_of_action 
+		}
+		mutually_exclusive = { focus = MIN_operation_sundown }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = no 
+			DIA = {
+				exists = yes
+				#OR = {
+				#	controls_state = 52
+				#	controls_state = 165
+				#}
+			}
+		}
+		bypass = {
+			IWA = { exists = no }
+			DIA = { exists = no }
+			DBQ = { exists = no }
+		}
+		will_lead_to_war_with = IWA
+		will_lead_to_war_with = DBQ
+		completion_reward = {
+			country_event = { hours = 6 id = iwa.12 }
+			IF = {
+				limit = {
+					IWA = { exists = yes }
+				}
+				declare_war_on = { type = annex_everything    target = IWA }
+			}
+			IF = {
+				limit = {
+					DBQ = { exists = yes }
+				}
+				declare_war_on = { type = annex_everything    target = DBQ }
+			}
+		}
+	}
+
+	#Focus for Operation: Sundown
+	focus = {
+		id = MIN_operation_sundown
+		icon = GFX_MIN_operation_sundown-125182
+		x = 11
+		y = 7
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_review_the_plan_of_action }
+		mutually_exclusive = { 
+			focus = MIN_meet_with_herring 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = no
+			DIA = { 
+				exists = no
+			}
+		}
+		bypass = {
+			IWA = { exists = no }
+			DIA = { exists = no }
+			DBQ = { exists = no }
+		}
+		will_lead_to_war_with = IWA
+		will_lead_to_war_with = DIA
+		will_lead_to_war_with = DBQ
+		completion_reward = {
+			IF = {
+				limit = {
+					IWA = { exists = yes }
+				}
+				declare_war_on = { type = annex_everything    target = IWA }
+			}
+			IF = {
+				limit = {
+					DIA = { exists = yes }
+				}
+				declare_war_on = { type = annex_everything    target = DIA }
+			}
+			IF = {
+				limit = {
+					DBQ = { exists = yes }
+				}
+				declare_war_on = { type = annex_everything    target = DBQ }
+			}
+		}
+	}
+
+	#Focus for The Sioux Falls Convention
+	focus = {
+		id = MIN_the_sioux_falls_convention
+		icon = GFX_DBQ_bruh3-126469
+		x = 7
+		y = 7
+		cost = 4
+		available = {
+			has_war = no
+		}
+		cancel_if_invalid = yes
+		bypass = {
+			NDA = { exists = no }
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_review_the_plan_of_action }
+		mutually_exclusive = { focus = MIN_operation_uprising }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = { hours = 6 id = min.18 }
+		}
+	}
+
+	#Focus for Operation: Uprising
+	focus = {
+		id = MIN_operation_uprising
+		icon = GFX_MIN_operation_uprising-125183
+		x = 9
+		y = 7
+		cost = 4
+		available = {
+			has_war = no 
+		}
+		bypass = {
+			NDA = { exists = no }
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_review_the_plan_of_action }
+		mutually_exclusive = { focus = MIN_the_sioux_falls_convention }
+		ai_will_do = {
+			factor = 1
+		}
+		will_lead_to_war_with = NDA
+		completion_reward = {
+			declare_war_on = { type = annex_everything    target = NDA }
+		}
+	}
+
+	#Focus for Connect the Roads
+	focus = {
+		id = MIN_connect_the_roads
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 12
+		y = 8
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MIN_meet_with_herring 
+			focus = MIN_operation_sundown 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			owns_state = 52
+		}
+		bypass = {
+			NOT = { owns_state = 52 }
+			IWA = { exists = no }
+			DIA = { exists = no }
+			DBQ = { exists = no }
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.06
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.10
+			}
+		}
+	}
+
+	#Focus for Reviving Two Harbors
+	focus = {
+		id = MIN_reviving_two_harbors
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 1
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MIN_a_chance_at_redemption 
+			focus = MIN_operation_northern_lights 
+		}
+		available = {
+			owns_state = 151
+		}
+		bypass = {
+			OJB = { exists = no }
+			NOT = {
+				owns_state = 151
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			151 = {
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			hidden_effect = {
+				random_list = {
+					50 = {
+						add_popularity = {
+							ideology = communism
+							popularity = 0.04
+						}
+						add_popularity = {
+							ideology = revolutionary_socialist
+							popularity = 0.02
+						}
+					}
+					50 = {
+						add_popularity = {
+							ideology = revolutionary_socialist
+							popularity = 0.04
+						}
+						add_popularity = {
+							ideology = communism
+							popularity = 0.02
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Official Recognition
+	focus = {
+		id = MIN_official_recognition
+		icon = GFX_goal_generic_national_unity
+		x = 7
+		y = 8
+		cost = 4
+		available = {
+			has_war = no
+			NDA = { has_war = no }
+		}
+		bypass = {
+			NDA = { exists = no }
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_the_sioux_falls_convention }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = { id = min.19 }
+		}
+	}
+
+	#Focus for The Fate of the Separatists
+	focus = {
+		id = MIN_the_fate_of_the_separatists
+		icon = GFX_goal_generic_secret_weapon
+		x = 9
+		y = 8
+		cost = 4
+		available = {
+			owns_state = 46 
+		}
+		bypass = {
+			NOT = { owns_state = 46 }
+			NDA = { exists = no }
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_operation_uprising }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = { id = min.17 hours = 6}
+			hidden_effect = {
+				random_list = {
+					
+				}
+			}
+		}
+	}
+
+	#Focus for Operation: Just Business
+	focus = {
+		id = MIN_operation_just_business
+		icon = GFX_MIN_operation_just_business-125184
+		x = 4
+		y = 7
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_review_the_plan_of_action }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = no
+		}
+		bypass = {
+			BMK = { exists = no }
+		}
+		will_lead_to_war_with = BMK
+		completion_reward = {
+			declare_war_on = { type = annex_everything    target = BMK }
+		}
+	}
+
+	#Focus for Free the Oppressed
+	focus = {
+		id = MIN_free_the_oppressed
+		icon = GFX_goal_generic_demand_territory
+		x = 3
+		y = 8
+		cost = 4
+		available = {
+			owns_state = 219
+		}
+		bypass = {
+			NOT = { owns_state = 219 }
+			BMK = { exists = no }
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_operation_just_business }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = -35
+			add_manpower = 4500
+			country_event = { hours = 6 id = min.20 }
+		}
+	}
+
+	#Focus for Fate of the Robber Barons
+	focus = {
+		id = MIN_fate_of_the_robber_barons
+		icon = GFX_goal_generic_neutrality_focus
+		x = 5
+		y = 8
+		cost = 4
+		available = {
+			owns_state = 219
+		}
+		bypass = {
+			NOT = { owns_state = 219 }
+			BMK = { exists = no }
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_operation_just_business }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = { hours = 6 id = min.16 }
+			hidden_effect = {
+				random_list = {
+					50 = {
+						add_popularity = {
+							ideology = fascism
+							popularity = 0.04
+						}
+						add_popularity = {
+							ideology = despotism
+							popularity = 0.02
+						}
+					}
+					50 = {
+						add_popularity = {
+							ideology = despotism
+							popularity = 0.04
+						}
+						add_popularity = {
+							ideology = fascism
+							popularity = 0.02
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Send in Weapons
+	focus = {
+		id = MIN_send_in_weapons
+		icon = GFX_goal_generic_military_sphere
+		x = 14
+		y = 6
+		cost = 4.5
+		available_if_capitulated = yes
+		prerequisite = { focus = MIN_influence_iowas_politics }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			has_country_flag = iwacivilwarisgoingon
+		}
+		completion_reward = {
+			custom_effect_tooltip = min_send_weapons_iowa
+			DIA = {
+				set_country_flag = min_send_weapons_iowa2
+			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36dflpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36dflpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36dflpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36dflpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag1
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36rpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36rpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36rpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36rpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Into the Fray
+	focus = {
+		id = MIN_into_the_fray
+		icon = GFX_MIN_into_the_fray-125181
+		x = 6
+		y = 9
+		cost = 4.5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MIN_fate_of_the_robber_barons 
+		}
+		prerequisite = { 
+			focus = MIN_free_the_oppressed 
+		}
+		prerequisite = { 
+			focus = MIN_the_fate_of_the_separatists 
+			focus = MIN_official_recognition 
+		}
+		prerequisite = { 
+			focus = MIN_reviving_two_harbors 
+		}
+		prerequisite = { 
+			focus = MIN_connect_the_roads 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = { hours = 6 id = min.21 }
+			set_cosmetic_tag = MIN_unify1
+			set_country_flag = min_invasion1
+			add_stability = 0.15
+			add_war_support = 0.15
+			add_political_power = 100
+			add_research_slot = 1
+			IF = {
+				limit = {
+					has_government = democratic_socialism
+				}
+				every_country = { 
+					news_event = { hours = 6 id = news.1 } 
+				}
+			}
+			IF = {
+				limit = {
+					has_government = conservatism
+				}
+				every_country = { 
+					news_event = { hours = 6 id = news.48 } 
+				}
+			}
+			hidden_effect = {
+				#country_event = { days = 58 id = min.26 }
+				add_manpower = 180000	#bruh who added this -memji im keeping it unless ww1 is your favorite war - ssess
+			}
+		}
+	}
+
+	#Focus for Calls for Unity
+	focus = {
+		id = MIN_calls_for_unity
+		icon = GFX_goal_generic_neutrality_focus
+		x = 3
+		y = 4
+		cost = 4.5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MIN_help_the_local_famer 
+		}
+		prerequisite = { 
+			focus = MIN_fix_the_twin_cities_infrastructure 
+		}
+		prerequisite = { 
+			focus = MIN_fulfill_legislative_promises 
+			focus = MIN_fulfill_legislative_promises123
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.05
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36dflpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36dflpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36dflpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36dflpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+				IF = {
+					limit = {
+						has_country_flag = Min_election_1936_decisions_flag1
+					}
+					random_list = {
+						20 = {
+							add_to_variable = { 36rpopularity = 2 }
+							add_to_variable = { 36ndpopularity = 2 }
+						}
+						50 = {
+							add_to_variable = { 36rpopularity = 4 }
+							add_to_variable = { 36ndpopularity = 4 }
+						}
+						20 = {
+							add_to_variable = { 36rpopularity = 6 }
+							add_to_variable = { 36ndpopularity = 6 }
+						}
+						10 = {
+							add_to_variable = { 36rpopularity = 8 }
+							add_to_variable = { 36ndpopularity = 8 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+#End of focuses 
+ }

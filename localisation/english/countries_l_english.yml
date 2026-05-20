@@ -54,11 +54,21 @@
  
  ###
  
- IOW:0 "Des Moines"
+ IOW:0 "Iowa"
  IOW_DEF:0 "the State of Iowa"
  IOW_ADJ:0 "Iowan"
+ IOW_neutrality:0 "Iowa Clique"
+ IOW_neutrality_DEF:0 "the Military District of Iowa"
+ IOW_neutrality_ADJ:0 "Iowan"
+ IOW_revolutionary_socialism:0 "Iowa Clique"
+ IOW_revolutionary_socialism_DEF:0 "the Socialist State of Iowa"
+ IOW_revolutionary_socialism_ADJ:0 "Iowan"
+ IOW_fascism:0 "Iowa"
+ IOW_fascism_DEF:0 "the State of Iowa"
+ IOW_fascism_ADJ:0 "Iowan"
  
- MIN:0 "Minneapolis"
+ 
+ MIN:0 "Minnesota"
  MIN_DEF:0 "the Republic of Minnesota"
  MIN_ADJ:0 "Minnesotan"
  
