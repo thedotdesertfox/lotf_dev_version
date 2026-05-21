@@ -57,6 +57,7 @@ add_ideas = {
 	free_trade
 }
 add_ideas = {
+	WSC_w_selden_washington_heir
 }
 
 

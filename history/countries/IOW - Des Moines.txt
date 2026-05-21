@@ -39,18 +39,18 @@ if = {
 }
 
 recruit_character = IOW_clyde_herring
-recruit_character = DIA_willard_wyman
-recruit_character = DIA_william_sharp
+recruit_character = IOW_willard_wyman
+recruit_character = IOW_william_sharp
 
-recruit_character = IWA_hanford_macnider
-recruit_character = IWA_jonathan_wainwright
-recruit_character = IWA_clovis_byers
-recruit_character = IWA_frank_mccoy
-recruit_character = IWA_wendell_fertig
-recruit_character = IWA_george_parker
+recruit_character = IOW_hanford_macnider
+recruit_character = IOW_jonathan_wainwright
+recruit_character = IOW_clovis_byers
+recruit_character = IOW_frank_mccoy
+recruit_character = IOW_wendell_fertig
+recruit_character = IOW_george_parker
 
-recruit_character = COM_ernest_hemingway
-recruit_character = COM_david_shoup
+recruit_character = IOW_ernest_hemingway
+recruit_character = IOW_david_shoup
 
 
 set_convoys = 100

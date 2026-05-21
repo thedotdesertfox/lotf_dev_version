@@ -13,11 +13,11 @@ characters = {
 			id = -1
 		}
 	}
-	DIA_willard_wyman = {
+	IOW_willard_wyman = {
 		name = "Willard G. Wyman"
 		portraits = {
 			army = {
-				large = "gfx/leaders/DIA/Wyman.jfif"
+				large = "gfx/leaders/IOW/IOW_willard_wyman.png"
 				small = "GFX_idea_USA_generic_land_1"
 			}
 		}
@@ -33,11 +33,11 @@ characters = {
 			logistics_skill = 3
 		}
 	}
-	DIA_william_sharp = {
+	IOW_william_sharp = {
 		name = "William F. Sharp"
 		portraits = {
 			army = {
-				large = "gfx/leaders/DIA/Sharp.jpg"
+				large = "gfx/leaders/IOW/IOW_william_sharp.png"
 				small = "GFX_idea_USA_generic_land_1"
 			}
 		}
@@ -54,14 +54,14 @@ characters = {
 		}
 	}
 	#Federalist Aligned
-	IWA_hanford_macnider = {
+	IOW_hanford_macnider = {
 		name = "Hanford MacNider"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/IWA/Hanford.dds"
+				large = "gfx/leaders/IOW/IOW_hanford_mcnider.png"
 			}
 			army = {
-				large = "gfx/leaders/IWA/Hanford.dds"
+				large = "gfx/leaders/IOW/IOW_hanford_mcnider.png"
 			}
 			army = {
 				small = "GFX_idea_USA_generic_land_2"
@@ -70,6 +70,7 @@ characters = {
 		country_leader = {
 			ideology = gen_despotism
 			traits = {
+				lotf_federalist_sympathizer
 				weak_authority
 			}
 		}
@@ -88,41 +89,43 @@ characters = {
 			logistics_skill = 2
 		}
 	}
-	IWA_jonathan_wainwright = {
-		name = "Jonathan Wainwright"
-		portraits = {
-			army = {
-				large = "gfx/leaders/IWA/wainwright.jfif"
-			}
-			army = {
-				small = "GFX_idea_USA_jonathan_wainwright"
-			}
-		}
-		corps_commander = {
-			skill = 3
-			traits = {
-				cavalry_officer
-				career_officer
-				trait_reckless
-				trait_federalist
-			}
-			attack_skill = 2
-			defense_skill = 4
-			planning_skill = 2
-			logistics_skill = 2
-		}
-	}
-	IWA_clovis_byers = {
+	#In Erie already :P
+	#IOW_jonathan_wainwright = {
+	#	name = "Jonathan Wainwright"
+	#	portraits = {
+	#		army = {
+	#			large = "gfx/leaders/IWA/wainwright.png"
+	#		}
+	#		army = {
+	#			small = "GFX_idea_USA_jonathan_wainwright"
+	#		}
+	#	}
+	#	corps_commander = {
+	#		skill = 3
+	#		traits = {
+	#			cavalry_officer
+	#			career_officer
+	#			trait_reckless
+	#			trait_federalist
+	#		}
+	#		attack_skill = 2
+	#		defense_skill = 4
+	#		planning_skill = 2
+	#		logistics_skill = 2
+	#	}
+	#}
+	IOW_clovis_byers = {
 		name = "Clovis E. Byers"
 		portraits = {
 			army = {
-				large = "gfx/leaders/IWA/Byers.jpg"
+				large = "gfx/leaders/IOW/IOW_clovis_byers.png"
 				small = "GFX_idea_USA_generic_land_5"
 			}
 		}
 		corps_commander = {
 			skill = 2
 			traits = {
+				lotf_federalist_sympathizer
 				commando
 			}
 			attack_skill = 1
@@ -131,11 +134,11 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	IWA_frank_mccoy = {
+	IOW_frank_mccoy = {
 		name = "Frank Ross McCoy"
 		portraits = {
 			army = {
-				large = "gfx/leaders/DBQ/McCoy.png"
+				large = "gfx/leaders/IOW/IOW_frank_ross_mccoy.png"
 				small = "GFX_idea_USA_generic_land_3"
 			}
 		}
@@ -154,17 +157,18 @@ characters = {
 			logistics_skill = 3
 		}
 	}
-	IWA_wendell_fertig = {
+	IOW_wendell_fertig = {
 		name = "Wendell Fertig"
 		portraits = {
 			army = {
-				large = "gfx/leaders/DIA/Fertig.jpg"
+				large = "gfx/leaders/IOW/IOW_wendell_fertig.png"
 				small = "GFX_idea_USA_generic_land_3"
 			}
 		}
 		corps_commander = {
 			skill = 2
 			traits = {
+				lotf_federalist_sympathizer
 				trickster
 				trait_engineer
 				guerilla_fighter
@@ -175,17 +179,18 @@ characters = {
 			logistics_skill = 2
 		}
 	}
-	IWA_george_parker = {
+	IOW_george_parker = {
 		name = "George M. Parker"
 		portraits = {
 			army = {
-				large = "gfx/leaders/IWA/Parker.jpg"
+				large = "gfx/leaders/IOW/IOW_george_parker.png"
 				small = "GFX_idea_USA_generic_land_5"
 			}
 		}
 		corps_commander = {
 			skill = 1
 			traits = {
+				lotf_federalist_sympathizer
 				trickster
 				trait_reckless
 			}
@@ -195,58 +200,19 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	IWA_willard_wyman = {
-		name = "Willard G. Wyman"
-		portraits = {
-			army = {
-				large = "gfx/leaders/IWA/Wyman.jfif"
-				small = "GFX_idea_USA_generic_land_1"
-			}
-		}
-		corps_commander = {
-			skill = 3
-			traits = {
-				infantry_leader
-				career_officer
-			}
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 3
-		}
-	}
-	IWA_william_sharp = {
-		name = "William F. Sharp"
-		portraits = {
-			army = {
-				large = "gfx/leaders/IWA/Sharp.jpg"
-				small = "GFX_idea_USA_generic_land_1"
-			}
-		}
-		corps_commander = {
-			skill = 1
-			traits = {
-				commando
-				infantry_officer
-			}
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-		}
-	}
 	# Socialist Aligned
-	COM_ernest_hemingway = {
+	IOW_ernest_hemingway = {
 		name = "Ernest Hemingway"
 		portraits = {
 			army = {
-				large = "gfx/leaders/DBQ/Hemingway.jpg"
+				large = "gfx/leaders/IOW/IOW_ernest_hemingway.png"
 				small = "GFX_idea_USA_generic_land_3"
 			}
 		}
 		corps_commander = {
 			skill = 1
 			traits = {
+				lotf_cmp_sympathizer
 				compassionate_leader
 				politically_connected
 				media_personality
@@ -258,11 +224,11 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	COM_david_shoup = {
+	IOW_david_shoup = {
 		name = "David Monroe Shoup"
 		portraits = {
 			army = {
-				large = "gfx/leaders/COM/David_Shoup.dds"
+				large = "gfx/leaders/IOW/IOW_david_shoup.png"
 			}
 			army = {
 				small = "GFX_idea_USA_generic_land_2"
@@ -276,6 +242,7 @@ characters = {
 		corps_commander = {
 			skill = 2
 			traits = {
+				lotf_cmp_sympathizer
 				adaptable
 				commando
 				urban_assault_specialist

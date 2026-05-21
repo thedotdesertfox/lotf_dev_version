@@ -915,9 +915,9 @@ focus_tree = {
 		}
 		prerequisite = { focus = IEF_coordinate_international_relief  focus = IEF_asserting_our_independence  }
 		completion_reward = {
-			#add_manpower = 5000
-			#army_experience = 15
-			#IEF_old_fix_anger = yes
+			add_manpower = 5000
+			army_experience = 15
+			IEF_old_fix_anger = yes
 		}
 	}
 	
@@ -1266,12 +1266,16 @@ focus_tree = {
 		}
 		completion_reward = {
 			395 = {
-					remove_core_of = CMP
-					add_core_of = IEF
+				remove_core_of = CMP
+				add_dynamic_modifier = {
+					modifier = lotf_military_state
 				}
+			}
 			1048 = {
 				remove_core_of = CMP
-				add_core_of = IEF
+				add_dynamic_modifier = {
+					modifier = lotf_military_state
+				}
 			}
 		}
 	}
@@ -1289,10 +1293,10 @@ focus_tree = {
 		}
 		prerequisite = { focus = IEF_review_the_plans  }
 		available = {
-			has_war_with = MIL
+			has_war_with = WSC
 		}
 		bypass = {
-			MIL = {
+			WSC = {
 				exists = no
 			}
 		}
@@ -1348,15 +1352,21 @@ focus_tree = {
 				}
 				393 = {
 					remove_core_of = MCH
-					add_core_of = IEF
+					add_dynamic_modifier = {
+						modifier = lotf_military_state
+					}
 				}
 				394 = {
 					remove_core_of = WSC
-					add_core_of = IEF
+					add_dynamic_modifier = {
+						modifier = lotf_military_state
+					}
 				}
 				1049 = {
 					remove_core_of = WSC
-					add_core_of = IEF
+					add_dynamic_modifier = {
+						modifier = lotf_military_state
+					}
 				}
 			}
 		}
@@ -1409,11 +1419,15 @@ focus_tree = {
 		completion_reward = {
 			261 = {
 					remove_core_of = OHI
-					add_core_of = IEF
+					add_dynamic_modifier = {
+						modifier = lotf_military_state
+					}
 				}
 			1047 = {
 				remove_core_of = ERR
-				add_core_of = IEF
+				add_dynamic_modifier = {
+					modifier = lotf_military_state
+				}
 			}
 		}
 	}

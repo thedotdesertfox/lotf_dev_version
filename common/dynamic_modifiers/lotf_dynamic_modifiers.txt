@@ -40,3 +40,20 @@ ief_hoover_relief = {
 	consumer_goods_factor = iefh_consumer_goods_factor
 	conscription_factor = iefh_conscription_factor
 }
+
+lotf_military_state = {
+	remove_trigger = { 
+		ROOT = {
+			always = no
+		}
+	}
+	
+	icon = GFX_idea_lon_military_rule
+	
+	resistance_target = 0.5
+	required_garrison_factor = 0.3
+	compliance_growth = -0.3
+	local_factories = -0.3
+	non_core_manpower = -0.5
+	local_org_regain = -0.5
+}

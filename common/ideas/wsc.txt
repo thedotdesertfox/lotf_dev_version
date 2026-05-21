@@ -1,0 +1,13 @@
+ideas = {
+
+	#WSC
+	country = {
+		WSC_w_selden_washington_heir = {
+			picture = w_selden_washington_heir
+			modifier = {
+				political_power_gain = 0.5
+				stability_factor = 0.1
+			}
+		}
+	}	
+}

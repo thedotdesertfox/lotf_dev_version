@@ -5,6 +5,10 @@ spriteTypes = {
 		name = "GFX_idea_refugee_evacuation"
 		texturefile = "gfx/interface/ideas/generic/GEN_refugees.png"	
 	}
+	SpriteType = {
+		name = "GFX_idea_refugee_evacuation"
+		texturefile = "gfx/interface/ideas/generic/GEN_refugees.png"	
+	}
 	
 	###MEX###
 	SpriteType = {
@@ -32,8 +36,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/ief/ohio_ief_cooperation.png"	
 	}
 	SpriteType = {
-		name = "GFX_idea_hoover_relief_agency"
-		texturefile = "gfx/interface/ideas/ief/hoover_relief_agency.png"	
+		name = "GFX_idea_lon_military_rule"
+		texturefile = "gfx/interface/state_modifiers/lon_military_rule.png"	
+	}
+	
+	###WSC###
+	SpriteType = {
+		name = "GFX_idea_w_selden_washington_heir"
+		texturefile = "gfx/interface/ideas/wsc/w_selden_washington_heir.png"	
 	}
 	
 }

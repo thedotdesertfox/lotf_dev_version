@@ -1,6 +1,19 @@
 ﻿l_english: 
-#Tooltip
-template_cap_increase_one_tt:0 "Increases the template cap of §YRestructured Infantry Division§! by: §Y1§!"
-template_cap_increase_two_tt:0 "Increases the template cap of §YRestructured Infantry Division§! by: §Y2§!"
-template_cap_increase_three_tt:0 "Increases the template cap of §YRestructured Infantry Division§! by: §Y3§!"
-template_cap_increase_five_tt:0 "Increases the template cap of §YRestructured Infantry Division§! by: §Y5§!"
+ #Tooltip
+ template_cap_increase_one_tt:0 "Increases the template cap of §YRestructured Infantry Division§! by: §Y1§!"
+ template_cap_increase_two_tt:0 "Increases the template cap of §YRestructured Infantry Division§! by: §Y2§!"
+ template_cap_increase_three_tt:0 "Increases the template cap of §YRestructured Infantry Division§! by: §Y3§!"
+ template_cap_increase_five_tt:0 "Increases the template cap of §YRestructured Infantry Division§! by: §Y5§!"
+ #Traits
+ lotf_cmp_sympathizer:0 "CMP Sympathizer"
+ lotf_cmp_sympathizer_desc:0 "This general recognizes the legitimacy of Thomas' presidency and rejects MacArthur's Ceasarism."
+ lotf_democracy_sympathizer:0 "Democracy Sympathizer"
+ lotf_democracy_sympathizer_desc:0 "This general firmly believes in democracy."
+ lotf_fascist_sympathizer:0 "Fascist Sympathizer"
+ lotf_fascist_sympathizer_desc:0 "This general fascistic sympathies."
+ lotf_federalist_sympathizer:0 "Federalist Sympathizer"
+ lotf_federalist_sympathizer_desc:0 "This general rejects the legitimacy of Thomas' presidency and is sympathetic to MacArthur."
+ lotf_lon_sympathizer:0 "LoN Sympathizer"
+ lotf_lon_sympathizer_desc:0 "This general supports the League of Nations in bringing stability to America."
+ #State Modifiers
+ lotf_military_state:0 "League of Nations Military Administration"

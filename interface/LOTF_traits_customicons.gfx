@@ -1,0 +1,24 @@
+spriteTypes = {
+	
+	SpriteType = {
+		name = "GFX_trait_lotf_cmp_sympathizer"
+		texturefile = "gfx/interface/traits/personal/trait_cmp_sympathizer.png"	
+	}
+	SpriteType = {
+		name = "GFX_trait_lotf_democracy_sympathizer"
+		texturefile = "gfx/interface/traits/personal/trait_democracy_sympathizer.png"	
+	}
+	SpriteType = {
+		name = "GFX_trait_lotf_fascist_sympathizer"
+		texturefile = "gfx/interface/traits/personal/trait_fascist_sympathizer.png"	
+	}
+	SpriteType = {
+		name = "GFX_trait_lotf_federalist_sympathizer"
+		texturefile = "gfx/interface/traits/personal/trait_federalist_sympathizer.png"	
+	}
+	SpriteType = {
+		name = "GFX_trait_lotf_lon_sympathizer"
+		texturefile = "gfx/interface/traits/personal/trait_lon_sympathizer.png"	
+	}
+	
+}
