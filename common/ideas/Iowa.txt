@@ -1,0 +1,713 @@
+ideas = {
+    #Bismarck
+	country = {
+		IWA_political_instability = {
+			picture = ARG_anti_american_propaganda
+			modifier = {
+				stability_weekly_factor = -0.005
+				war_support_factor = -0.15
+				party_popularity_stability_factor = -0.1
+			}
+		}
+		IWA_political_instability_2 = {
+			picture = ARG_anti_american_propaganda
+			modifier = {
+				stability_weekly_factor = -0.0025
+				war_support_factor = -0.15
+				#party_popularity_stability_factor = -0.1
+			}
+		}
+		IWA_paramilitaries = {
+			picture = citizen_militia_2
+			modifier = {
+				conscription = 0.005
+				political_power_factor = -0.15
+				revolutionary_socialism_drift = 0.05
+				neutrality_drift = 0.05
+				fascism_drift = 0.05
+			}
+		}
+		IWA_paramilitaries_worse = {
+			picture = citizen_militia_2
+			modifier = {
+				conscription = 0.01
+				political_power_factor = -0.2
+				revolutionary_socialism_drift = 0.1
+				neutrality_drift = 0.1
+				fascism_drift = 0.1
+			}
+		}
+
+		##############
+		IWA_volunteer_idea = {
+			picture = ast_volunteer_defence_corps
+			cancel = {
+				OR = {
+					DIA = { exists = no }
+					NOT = {
+						has_country_flag = iwacivilwarisgoingon
+					}
+				}
+			}
+			modifier = {
+				send_volunteer_size = 1
+				send_volunteer_divisions_required = -1
+				#send_volunteers_tension = -1
+			}
+		}
+		IWA_volunteer_idea1 = {
+			picture = ast_volunteer_defence_corps
+			cancel = {
+				OR = {
+					DBQ = { exists = no }
+					NOT = {
+						has_country_flag = iwacivilwarisgoingon
+					}
+				}
+			}
+			modifier = {
+				send_volunteer_size = 2
+				send_volunteer_divisions_required = -1
+				#send_volunteers_tension = -1
+			}
+		}
+		IWA_volunteer_idea2 = {
+			name = IWA_volunteer_idea
+			picture = ast_volunteer_defence_corps
+			cancel = {
+				OR = {
+					IWA = { exists = no }
+					NOT = {
+						has_country_flag = iwacivilwarisgoingon
+					}
+				}
+			}
+			modifier = {
+				send_volunteer_size = 2
+				send_volunteer_divisions_required = -1
+				#send_volunteers_tension = -1
+			}
+		}
+		IWA_infighting = {
+			picture = generic_army_problems
+			modifier = {
+				army_org_factor = -0.2
+			}
+			targeted_modifier = {
+				tag = BMK
+				defense_bonus_against = -0.25
+			}
+		}
+		DBQ_resentment = {
+			picture = generic_purge
+			modifier = {
+				no_compliance_gain = 1
+				political_power_factor = -0.25
+			}
+		}
+		DBQ_resentment2 = {
+			picture = generic_purge
+			modifier = {
+				political_power_factor = -0.1
+			}
+		}
+		DBQ_export = {
+			picture = MEX_revolutionary_army
+			modifier = {
+				army_org_Factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+		DBQ_exportdia = {
+			picture = MEX_revolutionary_army
+			modifier = {
+				army_org_Factor = 0.1
+				army_morale_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = DIA
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+		}
+		DBQ_exportiwa = {
+			picture = MEX_revolutionary_army
+			modifier = {
+				army_org_Factor = 0.1
+				army_morale_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = IWA
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+		}
+		DBQ_export1 = {
+			picture = MEX_revolutionary_army
+			modifier = {
+				army_org_Factor = 0.1
+				army_morale_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		DBQ_desertions = {
+			picture = generic_manpower_bonus
+			modifier = {
+				weekly_manpower = 250
+				experience_gain_army_factor = 0.05
+			}
+		}
+		DBQ_industrial = {
+			picture = generic_production_bonus
+			modifier = {
+				political_power_gain = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		DBQ_industrial_miners = {
+			picture = generic_production_bonus
+			modifier = {
+				political_power_gain = 0.15
+				local_resources_factor = 0.15
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		DBQ_agrarian = {
+			picture = gre_agricultural_communes
+			modifier = {
+				monthly_population = 0.2
+				conscription_factor = 0.05
+				stability_factor = 0.1
+			}
+		}
+		DBQ_agrarian_miners = {
+			picture = gre_agricultural_communes
+			modifier = {
+			monthly_population = 0.2
+			conscription_factor = 0.05
+			local_resources_factor = 0.1
+			stability_factor = 0.1
+			production_lack_of_resource_penalty_factor = -0.1
+			}
+		}
+		DBQ_miners = {
+			picture = generic_exploit_mines
+			modifier = {
+				local_resources_factor = 0.1
+			}
+		}
+		DBQ_nationalized = {
+			picture = SOV_second_five_year_plan
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.1
+			}
+		}
+		IWA_desertions = {
+			picture = tfv_can_conscription_crisis
+			modifier = {
+				weekly_manpower = -250
+				war_support_weekly = -0.003
+			}
+		}
+		DIA_destablized = {
+			picture = officers_purged
+			modifier = {
+				army_org_factor = -0.1
+				planning_speed = -0.10
+				max_planning = -0.15
+			}
+		}
+		DIA_homeland = {
+			picture = generic_victors_of_ww1
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				conscription_factor = 0.05
+			}
+		}
+		IWA_sioux_compensation = {
+			picture = generic_constitutional_guarantees
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = 0.1
+				compliance_growth_on_our_occupied_states = 0.15
+			}
+		}	
+		IWA_divided_government = {
+			picture = generic_disjointed_gov
+			modifier = {
+				surrender_limit = -0.2
+				stability_factor = -0.15
+				political_power_factor = -0.3
+				industrial_capacity_factory = -0.3
+			}
+		}	
+		IWA_divided_government1 = {
+			picture = generic_disjointed_gov
+			modifier = {
+				surrender_limit = -0.2
+				stability_factor = -0.08
+				political_power_factor = -0.3
+				industrial_capacity_factory = -0.15
+			}
+		}
+		IWA_divided_government0 = {
+			picture = generic_disjointed_gov
+			modifier = {
+				surrender_limit = -0.1
+				stability_factor = -0.15
+				political_power_factor = -0.15
+				industrial_capacity_factory = -0.3
+			}
+		}	
+		IWA_construction = {
+			picture = generic_production_bonus
+			modifier = {
+				production_speed_buildings_factor = 0.3
+			}
+		}
+		IWA_martial_law = {
+			picture = ast_classify_aliens
+			modifier = {
+				army_org_factor = 0.1
+				army_speed_factor = 0.05
+				war_stability_factor = 0.1
+				political_power_cost = 0.1
+			}
+		}	
+		IWA_conscript_act = {
+			picture = generic_infantry_bonus
+			modifier = {
+				recruitable_population = 0.01
+				non_core_manpower = 0.15
+			}
+		}	
+		IWA_professional = {
+			picture = generic_license_production
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				conscription_factor = -0.15
+				minimum_training_level = 0.6
+			}
+		}	
+		IWA_professional1 = {
+			picture = generic_license_production
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				army_org_factor = 0.05
+				conscription_factor = -0.1
+				minimum_training_level = 0.7
+			}
+		}	
+		IWA_professional2 = {
+			picture = generic_license_production
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.05
+				army_speed_factor = 0.05
+				army_org_factor = 0.05
+				terrain_penalty_reduction = 0.15
+				conscription_factor = -0.15
+				minimum_training_level = 0.8
+			}
+		}	
+		IWA_unprofessional = {
+			picture = generic_manpower_bonus
+			modifier = {
+				army_org_factor = -0.1
+				recruitable_population_factor = 0.1
+				mobilization_speed = 0.1
+			}
+		}	
+		IWA_unprofessional1 = {
+			picture = generic_manpower_bonus
+			modifier = {
+				army_org_factor = -0.1
+				recruitable_population_factor = 0.1
+				mobilization_speed = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15 
+					reliability_factor = -0.15
+					instant = yes
+				}
+			}
+		}
+		IWA_unprofessional2 = {
+			picture = generic_manpower_bonus
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					#reliability_factor = -0.15
+					instant = yes
+				}
+			}
+		}
+	}
+	# MILITARY
+
+
+	political_advisor = {
+		IWA_wi = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = IWA
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { war_industrialist }
+		}
+		
+
+		IWA_cg = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = IWA
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { compassionate_gentleman }
+		}
+		
+		IWA_qg = {
+
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = IWA
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { quartermaster_general }
+		}
+
+		IWA_bb = {
+
+			picture = generic_political_advisor_europe_2
+				
+			allowed = {
+				original_tag = IWA
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { backroom_backstabber }
+		}
+		
+		IWA_pot = {
+
+			picture = generic_political_advisor_europe_2
+
+			allowed = {
+				original_tag = IWA
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { prince_of_terror }
+		}
+
+		IWA_coi = {
+
+			picture = generic_political_advisor_europe_1
+				
+			allowed = {
+				original_tag = IWA
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { captain_of_industry }
+		}
+
+		IWA_stc = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = IWA
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { smooth_talking_charmer }
+		}
+	}
+
+	army_chief = {
+
+		IWA_aco2 = {
+
+			picture = generic_army_europe_4
+			
+			allowed = {
+				original_tag = IWA
+			}		
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { army_chief_organizational_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		IWA_acd2 = {
+
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = IWA
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+
+		IWA_acr = {
+
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = IWA
+			}
+			
+			traits = { air_chief_reform_2 }
+			available = {
+				has_country_flag = not_warlord4
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		IWA_acgs = {
+
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = IWA
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	navy_chief = {
+
+		IWA_nccr = {
+
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = IWA
+			}
+					
+			traits = { navy_chief_commerce_raiding_2 }
+			available = {
+				has_country_flag = not_warlord4
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		IWA_ncm = {
+
+			picture = generic_navy_europe_3
+			
+			allowed = {
+				original_tag = IWA
+			}
+					
+			traits = { navy_chief_maneuver_2 }
+			available = {
+				has_country_flag = not_warlord4
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	high_command = {
+
+		IWA_ar = {
+			ledger = army
+			
+			picture = generic_army_europe_5
+			
+			allowed = {
+				original_tag = IWA
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		IWA_ai2 = {
+			ledger = army
+
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = IWA
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		IWA_aa2 = {
+			ledger = army
+
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = IWA
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { army_armored_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		IWA_acas = {
+			ledger = air
+
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = IWA
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { air_close_air_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		IWA_ncs = {
+			ledger = navy
+
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = IWA
+			}
+			
+			traits = { navy_capital_ship_2 }
+			available = {
+				has_country_flag = not_warlord4
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}	
+
+	theorist = {
+		IWA_mt = {
+			ledger = army
+			
+			picture = generic_army_europe_6
+
+			allowed = {
+				original_tag = IWA
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { military_theorist }
+		}
+		
+		IWA_nt = {
+			ledger = navy
+
+			picture = generic_navy_europe_3
+			
+			allowed = {
+				original_tag = IWA
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			traits = { naval_theorist }
+		}	
+
+		IWA_awt = {
+			ledger = air
+
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = IWA
+			}
+			available = {
+				has_country_flag = not_warlord4
+			}
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+	}
+}

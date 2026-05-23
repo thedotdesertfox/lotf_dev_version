@@ -55,7 +55,6 @@ recruit_character = MIN_cordell_hull
 recruit_character = MIN_william_lemke
 recruit_character = MIN_glen_taylor
 recruit_character = MIN_John_davis
-recruit_character = MIN_John_raskob
 recruit_character = MIN_robert_follette
 recruit_character = MIN_robert_taft
 recruit_character = MIN_scott_lucas

@@ -1,9 +1,9 @@
 ﻿capital = 392
 
-oob = ""
+oob = "IOW_1936"
 
-set_research_slots = 3
-set_stability = 0.45
+set_research_slots = 2
+set_stability = 0.23
 set_war_support = 0.25
 
 # Starting tech
@@ -52,9 +52,14 @@ recruit_character = IOW_george_parker
 recruit_character = IOW_ernest_hemingway
 recruit_character = IOW_david_shoup
 
+recruit_character = MIN_John_raskob
 
-set_convoys = 100
 
+set_convoys = 5
+add_equipment_to_stockpile = {
+	type = train_equipment
+	amount = 5
+}
 
 set_politics = {
 	ruling_party = conservative_democracy
@@ -74,7 +79,10 @@ set_popularities = {
 add_ideas = {
 	civilian_economy
 	volunteer_only
-	free_trade
+	isolation
+
+	IWA_political_instability
+	IWA_paramilitaries
 }
 add_ideas = {
 }

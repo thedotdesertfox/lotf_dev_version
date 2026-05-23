@@ -24,6 +24,7 @@ characters = {
 		corps_commander = {
 			skill = 3
 			traits = {
+				lotf_democracy_sympathizer
 				infantry_leader
 				career_officer
 			}
@@ -44,6 +45,7 @@ characters = {
 		corps_commander = {
 			skill = 1
 			traits = {
+				lotf_democracy_sympathizer
 				commando
 				infantry_officer
 			}
@@ -70,13 +72,14 @@ characters = {
 		country_leader = {
 			ideology = gen_despotism
 			traits = {
-				lotf_federalist_sympathizer
+				#lotf_federalist_sympathizer
 				weak_authority
 			}
 		}
 		field_marshal = {
 			skill = 3
 			traits = {
+				lotf_federalist_sympathizer
 				inflexible_strategist
 				trait_reckless
 				politically_connected
@@ -168,7 +171,7 @@ characters = {
 		corps_commander = {
 			skill = 2
 			traits = {
-				lotf_federalist_sympathizer
+				lotf_democracy_sympathizer
 				trickster
 				trait_engineer
 				guerilla_fighter

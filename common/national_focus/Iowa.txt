@@ -1,0 +1,581 @@
+focus_tree = {
+	id = focus.iwa.1
+	country = {
+		factor = 0
+		modifier = {
+			add = 50
+			tag = iow
+		}
+	}
+	continuous_focus_position = { x = 615 y = 550 }
+
+	focus = {
+		id = iwa_election_1936
+		icon = GFX_focus_generic_election
+		x = 8
+		y = 0
+		cost = 0
+		available = {
+			date > 1936.11.3
+		}
+		#available_if_capitulated = yes
+		#prerequisite = { focus = MIN_calls_for_unity }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = iwa.19
+		}	
+	}
+	focus = {
+		id = iwa_socialist_path
+		icon = GFX_focus_NOR_a_new_norway_Trotsky_communism
+		x = 6
+		y = 1
+		cost = 5
+		available = {
+			has_government = revolutionary_socialism
+		}
+		#available_if_capitulated = yes
+		prerequisite = { focus = iwa_election_1936 }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 15000
+			add_political_power = 50
+			add_popularity = {
+				ideology = revolutionary_socialism
+				popularity = 0.15
+			}
+		}	
+	}
+	focus = {
+		id = iwa_democratic_path
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 2
+		y = 1
+		cost = 5
+		available = {
+			has_government = conservative_democracy
+		}
+		#available_if_capitulated = yes
+		prerequisite = { focus = iwa_election_1936 }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 50
+		}	
+	}
+	focus = {
+		id = iwa_democratic_path2
+		icon = GFX_focus_generic_manpower
+		x = 1
+		y = 2
+		cost = 5
+		#available_if_capitulated = yes
+		prerequisite = { focus = iwa_democratic_path }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = IWA_conscript_act
+		}	
+	}
+	focus = {
+		id = iwa_democratic_path3
+		icon = GFX_goal_generic_production
+		x = 3
+		y = 2
+		cost = 5
+		#available_if_capitulated = yes
+		prerequisite = { focus = iwa_democratic_path }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+   				 bonus = 0.5
+   				 uses = 2
+    			category = industry
+			}
+		}	
+	}
+	focus = {
+		id = iwa_purge_army
+		icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
+		x = 13
+		y = 2
+		cost = 5
+		available = {
+			#has_government = conservative_democracy
+		}
+		#available_if_capitulated = yes
+		prerequisite = { 
+			focus = iwa_democratic_path 
+			focus = iwa_socialist_path
+			focus = iwa_corporate_path
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 50
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.15
+			}
+			add_timed_idea = {
+				idea = DIA_destablized  
+				days = 120
+			}
+			custom_effect_tooltip = LOTF_federalist_general_flees   
+			hidden_effect = {
+				set_nationality = {
+					target_country = ERR
+					character = IOW_george_parker
+				}
+				set_nationality = {
+					target_country = ERR
+					character = IOW_clovis_byers
+				}
+				set_nationality = {
+					target_country = ERR
+					character = IOW_hanford_macnider
+				}
+			}
+		}	
+	}
+	focus = {
+		id = iwa_purge_democrats
+		icon = GFX_focus_BRA_utilize_security_law
+		x = 9
+		y = 2
+		cost = 5
+		available = {
+			#has_government = conservative_democracy
+		}
+		#available_if_capitulated = yes
+		prerequisite = { 
+			focus = iwa_federalist_path 
+			focus = iwa_socialist_path
+			focus = iwa_corporate_path
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = conservative_democracy
+				popularity = -0.15
+			}
+			custom_effect_tooltip = LOTF_democrat_general_flees   
+			hidden_effect = {
+				set_nationality = {
+					target_country = MIN
+					character = IOW_clyde_herring
+				}
+				set_nationality = {
+					target_country = MIN
+					character = IOW_wendell_fertig
+				}
+				set_nationality = {
+					target_country = MIN
+					character = IOW_willard_wyman
+				}
+				set_nationality = {
+					target_country = MIN
+					character = IOW_william_sharp
+				}
+			}
+		}	
+	}
+	focus = {
+		id = iwa_purge_socialists
+		icon = GFX_focus_SOV_military_purge
+		x = 12
+		y = 3
+		cost = 5
+		available = {
+			#has_government = conservative_democracy
+		}
+		#available_if_capitulated = yes
+		prerequisite = { 
+			focus = iwa_federalist_path 
+			focus = iwa_democratic_path
+			focus = iwa_corporate_path
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = revolutionary_socialism
+				popularity = -0.15
+			}
+			add_timed_idea = {
+				idea = DBQ_nationalized
+				days = 180
+			}
+			custom_effect_tooltip = LOTF_socialist_general_flees   
+			hidden_effect = {
+				set_nationality = {
+					target_country = CMP
+					character = IOW_ernest_hemingway
+				}
+				set_nationality = {
+					target_country = CMP
+					character = IOW_david_shoup
+				}
+			}
+		}	
+	}
+	focus = {
+		id = iwa_purge_corporate
+		icon = GFX_focus_SOV_military_purge
+		x = 4
+		y = 3
+		cost = 5
+		available = {
+			#has_government = conservative_democracy
+		}
+		#available_if_capitulated = yes
+		prerequisite = { 
+			focus = iwa_federalist_path 
+			focus = iwa_democratic_path
+			focus = iwa_socialist_path
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			392 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}	
+	}
+	focus = {
+		id = iwa_federalist_path
+		icon = GFX_focus_FIN_strengthen_military_administration
+		x = 10
+		y = 1
+		cost = 5
+		available = {
+			has_government = neutrality
+		}
+		#available_if_capitulated = yes
+		prerequisite = { focus = iwa_election_1936 }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.15
+			add_political_power = 50
+		}	
+	}
+	focus = {
+		id = iwa_federalist_path2
+		icon = GFX_focus_CHI_popular_army
+		x = 11
+		y = 2
+		cost = 5
+		available = {
+			#has_government = neutrality
+		}
+		#available_if_capitulated = yes
+		prerequisite = { focus = iwa_federalist_path focus = iwa_corporate_path }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = IWA_professional1
+		}	
+	}
+	focus = {
+		id = iwa_federalist_path3 
+		icon = GFX_focus_JAP_implement_army_reforms
+		x = 10
+		y = 3
+		cost = 5
+		available = {
+			#has_government = neutrality
+		}
+		#available_if_capitulated = yes
+		prerequisite = { focus = iwa_federalist_path2  }
+		prerequisite = { focus = iwa_federalist_path  }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = IWA_professional2
+				remove_idea = IWA_professional1
+			}
+		}	
+	}
+	focus = {
+		id = iwa_corporate_path
+		icon = GFX_focus_ICE_state_corporatism
+		x = 14
+		y = 1
+		cost = 5
+		available = {
+			has_government = fascism
+		}
+		#available_if_capitulated = yes
+		prerequisite = { focus = iwa_election_1936 }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+		}	
+	}
+	focus = {
+		id = iwa_corporate_path2
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		x = 15
+		y = 2
+		cost = 5
+
+		#available_if_capitulated = yes
+		prerequisite = { focus = iwa_corporate_path }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = IWA_unprofessional2
+		}	
+	}
+	focus = {
+		id = iwa_corporate_path3
+		icon = GFX_focus_PHI_small_arms_and_artillery_requisition
+		x = 14
+		y = 3
+		cost = 5
+
+		#available_if_capitulated = yes
+		prerequisite = { focus = iwa_corporate_path }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 150
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment 
+				amount = 150
+			}
+		}	
+	}
+	focus = {
+		id = iwa_disarm_paramilitaries
+		icon = GFX_focus_AUS_frontmiliz_focus
+		x = 18
+		y = 1
+		cost = 5
+		#available_if_capitulated = yes
+		prerequisite = { 
+			focus = iwa_election_1936
+		}
+		available = {
+			NOT = {
+				has_idea = IWA_paramilitaries_worse
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_equipment_to_stockpile = {
+    			type = infantry_equipment`
+    			amount = 1500
+			}
+		}	
+	}
+	focus = {
+		id = iwa_consolidate_control
+		icon = GFX_focus_generic_self_management
+		x = 19
+		y = 2
+		cost = 5
+		#available_if_capitulated = yes
+		prerequisite = { 
+			focus = iwa_disarm_paramilitaries
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = IWA_political_instability
+				add_idea = IWA_political_instability_2
+			}
+		}	
+	}
+	focus = {
+		id = iwa_consolidate_control2
+		icon = GFX_SOV_the_onslaught_on_colonialism_ccp_2d_sov_compatibility
+		x = 18
+		y = 3
+		cost = 5
+		#available_if_capitulated = yes
+		prerequisite = { 
+			focus = iwa_consolidate_control
+		}
+		prerequisite = { 
+			focus = iwa_factories
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = IWA_political_instability_2
+		}	
+	}
+	focus = {
+		id = iwa_consolidate_control3
+		icon = GFX_focus_research
+		x = 20
+		y = 3
+		cost = 5
+		#available_if_capitulated = yes
+		prerequisite = { 
+			focus = iwa_consolidate_control
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}	
+	}
+	focus = {
+		id = iwa_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 17
+		y = 2
+		cost = 5
+		#available_if_capitulated = yes
+		prerequisite = { 
+			focus = iwa_disarm_paramilitaries
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			#add_offsite_building = { type = arms_factory level = 1 }
+			392 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}	
+	}
+	focus = {
+		id = iwa_declare_martial_law
+		icon = GFX_focus_generic_military_dictatorship
+		x = 8
+		y = 3
+		cost = 10
+		#available_if_capitulated = yes
+		prerequisite = { 
+			#focus = iwa_corporate_path 
+			focus = iwa_federalist_path
+			focus = iwa_socialist_path
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = IWA_martial_law
+		}	
+	}
+	focus = {
+		id = iwa_socialist_path_2
+		icon = GFX_focus_generic_farmland
+		x = 5
+		y = 2
+		cost = 10
+		#available_if_capitulated = yes
+		prerequisite = { 
+			#focus = iwa_corporate_path 
+			#focus = iwa_federalist_path
+			focus = iwa_socialist_path
+			focus = iwa_democratic_path
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = DBQ_agrarian
+		}	
+	}
+	focus = {
+		id = iwa_socialist_path_3
+		icon = GFX_focus_generic_mineral_prospecting
+		x = 7
+		y = 2
+		cost = 10
+		#available_if_capitulated = yes
+		prerequisite = { 
+			#focus = iwa_corporate_path 
+			#focus = iwa_federalist_path
+			focus = iwa_socialist_path
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = DBQ_miners
+		}	
+	}
+	focus = {
+		id = iwa_socialist_path_4
+		icon = GFX_focus_FIN_socialist_welfare
+		x = 6
+		y = 3
+		cost = 10
+		#available_if_capitulated = yes
+		prerequisite = { 
+			#focus = iwa_corporate_path 
+			#focus = iwa_federalist_path
+			focus = iwa_socialist_path_3
+		}
+		prerequisite = { 
+			#focus = iwa_corporate_path 
+			#focus = iwa_federalist_path
+			focus = iwa_socialist_path_2
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = DBQ_miners
+			remove_ideas = DBQ_agrarian
+			add_ideas = DBQ_agrarian_miners
+		}	
+	}
+#End of focuses 
+ }
