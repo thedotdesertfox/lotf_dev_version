@@ -1855,7 +1855,15 @@ JAP_pacific_union = {
 
 
 
+IEF_GAR_unify_01 = {
+	color = rgb { 47 69 114 } 
+	color_ui = rgb { 47 69 114 }
+}
 
+IEF_LON = {
+	color = rgb { 165 165 170 } 
+	color_ui = rgb { 165 165 170 }
+}
 
 NMD_LON = {
 	color = rgb { 165 165 170 } 

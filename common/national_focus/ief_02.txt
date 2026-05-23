@@ -410,9 +410,9 @@ focus_tree = {
 		x = 21
 		y = 0
 		cost = 2
-		#allow_branch = {
-		#	has_completed_focus = IEF_old_affirm_loyalty_to_the_league
-		#}
+		allow_branch = {
+			has_completed_focus = IEF_old_affirm_loyalty_to_the_league
+		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -773,9 +773,9 @@ focus_tree = {
 		x = 23
 		y = 0
 		cost = 1
-		allow_branch = {
-			has_completed_focus = IEF_old_treading_our_own_path
-		}
+		#allow_branch = {
+		#	has_completed_focus = IEF_old_treading_our_own_path
+		#}
 		completion_reward = {
 			add_political_power = 25
 		}

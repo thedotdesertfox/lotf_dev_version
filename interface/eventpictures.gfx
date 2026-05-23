@@ -271,6 +271,10 @@ spriteTypes = {
 		name = "GFX_report_event_EUR_report1"
 		texturefile = "gfx/event_pictures/EUR_report1.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_IEF_report1"
+		texturefile = "gfx/event_pictures/IEF_report1.png"
+	}
     ####################
 	spriteType = {
 		name = "GFX_report_event_canada_ronnie"

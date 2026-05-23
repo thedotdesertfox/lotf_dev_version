@@ -148,3 +148,17 @@ country_event = {
 		add_ideas = IEF_riverine_warefare_02
 	}
 }
+
+country_event = {
+	id = ief.10
+	title = ief.10.t
+	desc = ief.10.d
+	picture = GFX_report_event_IEF_report1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ief.10.a
+		ai_chance = { factor = 100 }		
+	}
+}

@@ -330,6 +330,8 @@ focus_tree = {
 					add_core_of = IEF
 				}
 			}
+			add_war_support = 0.05
+			army_experience = 25
 		}
 	}
 	
@@ -367,7 +369,7 @@ focus_tree = {
 		prerequisite = { focus = IEF_the_ara_returns }
 		completion_reward = {
 			add_war_support = 0.05
-			IEF_fix_anger = yes
+			ief_improve_angry_population = yes
 		}
 	}
 	
@@ -459,7 +461,7 @@ focus_tree = {
 		prerequisite = { focus = IEF_the_ara_returns }
 		completion_reward = {
 			add_stability = 0.05
-			IEF_fix_anger = yes
+			ief_improve_angry_population = yes
 		}
 	}
 	
@@ -550,7 +552,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_manpower = 3000
-			IEF_fix_anger = yes
+			ief_improve_angry_population = yes
+			IEF_walter_bedell_smith = {
+				swap_country_leader_traits = {
+					remove = benedict_01
+					add = benedict_02
+					ideology = gen_anocracy
+				}
+			}
 		}
 	}
 
@@ -934,7 +943,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = IEF_the_central_plains_burn  }
 		completion_reward = {
-			#add_political_power = 50
+			add_political_power = 50
 			#IEF_old_walter_bedell_smith = {
 			#	remove_trait = {
 			#		ideology = anocratic
@@ -978,11 +987,11 @@ focus_tree = {
 		}
 		prerequisite = { focus = IEF_savior_of_the_nation  }
 		completion_reward = {
-			#IEF_fix_anger = yes
-			#add_popularity = {
-			#	ideology = anocratic
-			#	popularity = 0.05
-			#}
+			ief_improve_angry_population = yes
+			add_popularity = {
+				ideology = anocratic
+				popularity = 0.05
+			}
 		}
 	}
 
@@ -999,10 +1008,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = IEF_the_fate_of_the_officer_corps  focus = IEF_gradual_restoration  }
 		completion_reward = {
-			#swap_ideas = {
-			#	remove_idea = IEF_professional_army
-			#	add_idea = IEF_professional_army1
-			#}
+			ief_improve_professional_army = yes
 		}
 	}
 	
@@ -1090,9 +1096,9 @@ focus_tree = {
 		x = 35
 		y = 0
 		cost = 2
-		#allow_branch = {
-		#	has_completed_focus = IEF_affirm_loyalty_to_the_league
-		#}
+		allow_branch = {
+			has_completed_focus = IEF_affirm_loyalty_to_the_league
+		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -1154,7 +1160,7 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		available = {
-			has_political_power > 0
+			has_political_power > 50
 		}
 		prerequisite = { focus = IEF_league_loans  }
 		completion_reward = {
@@ -1168,7 +1174,7 @@ focus_tree = {
 	
 	#The 4th Chars de Combat Division
 	focus = {
-		id = IEF_the_4th_chars_de_combat_division
+		id = IEF_additional_french_support
 		icon = GFX_goal_generic_army_tanks
 		relative_position_id = IEF_invite_british_advisors
 		x = -1
@@ -1179,10 +1185,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = IEF_invite_british_advisors  }
 		completion_reward = {
-			custom_effect_tooltip = IEF_call_for_volunteers_tooltip
-			hidden_effect = {
-				load_oob = "IEF_1938"
-			}
+			country_event = ief.10
 		}
 	}
 	
@@ -1450,6 +1453,316 @@ focus_tree = {
 			add_research_slot = 1
 			create_faction = "International Expeditionary Forces in America"
 			set_cosmetic_tag = IEF_unify_01
+		}
+	}
+	
+	###############################
+	######BRANCH THREE - FREE######
+	###############################
+	
+	#The Last Long Mile
+	focus = {
+		id = IEF_the_last_long_mile
+		icon = GFX_focus_chi_mission_to_the_us
+		x = 35
+		y = 0
+		cost = 1
+		#allow_branch = {
+		#	has_completed_focus = IEF_treading_our_own_path
+		#}
+		completion_reward = {
+			IEF_walter_bedell_smith = {
+				swap_country_leader_traits = {
+					remove = benedict_02
+					add = benedict_03
+					ideology = gen_anocracy
+				}
+			}
+			add_political_power = 25
+		}
+	}
+	
+	#The New American Army
+	focus = {
+		id = IEF_new_american_army
+		icon = GFX_focus_usa_recruit_the_free_corps
+		relative_position_id = IEF_the_last_long_mile
+		x = -5
+		y = 1
+		cost = 4
+		prerequisite = { focus = IEF_the_last_long_mile  }
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				uses = 2
+				category = land_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				uses = 2
+				category = air_doctrine
+			}
+			add_mastery = {
+				amount = 50
+				# FILTERS:
+				folder = land
+			}
+			add_mastery = {
+				amount = 50
+				# FILTERS:
+				folder = air
+			}
+			every_army_leader = {
+				gain_xp = 500
+			}
+		}
+	}
+	
+	#The Raid League Territory
+	focus = {
+		id = IEF_raid_league_territory
+		icon = GFX_SOV_protect_the_white_sea_baltic_canal_ccp_2d_sov_compatibility
+		relative_position_id = IEF_the_last_long_mile
+		x = 5
+		y = 1
+		cost = 3
+		prerequisite = { focus = IEF_the_last_long_mile  }
+		completion_reward = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 396
+					num_provinces = 4
+					on_win = ief_border_conflict.1
+					on_lose = ief_border_conflict.2
+				}	
+				defender = {
+					state = 369
+					num_provinces = 3
+				}
+			}
+		}
+	}
+	
+	#Reintroduce Conscription
+	focus = {
+		id = IEF_reintroduce_conscription
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		relative_position_id = IEF_the_last_long_mile
+		x = -1
+		y = 1
+		cost = 3
+		mutually_exclusive = { focus = IEF_integrate_former_legionaires }
+		prerequisite = { focus = IEF_the_last_long_mile  }
+		completion_reward = {
+			add_stability = -0.03
+			add_war_support = -0.03
+			add_ideas = limited_conscription
+		}
+	}
+	
+	#Integrate Former Legionaires
+	focus = {
+		id = IEF_integrate_former_legionaires
+		icon = GFX_focus_generic_fascist_troops
+		relative_position_id = IEF_the_last_long_mile
+		x = 1
+		y = 1
+		cost = 3
+		mutually_exclusive = { focus = IEF_reintroduce_conscription }
+		prerequisite = { focus = IEF_the_last_long_mile  }
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+			add_manpower = 2000
+			custom_effect_tooltip = IEF_old_ARA_units
+			hidden_effect = {
+				load_oob = IEF_old_fash
+			}
+		}
+	}
+	
+	#Our Destiney
+	focus = {
+		id = IEF_our_destiney
+		icon = GFX_focus_generic_support_the_left_right
+		relative_position_id = IEF_the_last_long_mile
+		x = 0
+		y = 2
+		cost = 1
+		prerequisite = { focus = IEF_reintroduce_conscription focus = IEF_integrate_former_legionaires  }
+		completion_reward = {
+			add_war_support = 0.15
+			add_manpower = 10000
+		}
+	}
+	
+	#We Dont Negotiate with Traitors
+	focus = {
+		id = IEF_dont_negotiate_with_traitors
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		relative_position_id = IEF_our_destiney
+		x = -4
+		y = 1
+		cost = 3
+		mutually_exclusive = { focus = IEF_federalist_detente }
+		prerequisite = { focus = IEF_our_destiney }
+		completion_reward = {
+		}
+	}
+	
+	#Destroy Erie
+	focus = {
+		id = IEF_war_with_err
+		icon = GFX_SOV_desperate_measures_ccp_2d_sov_compatibility
+		relative_position_id = IEF_dont_negotiate_with_traitors
+		x = 0
+		y = 1
+		cost = 3
+		prerequisite = { focus = IEF_dont_negotiate_with_traitors }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ERR
+			}
+		}
+	}
+	
+	#Trial of MacArthur
+	focus = {
+		id = IEF_trial_of_macarthur
+		icon = GFX_goal_generic_neutrality_focus
+		relative_position_id = IEF_war_with_err
+		x = 0
+		y = 3
+		cost = 4
+		prerequisite = { focus = IEF_war_with_err }
+		completion_reward = {
+		}
+	}
+	
+	#Federalist Detente
+	focus = {
+		id = IEF_federalist_detente
+		icon = GFX_SOV_infiltrate_the_nkvd_ccp_2d_sov_compatibility
+		relative_position_id = IEF_our_destiney
+		x = 4
+		y = 1
+		cost = 3
+		mutually_exclusive = { focus = IEF_dont_negotiate_with_traitors }
+		prerequisite = { focus = IEF_our_destiney }
+		completion_reward = {
+		}
+	}
+	
+	#Force Macarthur to Step Down
+	focus = {
+		id = IEF_force_macarthur_to_step_down
+		icon = GFX_SOV_demand_eastern_poland_ccp_2d_sov_compatibility
+		relative_position_id = IEF_federalist_detente
+		x = 0
+		y = 4
+		cost = 3
+		prerequisite = { focus = IEF_federalist_detente }
+		prerequisite = { focus = IEF_partition_cmp }
+		completion_reward = {
+		}
+	}
+	
+	#Destroy Chicago
+	focus = {
+		id = IEF_war_with_cmp
+		icon = GFX_SOV_a_new_theory_of_revolution_ccp_2d_sov_compatibility
+		relative_position_id = IEF_our_destiney
+		x = 0
+		y = 2
+		cost = 3
+		prerequisite = { focus = IEF_dont_negotiate_with_traitors focus = IEF_federalist_detente }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = CMP
+			}
+		}
+	}
+	
+	#Arrest Norman Thomas
+	focus = {
+		id = IEF_arrest_norman_thomas
+		icon = GFX_focus_spr_crush_the_revolution
+		relative_position_id = IEF_war_with_cmp
+		x = -1
+		y = 1
+		cost = 3
+		prerequisite = { focus = IEF_dont_negotiate_with_traitors }
+		prerequisite = { focus = IEF_war_with_cmp }
+		completion_reward = {
+		}
+	}
+	
+	#Partition Chicago
+	focus = {
+		id = IEF_partition_cmp
+		icon = GFX_goal_generic_military_deal
+		relative_position_id = IEF_war_with_cmp
+		x = 1
+		y = 1
+		cost = 3
+		prerequisite = { focus = IEF_federalist_detente }
+		prerequisite = { focus = IEF_war_with_cmp }
+		completion_reward = {
+		}
+	}
+	
+	#Destroy Wisconsin
+	focus = {
+		id = IEF_war_with_wsc
+		icon = GFX_focus_rom_handle_king
+		relative_position_id = IEF_our_destiney
+		x = 0
+		y = 4
+		cost = 3
+		prerequisite = { focus = IEF_arrest_norman_thomas focus = IEF_partition_cmp }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = WSC
+			}
+		}
+	}
+	
+	#Sic Semper Tyrannus
+	focus = {
+		id = IEF_sic_semper_tyrannis
+		icon = GFX_focus_rom_parties_end
+		relative_position_id = IEF_war_with_wsc
+		x = 0
+		y = 1
+		cost = 3
+		prerequisite = { focus = IEF_war_with_wsc }
+		completion_reward = {
+		}
+	}
+	
+	#Redemption
+	focus = {
+		id = IEF_redemption
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		relative_position_id = IEF_sic_semper_tyrannis
+		x = 0
+		y = 1
+		cost = 3
+		prerequisite = { focus = IEF_trial_of_macarthur focus = IEF_force_macarthur_to_step_down }
+		prerequisite = { focus = IEF_sic_semper_tyrannis }
+		completion_reward = {
+			set_cosmetic_tag = IEF_GAR_unify_01
+			IEF_walter_bedell_smith = {
+			remove_country_leader_trait = {
+				ideology = gen_anocracy
+				trait = benedict_03
+			}
 		}
 	}
 }

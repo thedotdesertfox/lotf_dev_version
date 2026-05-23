@@ -9,6 +9,9 @@ characters = {
 		country_leader = {
 			ideology = gen_anocratic
 			expire = "1965.1.1.1"
+			traits = {
+				benedict_01
+			}
 			id = -1
 		}
 		field_marshal = {
