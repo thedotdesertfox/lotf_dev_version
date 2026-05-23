@@ -16,6 +16,33 @@
 #	}
 #
 
+#############################################
+##### Keep Party Popularities on Puppet #####
+#############################################
+
+set_temp_party_var = {
+	set_temp_variable = { temp_popularity_communism = ROOT.party_popularity_100@communism }
+	set_temp_variable = { temp_popularity_revolutionary_socialism = ROOT.party_popularity_100@revolutionary_socialism }
+	set_temp_variable = { temp_popularity_socialist_democracy = ROOT.party_popularity_100@socialist_democracy }
+	set_temp_variable = { temp_popularity_democratic = ROOT.party_popularity_100@democratic }
+	set_temp_variable = { temp_popularity_conservative_democracy = ROOT.party_popularity_100@conservative_democracy }
+	set_temp_variable = { temp_popularity_anocratic = ROOT.party_popularity_100@anocratic }
+	set_temp_variable = { temp_popularity_neutrality = ROOT.party_popularity_100@neutrality }
+	set_temp_variable = { temp_popularity_fascism = ROOT.party_popularity_100@fascism }
+}
+
+apply_temp_party_var = {
+	set_popularities = {
+		communism = temp_popularity_communism
+		revolutionary_socialism = temp_popularity_revolutionary_socialism
+		socialist_democracy = temp_popularity_socialist_democracy
+		democratic = temp_popularity_democratic
+		conservative_democracy = temp_popularity_conservative_democracy
+		anocratic = temp_popularity_anocratic
+		neutrality = temp_popularity_neutrality
+		fascism = temp_popularity_fascism
+	}
+}
 
 ###############################
 ##### Capitulation Events #####
