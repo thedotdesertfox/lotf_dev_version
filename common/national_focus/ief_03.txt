@@ -3,10 +3,6 @@ focus_tree = {
 	continuous_focus_position = { x = 20 y = 1000 } 
 	country = {
 		factor = 0
-		modifier = {
-			add = 600
-			tag = CMP
-		}
 	}
 	#For the Good of Our Nation
 	focus = {

@@ -1,0 +1,93 @@
+defined_text = {
+    name = get_walter_hate
+    text = {
+        trigger = {
+            check_variable = {
+				IEF_walter_hate < 6
+			}
+        }
+        localization_key = walter_hate_none
+    }
+	text = {
+        trigger = {
+            check_variable = {
+				IEF_walter_hate > 5
+			}
+			check_variable = {
+				IEF_walter_hate < 11
+			}
+        }
+        localization_key = walter_hate_noticable
+    }
+	text = {
+        trigger = {
+            check_variable = {
+				IEF_walter_hate > 10
+			}
+			check_variable = {
+				IEF_walter_hate < 30
+			}
+        }
+        localization_key = walter_hate_significant
+    }
+	text = {
+        trigger = {
+            check_variable = {
+				IEF_walter_hate > 29
+			}
+        }
+        localization_key = walter_hate_severe
+    }
+}
+defined_text = {
+    name = get_walter_love
+    text = {
+        trigger = {
+            check_variable = {
+				IEF_walter_love < 11
+			}
+        }
+        localization_key = walter_love_none
+    }
+	text = {
+        trigger = {
+            check_variable = {
+				IEF_walter_love > 10
+			}
+			check_variable = {
+				IEF_walter_love < 21
+			}
+        }
+        localization_key = walter_love_local
+    }
+	text = {
+        trigger = {
+            check_variable = {
+				IEF_walter_love > 20
+			}
+			check_variable = {
+				IEF_walter_love < 31
+			}
+        }
+        localization_key = walter_love_growing
+    }
+	text = {
+        trigger = {
+            check_variable = {
+				IEF_walter_love > 30
+			}
+			check_variable = {
+				IEF_walter_love < 41
+			}
+        }
+        localization_key = walter_love_widespread
+    }
+	text = {
+        trigger = {
+            check_variable = {
+				IEF_walter_love > 40
+			}
+        }
+        localization_key = walter_love_complete
+    }
+}

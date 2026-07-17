@@ -51,6 +51,8 @@ recruit_character = IEF_collapsed_authority
 set_convoys = 100
 
 set_variable = { normal_infantry_cap@IEF = 10 }
+set_variable = { IEF_walter_hate = 30 }
+set_variable = { IEF_walter_love = 10 }
 
 set_politics = {
 	ruling_party = anocratic

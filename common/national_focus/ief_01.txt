@@ -27,7 +27,7 @@ focus_tree = {
 		relative_position_id = IEF_the_long_road
 		x = -4
 		y = 1
-		cost = 5
+		cost = 4
 		prerequisite = { focus = IEF_the_long_road }
 		completion_reward = {
 			hidden_effect = {
@@ -51,7 +51,7 @@ focus_tree = {
 		relative_position_id = IEF_request_hoovers_help
 		x = -2
 		y = 1
-		cost = 6
+		cost = 4
 		prerequisite = { focus = IEF_request_hoovers_help }
 		completion_reward = {
 			hidden_effect = {
@@ -87,7 +87,7 @@ focus_tree = {
 		relative_position_id = IEF_request_hoovers_help
 		x = 2
 		y = 1
-		cost = 5
+		cost = 4
 		prerequisite = { focus = IEF_request_hoovers_help }
 		completion_reward = {
 			hidden_effect = {
@@ -105,7 +105,7 @@ focus_tree = {
 		relative_position_id = IEF_the_long_road
 		x = 4
 		y = 1
-		cost = 3
+		cost = 2
 		prerequisite = { focus = IEF_the_long_road }
 		completion_reward = {
 			swap_ideas = {
@@ -120,7 +120,7 @@ focus_tree = {
 		relative_position_id = IEF_aras_scars
 		x = -2
 		y = 1
-		cost = 3
+		cost = 2
 		prerequisite = { focus = IEF_aras_scars }
 		completion_reward = {
 			IEF_roy_urquhart = {
@@ -135,7 +135,7 @@ focus_tree = {
 		relative_position_id = IEF_expand_urquharts_powers
 		x = -1
 		y = 1
-		cost = 5
+		cost = 4
 		prerequisite = { focus = IEF_expand_urquharts_powers }
 		completion_reward = {
 			hidden_effect = {
@@ -151,7 +151,7 @@ focus_tree = {
 		relative_position_id = IEF_expand_urquharts_powers
 		x = 1
 		y = 1
-		cost = 6
+		cost = 5
 		prerequisite = { focus = IEF_expand_urquharts_powers }
 		completion_reward = {
 			if = {
@@ -187,7 +187,7 @@ focus_tree = {
 		relative_position_id = IEF_aras_scars
 		x = 1
 		y = 1
-		cost = 4
+		cost = 3
 		prerequisite = { focus = IEF_aras_scars }
 		available = { focus = IEF_strict_rationing }
 		completion_reward = {
@@ -201,7 +201,7 @@ focus_tree = {
 		relative_position_id = IEF_increase_enlisted_family_rations
 		x = 0
 		y = 1
-		cost = 3
+		cost = 2
 		prerequisite = { focus = IEF_increase_enlisted_family_rations }
 		completion_reward = {
 			add_manpower = 8000
@@ -226,6 +226,9 @@ focus_tree = {
 				target = STL
 			}
 			add_war_support = 0.1
+			STL = {
+				set_country_flag = keep_alive_after_peace
+			}
 		}
 	}
 	focus = {
@@ -268,7 +271,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		cost = 2
-		available = { always = NOT }
+		available = { owns_state = 1051 }
 		prerequisite = { focus = IEF_riverine_troops focus = IEF_anti_vehicle_tactics }
 		mutually_exclusive = { focus = IEF_an_embarassing_failure }
 		completion_reward = {
@@ -355,7 +358,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
-			
+			add_war_support = 0.10
 		}
 	}
 
@@ -747,8 +750,24 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 1
+		#allow_branch = {
+		#	has_completed_focus = IEF_final_offensive
+		#	ARA = {
+		#		exists = yes
+		#	}
+		#}
 		prerequisite = { focus = IEF_final_offensive  }
-		completion_reward = { }
+		completion_reward = {
+			country_event = ief.7
+			hidden_effect = {
+				country_event = {
+					id = ief.8
+					days = 25
+					random_days = 10
+					random_hours = 12
+				}
+			}
+		}
 	}
 	
 	#Rebuild Indiana
@@ -758,7 +777,7 @@ focus_tree = {
 		relative_position_id = IEF_the_central_plains_burn
 		x = -4
 		y = 1
-		cost = 3
+		cost = 4
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -777,7 +796,7 @@ focus_tree = {
 		relative_position_id = IEF_rebuild_indiana
 		x = -2
 		y = 1
-		cost = 3
+		cost = 4
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -797,7 +816,7 @@ focus_tree = {
 		relative_position_id = IEF_rebuild_indiana
 		x = 0
 		y = 1
-		cost = 3
+		cost = 4
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -823,7 +842,7 @@ focus_tree = {
 		relative_position_id = IEF_rebuild_indiana
 		x = 2
 		y = 1
-		cost = 3
+		cost = 4
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -846,7 +865,7 @@ focus_tree = {
 		relative_position_id = IEF_jobs_for_the_people
 		x = 0
 		y = 1
-		cost = 2
+		cost = 3
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -908,6 +927,14 @@ focus_tree = {
 				idea = IEF_self_help
 				days = 300
 			}
+			hidden_effect = {
+				country_event = {
+					id = IEF.9
+					days = 70
+					random_days = 10
+					random_hours = 6
+				}
+			}
 		}
 	}
 	
@@ -918,7 +945,7 @@ focus_tree = {
 		relative_position_id = IEF_the_central_plains_burn
 		x = 0
 		y = 3
-		cost = 3
+		cost = 4
 		search_filters = {
 			FOCUS_FILTER_STABILITY
 		}
@@ -937,7 +964,7 @@ focus_tree = {
 		relative_position_id = IEF_the_central_plains_burn
 		x = 4
 		y = 1
-		cost = 4
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -961,7 +988,7 @@ focus_tree = {
 		relative_position_id = IEF_savior_of_the_nation
 		x = -1
 		y = 1
-		cost = 2
+		cost = 3
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -981,7 +1008,7 @@ focus_tree = {
 		relative_position_id = IEF_savior_of_the_nation
 		x = 1
 		y = 1
-		cost = 2
+		cost = 3
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -1002,7 +1029,7 @@ focus_tree = {
 		relative_position_id = IEF_savior_of_the_nation
 		x = 0
 		y = 2
-		cost = 3
+		cost = 4
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -1068,10 +1095,6 @@ focus_tree = {
 			add_popularity = {
 				ideology = anocratic
 				popularity = 0.1
-			}
-			add_timed_idea = {
-				idea = IEF_slashed
-				days = 120
 			}
 			NMD = {
 				add_opinion_modifier = { target = IEF modifier = large_decrease }
@@ -1657,16 +1680,31 @@ focus_tree = {
 		}
 	}
 	
-	#Force Macarthur to Step Down
+	#Let us go Forward Together  
 	focus = {
-		id = IEF_force_macarthur_to_step_down
-		icon = GFX_SOV_demand_eastern_poland_ccp_2d_sov_compatibility
+		id = IEF_lets_go_forward_together
+		icon = GFX_focus_generic_befriend_usa
 		relative_position_id = IEF_federalist_detente
-		x = 0
+		x = -1
 		y = 4
 		cost = 3
+		mutually_exclusive = { focus = IEF_end_macarthurs_caesarism }
 		prerequisite = { focus = IEF_federalist_detente }
 		prerequisite = { focus = IEF_partition_cmp }
+		completion_reward = {
+		}
+	}
+	
+	#End MacArthur's Caesarism
+	focus = {
+		id = IEF_end_macarthurs_caesarism
+		icon = GFX_SOV_demand_eastern_poland_ccp_2d_sov_compatibility
+		relative_position_id = IEF_federalist_detente
+		x = 1
+		y = 4
+		cost = 3
+		mutually_exclusive = { focus = IEF_lets_go_forward_together }
+		prerequisite = { focus = IEF_federalist_detente }
 		completion_reward = {
 		}
 	}
@@ -1754,7 +1792,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 3
-		prerequisite = { focus = IEF_trial_of_macarthur focus = IEF_force_macarthur_to_step_down }
+		prerequisite = { focus = IEF_trial_of_macarthur focus = IEF_lets_go_forward_together focus = IEF_end_macarthurs_caesarism }
 		prerequisite = { focus = IEF_sic_semper_tyrannis }
 		completion_reward = {
 			set_cosmetic_tag = IEF_GAR_unify_01

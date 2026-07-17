@@ -106,7 +106,7 @@ ideas = {
 				army_speed_factor = -0.1
 			}
 		}	
-		IEF_slashed = {
+		IEF_slashed_budget_01 = {
 			picture = chi_incompetent_officers
 			modifier = {
 				consumer_goods_factor = 0.2
@@ -117,7 +117,7 @@ ideas = {
 				neutrality_drift = -0.15
 			}
 		}
-		IEF_slashed_01 = {
+		IEF_slashed_budget_02 = {
 			picture = chi_incompetent_officers
 			modifier = {
 				consumer_goods_factor = 0.1

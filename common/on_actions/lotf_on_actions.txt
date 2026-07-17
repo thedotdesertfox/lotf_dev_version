@@ -22,16 +22,30 @@ on_actions = {
 	on_peaceconference_ended = {
 		effect = {
 			FROM = {
-				limit = {
-					exists = yes
-				}
-				ROOT = {
-					annex_country = {
-						target = PREV
-						transfer_troops = no
+				if = {
+					limit = {
+						exists = yes
+						NOT = {
+							has_country_flag = keep_alive_after_peace
+						}
 					}
-				}				
+					ROOT = {
+						annex_country = {
+							target = PREV
+							transfer_troops = no
+						}
+					}
+				}
 			}
+		}
+	}
+	on_annex = {
+		effect = {
+			limit = {
+				ROOT = IEF
+				FROM = STL
+            }
+			complete_national_focus = IEF_proper_learning_experience
 		}
 	}
 }

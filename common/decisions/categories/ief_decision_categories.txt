@@ -6,3 +6,15 @@ IEF_debug_crap = {
 		tag = IEF
 	}
 }
+IEF_publicity_tour = {
+	priority = 90
+	visible_when_empty = yes
+	icon =  GFX_decision_category_usa_congress
+	picture = GFX_decision_cat_picture_IEF_publicity_tour
+	allowed = {
+		tag = IEF
+	}
+	visible = {
+		has_country_flag = IEF_walters_plan
+	}
+}

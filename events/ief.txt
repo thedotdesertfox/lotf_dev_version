@@ -14,8 +14,8 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = ief.2
-				days = 17
-				random_days = 6
+				days = 60
+				random_days = 15
 				random_hours = 12
 			}
 		}
@@ -81,50 +81,50 @@ country_event = {
 	option = {
 		name = ief.5.a
 		ai_chance = { factor = 100 }
-		white_peace = STL
-		custom_effect_tooltip = IEF_squash
-		hidden_effect = {
-			IEF = {
-				remove_state_core = 396
+		IEF = {
+			if = {
+				limit = {
+					has_war_with = STL
+				}
+				white_peace = STL
+				complete_national_focus = IEF_an_embarassing_failure
 			}
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.3
-			}
-			every_country = {
-				news_event = { hours = 24 id = news.53 }
-			}
-			ARA = { 
-				transfer_state = 396
-				add_state_core = 396
-				load_oob = ARA_1936
-				declare_war_on = { type = annex_everything    target = IEF }
+			set_country_flag = ARA_have_revolted
+			remove_ideas = IEF_ohio_ief_cooperation
+		}
+		ARA = {
+			transfer_state = 396
+			add_state_core = 396
+			load_oob = ARA_1936
+			declare_war_on = {
+				target = IEF
+				type = annex_everything
 			}
 		}
 	}	
 	option = {
 		name = ief.5.b
 		ai_chance = { factor = 100 }
-		white_peace = STL
-		custom_effect_tooltip = IEF_squash
-		hidden_effect = {
-			IEF = {
-				remove_state_core = 396
+		IEF = {
+			if = {
+				limit = {
+					has_war_with = STL
+				}
+				white_peace = STL
+				complete_national_focus = IEF_an_embarassing_failure
 			}
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.3
+			set_country_flag = ARA_have_revolted
+			remove_ideas = IEF_ohio_ief_cooperation
+		}
+		ARA = {
+			transfer_state = 396
+			add_state_core = 396
+			load_oob = ARA_1936
+			declare_war_on = {
+				target = IEF
+				type = annex_everything
 			}
-			every_country = {
-				news_event = { hours = 24 id = news.53 }
-			}
-			ARA = { 
-				transfer_state = 396
-				add_state_core = 396
-				load_oob = ARA_1936
-				declare_war_on = { type = annex_everything    target = IEF }
-				change_tag_from = IEF 
-			}	
+			change_tag_from = IEF
 		}
 	}
 }
@@ -150,15 +150,127 @@ country_event = {
 }
 
 country_event = {
+	id = ief.7
+	title = ief.7.t
+	desc = ief.7.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ief.7.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.1
+	}
+}
+
+country_event = {
+	id = ief.8
+	title = ief.8.t
+	desc = ief.8.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ief.8.a
+		ai_chance = { factor = 100 }
+		set_country_flag = IEF_walters_plan
+	}
+}
+
+country_event = {
+	id = ief.9
+	title = ief.9.t
+	desc = ief.9.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ief.9.a
+		ai_chance = { factor = 100 }
+		delete_units = {
+			division_template = "Foreign Volunteers"
+		}
+	}
+}
+
+country_event = {
 	id = ief.10
 	title = ief.10.t
 	desc = ief.10.d
-	picture = GFX_report_event_IEF_report1
+	picture = GFX_report_event_IEF_report2
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = ief.10.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+country_event = {
+	id = ief.11
+	title = ief.11.t
+	desc = ief.11.d
+	picture = GFX_report_event_IEF_report3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ief.11.a
+		ai_chance = { factor = 100 }
+		kill_country_leader = yes
+		set_politics = {
+			ruling_party = neutrality
+		}
+		set_political_party = {
+			ideology = neutrality
+			popularity = 50
+		}
+	}
+}
+
+country_event = {
+	id = ief.12
+	title = ief.12.t
+	desc = ief.12.d
+	picture = GFX_report_event_IEF_report4
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ief.12.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = ief.13
+	title = ief.13.t
+	desc = ief.13.d
+	picture = GFX_report_event_IEF_report5
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ief.13.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = ief.xxx
+	title = ief.xxx.t
+	desc = ief.xxx.d
+	picture = GFX_report_event_IEF_report1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ief.xxx.a
 		ai_chance = { factor = 100 }		
 	}
 }

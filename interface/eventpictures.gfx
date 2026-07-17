@@ -272,8 +272,25 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/EUR_report1.png"
 	}
 	spriteType = {
-		name = "GFX_report_event_IEF_report1"
-		texturefile = "gfx/event_pictures/IEF_report1.png"
+		name = "GFX_report_event_IEF_report2"
+		texturefile = "gfx/event_pictures/IEF_report2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IEF_report3"
+		texturefile = "gfx/event_pictures/IEF_report3.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IEF_report4"
+		texturefile = "gfx/event_pictures/IEF_report4.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IEF_report5"
+		texturefile = "gfx/event_pictures/IEF_report5.png"
+	}
+	####################
+	spriteType = {
+		name = "GFX_decision_cat_picture_IEF_publicity_tour"
+		texturefile = "gfx/event_pictures/GFX_decision_cat_picture_IEF_01.png"
 	}
     ####################
 	spriteType = {

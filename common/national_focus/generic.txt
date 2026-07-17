@@ -1,0 +1,385 @@
+focus_tree = {
+	id = generic_focus
+	
+	country = {
+		factor = 1
+	}
+	continuous_focus_position = { x = 150 y = 800 }
+	
+	default = yes
+	
+	focus = {
+		id = GENERIC_the_end_of_america
+		icon = GFX_focus_eng_crush_the_dream
+		cost = 2
+		x = 15
+		y = 0
+		completion_reward = {
+		}
+	}
+	
+	###ECONOMY COMMUNISM###
+	focus = {
+		id = GENERIC_COMMUNISM_our_five_year_plan
+		icon = GFX_goal_support_communism
+		cost = 2
+		relative_position_id = GENERIC_the_end_of_america
+		x = -7
+		y = 1
+		allow_branch = {
+			OR = {
+				has_government = communism
+				has_government = revolutionary_socialism
+				has_government = socialist_democracy
+			}
+		}
+		prerequisite = { focus = GENERIC_the_end_of_america }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_COMMUNISM_continue_nationalization
+		icon = GFX_goal_support_communism
+		cost = 2
+		relative_position_id = GENERIC_COMMUNISM_our_five_year_plan
+		x = -3
+		y = 1
+		prerequisite = { focus = GENERIC_COMMUNISM_our_five_year_plan }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_COMMUNISM_desolve_state_banks
+		icon = GFX_goal_support_communism
+		cost = 2
+		relative_position_id = GENERIC_COMMUNISM_our_five_year_plan
+		x = 0
+		y = 1
+		prerequisite = { focus = GENERIC_COMMUNISM_our_five_year_plan }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_COMMUNISM_establish_township_councils
+		icon = GFX_goal_support_communism
+		cost = 2
+		relative_position_id = GENERIC_COMMUNISM_our_five_year_plan
+		x = 3
+		y = 1
+		prerequisite = { focus = GENERIC_COMMUNISM_our_five_year_plan }
+		completion_reward = {
+		}
+	}
+	
+	###ECONOMY DEMOCRATIC###
+	focus = {
+		id = GENERIC_DEMOCRACY_relying_on_local_businesses
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_the_end_of_america
+		x = -7
+		y = 1
+		allow_branch = {
+			OR = {
+				has_government = democratic
+				has_government = conservative_democracy
+				has_government = anocratic
+			}
+		}
+		prerequisite = { focus = GENERIC_the_end_of_america }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_DEMOCRACY_everyone_must_do_their_part
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_DEMOCRACY_relying_on_local_businesses
+		x = -3
+		y = 1
+		prerequisite = { focus = GENERIC_DEMOCRACY_relying_on_local_businesses }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_DEMOCRACY_scrap_scrap_scrap
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_DEMOCRACY_relying_on_local_businesses
+		x = -1
+		y = 1
+		prerequisite = { focus = GENERIC_DEMOCRACY_relying_on_local_businesses }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_DEMOCRACY_establish_limited_trade
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_DEMOCRACY_relying_on_local_businesses
+		x = 1
+		y = 1
+		prerequisite = { focus = GENERIC_DEMOCRACY_relying_on_local_businesses }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_DEMOCRACY_retool_workshops
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_DEMOCRACY_relying_on_local_businesses
+		x = 3
+		y = 1
+		prerequisite = { focus = GENERIC_DEMOCRACY_relying_on_local_businesses }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_DEMOCRACY_readopt_wwi_victory_gardens
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_DEMOCRACY_relying_on_local_businesses
+		x = -2
+		y = 2
+		prerequisite = { focus = GENERIC_DEMOCRACY_everyone_must_do_their_part focus = GENERIC_DEMOCRACY_scrap_scrap_scrap }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_DEMOCRACY_wooden_construction
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_DEMOCRACY_relying_on_local_businesses
+		x = 2
+		y = 2
+		prerequisite = { focus = GENERIC_DEMOCRACY_establish_limited_trade focus = GENERIC_DEMOCRACY_retool_workshops }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_DEMOCRACY_economy_of_survival
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_DEMOCRACY_relying_on_local_businesses
+		x = 0
+		y = 3
+		prerequisite = { focus = GENERIC_DEMOCRACY_readopt_wwi_victory_gardens }
+		prerequisite = { focus = GENERIC_DEMOCRACY_wooden_construction }
+		completion_reward = {
+		}
+	}
+	
+	###POLITICAL DEMOCRATIC###
+	
+	focus = {
+		id = GENERIC_carrying_the_torch
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_the_end_of_america
+		x = 0
+		y = 1
+		allow_branch = {
+			OR = {
+				has_government = democratic
+				has_government = conservative_democracy
+				has_government = anocratic
+			}
+		}
+		prerequisite = { focus = GENERIC_the_end_of_america }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_crackdown_on_corruption
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_carrying_the_torch
+		x = -1
+		y = 1
+		prerequisite = { focus = GENERIC_carrying_the_torch }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_reorganize_local_banks
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_crackdown_on_corruption
+		x = -1
+		y = 1
+		prerequisite = { focus = GENERIC_crackdown_on_corruption }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_root_out_cmp_infiltration
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_crackdown_on_corruption
+		x = 1
+		y = 1
+		prerequisite = { focus = GENERIC_crackdown_on_corruption }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_mayoral_council
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_carrying_the_torch
+		x = 2
+		y = 1
+		prerequisite = { focus = GENERIC_carrying_the_torch }
+		completion_reward = {
+		}
+	}
+	
+	###MILITARY COMMUNISM###
+	focus = {
+		id = GENERIC_COMMUNISM_peoples_army
+		icon = GFX_goal_support_communism
+		cost = 2
+		relative_position_id = GENERIC_the_end_of_america
+		x = 6
+		y = 1
+		allow_branch = {
+			OR = {
+				has_government = communism
+				has_government = revolutionary_socialism
+				has_government = socialist_democracy
+			}
+		}
+		prerequisite = { focus = GENERIC_the_end_of_america }
+		completion_reward = {
+		}
+	}
+	
+	###MILITARY DEMOCRATIC###
+	
+	focus = {
+		id = GENERIC_DEMOCRACY_legacy_of_the_minutemen
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_the_end_of_america
+		x = 6
+		y = 1
+		allow_branch = {
+			OR = {
+				has_government = democratic
+				has_government = conservative_democracy
+				has_government = anocratic
+			}
+		}
+		mutually_exclusive = { focus = GENERIC_DEMOCRACY_national_guard_primacy }
+		prerequisite = { focus = GENERIC_the_end_of_america }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_DEMOCRACY_armed_people_are_free
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_DEMOCRACY_legacy_of_the_minutemen
+		x = -1
+		y = 1
+		prerequisite = { focus = GENERIC_DEMOCRACY_legacy_of_the_minutemen }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_DEMOCRACY_boy_scout_auxillaries
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_DEMOCRACY_armed_people_are_free
+		x = 0
+		y = 1
+		prerequisite = { focus = GENERIC_DEMOCRACY_armed_people_are_free }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_DEMOCRACY_our_little_west_point
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_DEMOCRACY_legacy_of_the_minutemen
+		x = 2
+		y = 1
+		prerequisite = { focus = GENERIC_DEMOCRACY_legacy_of_the_minutemen focus = GENERIC_DEMOCRACY_national_guard_primacy }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_DEMOCRACY_better_dead_then_red
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_DEMOCRACY_our_little_west_point
+		x = 0
+		y = 1
+		prerequisite = { focus = GENERIC_DEMOCRACY_our_little_west_point }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_DEMOCRACY_national_guard_primacy
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_the_end_of_america
+		x = 10
+		y = 1
+		allow_branch = {
+			OR = {
+				has_government = democratic
+				has_government = conservative_democracy
+				has_government = anocratic
+			}
+		}
+		mutually_exclusive = { focus = GENERIC_DEMOCRACY_legacy_of_the_minutemen }
+		prerequisite = { focus = GENERIC_the_end_of_america }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_DEMOCRACY_maintain_nonpartisanship
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_DEMOCRACY_national_guard_primacy
+		x = 1
+		y = 1
+		prerequisite = { focus = GENERIC_DEMOCRACY_national_guard_primacy }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GENERIC_DEMOCRACY_the_square_division
+		icon = GFX_goal_support_democracy
+		cost = 2
+		relative_position_id = GENERIC_DEMOCRACY_maintain_nonpartisanship
+		x = 0
+		y = 1
+		prerequisite = { focus = GENERIC_DEMOCRACY_maintain_nonpartisanship }
+		completion_reward = {
+		}
+	}
+
+}

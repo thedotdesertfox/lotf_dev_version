@@ -1,12 +1,12 @@
 focus_tree = {
-	id = mch_focus
+	id = wsc_focus
 	
 	country = {
 		factor = 0
 		
 		modifier = {
 			add = 10
-			tag = MCH
+			tag = N02
 		}
 	}
 	
