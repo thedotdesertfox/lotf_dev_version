@@ -8,5 +8,5 @@ tags={
 	"Ideologies"
 }
 name="loTFRD_Dev_version"
-supported_version="1.18.1.0"
+supported_version="1.19.*.0"
 remote_file_id="3725124207"
